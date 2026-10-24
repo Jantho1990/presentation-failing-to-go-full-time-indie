@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://bxvrstjlki3kw"]
+
+[ext_resource type="Texture2D" uid="uid://de0o57xo3micq" path="res://assets/graphics/ui/icons/pixel_art/_custom/target_16x16.png" id="1_c6q32"]
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_pwimo"]
+
+[resource]
+atlas = ExtResource("1_c6q32")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("1_pwimo")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"

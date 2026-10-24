@@ -1,0 +1,164 @@
+[gd_scene format=3 uid="uid://bdpavw5h6o1n0"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_64udj"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_lyyyy"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="3_ud07a"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="4_cu3ep"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="5_qel75"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="6_h41ka"]
+[ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="7_gqowa"]
+[ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="8_o7v2a"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="9_2yq0d"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="10_c4uhy"]
+[ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="11_gqowa"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="12_ovcjt"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("3_ud07a")
+
+[sub_resource type="Resource" id="Resource_iuetc"]
+script = ExtResource("5_qel75")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/TitleContainer")])
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("6_h41ka")
+
+[sub_resource type="Resource" id="Resource_wa7o3"]
+script = ExtResource("4_cu3ep")
+slide_steps = Array[ExtResource("2_lyyyy")]([SubResource("Resource_iuetc"), SubResource("Resource_1vcjn")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3arb"]
+
+[node name="SWFGTitle" type="Control" unique_id=1867292032]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_64udj")
+steps = Array[ExtResource("2_lyyyy")]([SubResource("Resource_sho4t"), SubResource("Resource_wa7o3")])
+
+[node name="Background" type="TextureRect" parent="." unique_id=1001554132]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_gqowa")
+expand_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=649606572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelEditorBlue"
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b3arb")
+
+[node name="LineDecorations" parent="PanelContainer" unique_id=485825233 instance=ExtResource("8_o7v2a")]
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer" unique_id=1030837381]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/Control" unique_id=1124229887]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.01
+anchor_right = 0.06
+anchor_bottom = 0.99
+theme_override_styles/separator = ExtResource("9_2yq0d")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/Control" unique_id=1400917492]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.9
+anchor_right = 0.99
+anchor_bottom = 0.9
+theme_override_styles/separator = ExtResource("10_c4uhy")
+
+[node name="TitleContainer" type="Control" parent="PanelContainer" unique_id=365768485]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/TitleContainer" unique_id=643503634]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.8
+offset_right = 40.0
+offset_bottom = 40.0
+alignment = 2
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/TitleContainer/VBox" unique_id=1135820902]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("11_gqowa")
+theme_override_fonts/bold_font = ExtResource("11_gqowa")
+theme_override_font_sizes/bold_font_size = 160
+bbcode_enabled = true
+text = "[left][b]Postmortem:[/b][/left]"
+fit_content = true
+
+[node name="Subtitle" type="RichTextLabel" parent="PanelContainer/TitleContainer/VBox" unique_id=547156777]
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("11_gqowa")
+theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/bold_font_size = 72
+bbcode_enabled = true
+text = "[right]Dice Gun Commando Demo[/right]"
+fit_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=537426972]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=649408932]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBox3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=480259809]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 64
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox3" unique_id=1131901919]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 264
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer" unique_id=401830137]
+custom_minimum_size = Vector2(0, 235)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/bold_font_size = 172
+bbcode_enabled = true
+text = "[b]Thank you![/b]"
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=2067559416 instance=ExtResource("12_ovcjt")]
+layout_mode = 2
+size_flags_vertical = 8

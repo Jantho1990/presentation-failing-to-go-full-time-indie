@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dqw207abbtaae"]
+
+[ext_resource type="Script" uid="uid://cx5ff6rmig1pl" path="res://nodes/Presentation.gd" id="1_tqjp2"]
+
+[node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_tqjp2")
+metadata/_custom_type_script = "uid://cx5ff6rmig1pl"

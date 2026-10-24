@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://cva0ss6ccpwep"]
+
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_0ppu4"]
+[ext_resource type="Texture2D" uid="uid://cr1r7il3wwn3h" path="res://assets/graphics/ui/icons/pixel_art/_custom/damge_16x16.png" id="1_ksuu1"]
+
+[resource]
+atlas = ExtResource("1_ksuu1")
+region = Rect2(0, 0, 32, 32)
+script = ExtResource("1_0ppu4")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"

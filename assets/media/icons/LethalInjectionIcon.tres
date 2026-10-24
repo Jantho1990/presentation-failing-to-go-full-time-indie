@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://cycfqdabypid8"]
+
+[ext_resource type="Texture2D" uid="uid://cce4jd3fjfohh" path="res://assets/graphics/ui/icons/pixel_art/_custom/lethal_injection_icon.png" id="1_irf0o"]
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_j6hgn"]
+
+[resource]
+atlas = ExtResource("1_irf0o")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("1_j6hgn")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"

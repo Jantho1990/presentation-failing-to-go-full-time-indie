@@ -1,0 +1,33 @@
+[gd_scene format=3 uid="uid://bt0q3yfxuiytc"]
+
+[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepBaseTypeGreen.tres" id="1_qxasr"]
+[ext_resource type="Script" uid="uid://7nica5gmrs2p" path="res://scenes/SlideHeader/SlideHeader.gd" id="1_r7ar7"]
+[ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="2_menpi"]
+
+[node name="SlideHeader" type="VBoxContainer" unique_id=651438447]
+anchors_preset = 10
+anchor_right = 1.0
+offset_bottom = 72.0
+grow_horizontal = 2
+size_flags_horizontal = 3
+script = ExtResource("1_r7ar7")
+
+[node name="Indent" type="MarginContainer" parent="." unique_id=872338971]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+
+[node name="SlideHeader" type="RichTextLabel" parent="Indent" unique_id=116792445]
+texture_filter = 1
+custom_minimum_size = Vector2(0, 68)
+layout_mode = 2
+theme_type_variation = &"SlideHeaderRichTextLabel"
+theme_override_fonts/normal_font = ExtResource("2_menpi")
+theme_override_fonts/bold_font = ExtResource("2_menpi")
+theme_override_font_sizes/bold_font_size = 50
+bbcode_enabled = true
+text = "[b]Your Slide Title![/b]"
+
+[node name="HSeparator" type="HSeparator" parent="." unique_id=1512380026]
+layout_mode = 2
+theme_type_variation = &"HSepGreen"
+theme_override_styles/separator = ExtResource("1_qxasr")

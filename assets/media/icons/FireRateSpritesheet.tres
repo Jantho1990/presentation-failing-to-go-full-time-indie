@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://dhsan8ncxtv6y"]
+
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_d8nln"]
+[ext_resource type="Texture2D" uid="uid://dyr63k7fdk0sx" path="res://assets/graphics/ui/icons/pixel_art/_custom/arrow_clockwise.png" id="1_obfmr"]
+
+[resource]
+atlas = ExtResource("1_obfmr")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("1_d8nln")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"

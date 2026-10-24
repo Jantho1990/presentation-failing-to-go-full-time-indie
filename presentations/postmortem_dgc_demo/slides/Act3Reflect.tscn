@@ -1,0 +1,222 @@
+[gd_scene format=3 uid="uid://dmwvrycxmnpx"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_1x004"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_wtm5u"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_vm0aj"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_3fy1o"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="4_wtm5u"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_0lt0y"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_uebxy"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="6_vm0aj"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="8_1whm2"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="9_7vm4x"]
+[ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="10_e4goq"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="11_4ugqv"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="12_g1eby"]
+[ext_resource type="Texture2D" uid="uid://cofm8sak5ykmt" path="res://assets/media/icons/projectiles_icon.png" id="13_vm0aj"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_3fy1o")
+animation_duration = 0.1
+
+[sub_resource type="Resource" id="Resource_k72nw"]
+script = ExtResource("6_vm0aj")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3/Point2")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_rlusi"]
+script = ExtResource("4_wtm5u")
+slide_steps = Array[ExtResource("2_wtm5u")]([SubResource("Resource_sho4t"), SubResource("Resource_k72nw")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_744ps"]
+script = ExtResource("5_0lt0y")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_sn6hl"]
+script = ExtResource("3_vm0aj")
+slide_steps = Array[ExtResource("2_wtm5u")]([SubResource("Resource_rlusi"), SubResource("Resource_744ps")])
+
+[sub_resource type="Resource" id="Resource_1uyqe"]
+script = ExtResource("5_0lt0y")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper/Point0")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_mqkff"]
+script = ExtResource("5_0lt0y")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2/Point1")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_1bqkd"]
+script = ExtResource("5_0lt0y")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3/Point2")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_u6o0g"]
+script = ExtResource("6_uebxy")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("8_1whm2")
+
+[sub_resource type="Resource" id="Resource_1wvi1"]
+script = ExtResource("3_vm0aj")
+slide_steps = Array[ExtResource("2_wtm5u")]([SubResource("Resource_u6o0g"), SubResource("Resource_1vcjn")])
+
+[node name="WhyBotherSideProjectResponse" type="Control" unique_id=896342009]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1x004")
+steps = Array[ExtResource("2_wtm5u")]([SubResource("Resource_sn6hl"), SubResource("Resource_1uyqe"), SubResource("Resource_mqkff"), SubResource("Resource_1bqkd"), SubResource("Resource_1wvi1")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1052727957]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1236441324]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2047337107]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=1935034350 instance=ExtResource("9_7vm4x")]
+layout_mode = 2
+title = "Act 3: Reflect"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1159104082]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=1687516232]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+
+[node name="AnimationWrapper" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/List" unique_id=1942699293]
+custom_minimum_size = Vector2(896, 172)
+layout_mode = 2
+script = ExtResource("10_e4goq")
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper" unique_id=849249859]
+layout_mode = 0
+offset_right = 896.0
+offset_bottom = 64.0
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper/Point0" unique_id=797379099 instance=ExtResource("11_4ugqv")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("13_vm0aj")
+
+[node name="TopMargin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper/Point0" unique_id=1559619169]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper/Point0/TopMargin" unique_id=203862220]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Core Idea Strong
+[b][ul]
+  Initial learning curve
+  Intuitive once understood
+  Building dice synergies with gunplay addicting
+[/ul][/b]"
+fit_content = true
+
+[node name="AnimationWrapper2" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/List" unique_id=727672323]
+custom_minimum_size = Vector2(1113, 172)
+layout_mode = 2
+script = ExtResource("10_e4goq")
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2" unique_id=336421483]
+layout_mode = 0
+offset_right = 1113.0
+offset_bottom = 172.0
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2/Point1" unique_id=1424811057 instance=ExtResource("11_4ugqv")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("13_vm0aj")
+
+[node name="TopMargin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2/Point1" unique_id=1866206355]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper2/Point1/TopMargin" unique_id=1141120378]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Speed Requires Tradeoffs
+[b][ul]
+  Can't make everything perfect
+  Planning by priority made cuts easier
+  Avoided time waste from throwing away perfect systems
+[/ul][/b]"
+fit_content = true
+
+[node name="AnimationWrapper3" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/List" unique_id=1168122674]
+custom_minimum_size = Vector2(1200, 172)
+layout_mode = 2
+script = ExtResource("10_e4goq")
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3" unique_id=2147255275]
+layout_mode = 0
+offset_right = 1200.0
+offset_bottom = 90.0
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3/Point2" unique_id=223413903 instance=ExtResource("11_4ugqv")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("13_vm0aj")
+
+[node name="TopMargin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3/Point2" unique_id=1824137760]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/List/AnimationWrapper3/Point2/TopMargin" unique_id=1228530439]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Did Not Consider Marketing Factors
+[b][ul]
+  Dark with flashlights cool, but hard to see in trailers
+  Launched demo with no marketing beat, wasted boost
+  No social media buildup
+[/ul][/b]"
+fit_content = true
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=48079758 instance=ExtResource("12_g1eby")]
+layout_mode = 2
+size_flags_vertical = 8

@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://bfdprafakrb16"]
+
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_5fsl1"]
+[ext_resource type="Texture2D" uid="uid://3vu03x01fovx" path="res://assets/graphics/ui/icons/pixel_art/_custom/immunity_icon.png" id="1_33ts1"]
+
+[resource]
+atlas = ExtResource("1_33ts1")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("1_5fsl1")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"

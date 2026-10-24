@@ -1,0 +1,62 @@
+[gd_scene format=3 uid="uid://cgbstsitgde1s"]
+
+[ext_resource type="Script" uid="uid://cx5ff6rmig1pl" path="res://nodes/Presentation.gd" id="1_rrfh6"]
+[ext_resource type="PackedScene" uid="uid://bep4h4rylmh8a" path="res://presentations/postmortem_dgc_demo/slides/WhoAmI.tscn" id="2_ibmsi"]
+[ext_resource type="PackedScene" uid="uid://bdpavw5h6o1n0" path="res://presentations/postmortem_dgc_demo/slides/PDGCDTitle.tscn" id="2_wddip"]
+[ext_resource type="PackedScene" uid="uid://b8ftlrd0q6fy7" path="res://presentations/postmortem_dgc_demo/slides/PivotFromDT.tscn" id="3_ku21x"]
+[ext_resource type="PackedScene" uid="uid://dhg208r1w4sd5" path="res://presentations/postmortem_dgc_demo/slides/IntroThePlan.tscn" id="4_04fiw"]
+[ext_resource type="PackedScene" uid="uid://1cefgk1qgs2w" path="res://presentations/postmortem_dgc_demo/slides/DGCScreenshots.tscn" id="4_42qw3"]
+[ext_resource type="PackedScene" uid="uid://chm7opksrj4o" path="res://presentations/postmortem_dgc_demo/slides/Act1Plan.tscn" id="6_dsyx8"]
+[ext_resource type="PackedScene" uid="uid://ct217ra4r5ra7" path="res://presentations/postmortem_dgc_demo/slides/Act2Execute.tscn" id="7_bq81u"]
+[ext_resource type="PackedScene" uid="uid://dmwvrycxmnpx" path="res://presentations/postmortem_dgc_demo/slides/Act3Reflect.tscn" id="8_20i3r"]
+[ext_resource type="PackedScene" uid="uid://dlf71m6fob6qe" path="res://presentations/postmortem_dgc_demo/slides/Conclusion.tscn" id="9_20i3r"]
+[ext_resource type="PackedScene" uid="uid://dwotx2sncrfp8" path="res://presentations/postmortem_dgc_demo/slides/TitleThankYou.tscn" id="10_42qw3"]
+
+[node name="PostmortemDGCDemo" type="Control" unique_id=89003868]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_rrfh6")
+metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
+
+[node name="PDGCDTitle" parent="." unique_id=1867292032 instance=ExtResource("2_wddip")]
+layout_mode = 1
+
+[node name="WhoAmI" parent="." unique_id=546387486 instance=ExtResource("2_ibmsi")]
+visible = false
+layout_mode = 1
+
+[node name="DGCScreenshots" parent="." unique_id=98922950 instance=ExtResource("4_42qw3")]
+visible = false
+layout_mode = 1
+
+[node name="PivotFromDT" parent="." unique_id=2104288203 instance=ExtResource("3_ku21x")]
+visible = false
+layout_mode = 1
+
+[node name="IntroThePlan" parent="." unique_id=279363404 instance=ExtResource("4_04fiw")]
+visible = false
+layout_mode = 1
+
+[node name="Act1Plan" parent="." unique_id=896342009 instance=ExtResource("6_dsyx8")]
+visible = false
+layout_mode = 1
+
+[node name="Act2Execute" parent="." unique_id=686897252 instance=ExtResource("7_bq81u")]
+visible = false
+layout_mode = 1
+
+[node name="WhyBotherSideProjectResponse" parent="." unique_id=546507598 instance=ExtResource("8_20i3r")]
+visible = false
+layout_mode = 1
+
+[node name="Conclusion" parent="." unique_id=1418301073 instance=ExtResource("9_20i3r")]
+visible = false
+layout_mode = 1
+
+[node name="TitleThankYou" parent="." unique_id=1843783189 instance=ExtResource("10_42qw3")]
+visible = false
+layout_mode = 1

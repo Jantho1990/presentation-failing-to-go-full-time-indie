@@ -1,0 +1,10 @@
+[gd_resource type="AtlasTexture" script_class="SpritesheetTexture" format=3 uid="uid://bbwcuhlyvcasc"]
+
+[ext_resource type="Script" uid="uid://cr670ewaruvdv" path="res://assets/resources/SpritesheetTexture.gd" id="1_21kgy"]
+[ext_resource type="Texture2D" uid="uid://caxvl1wckubbm" path="res://assets/graphics/ui/icons/pixel_art/_custom/fowl_ordinance.png" id="1_87bss"]
+
+[resource]
+atlas = ExtResource("1_87bss")
+region = Rect2(0, 0, 16, 16)
+script = ExtResource("1_21kgy")
+metadata/_custom_type_script = "uid://cr670ewaruvdv"
