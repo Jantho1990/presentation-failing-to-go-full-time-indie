@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_7mvgy"]
 [ext_resource type="Texture2D" uid="uid://ctyyeepf2twyi" path="res://assets/media/images/artemis_2_splashdown-nhq202604100021.jpg" id="11_fdq1m"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="12_q0aia"]
+[ext_resource type="Texture2D" uid="uid://crwwyo63quxv8" path="res://assets/media/icons/star.png" id="13_2ea6k"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="13_182sg"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
@@ -137,6 +138,7 @@ theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=424424899 instance=ExtResource("12_q0aia")]
 layout_mode = 2
+texture = ExtResource("13_2ea6k")
 
 [node name="TopMargin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1525349983]
 layout_mode = 2
@@ -158,6 +160,7 @@ theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1056279698 instance=ExtResource("12_q0aia")]
 layout_mode = 2
+texture = ExtResource("13_2ea6k")
 
 [node name="TopMargin2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=783461887]
 layout_mode = 2
@@ -179,6 +182,7 @@ theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=166342096 instance=ExtResource("12_q0aia")]
 layout_mode = 2
+texture = ExtResource("13_2ea6k")
 
 [node name="TopMargin2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=467324555]
 layout_mode = 2
@@ -200,6 +204,7 @@ theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=2113021701 instance=ExtResource("12_q0aia")]
 layout_mode = 2
+texture = ExtResource("13_2ea6k")
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=826107099]
 layout_mode = 2

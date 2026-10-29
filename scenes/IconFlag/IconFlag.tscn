@@ -1,8 +1,8 @@
-[gd_scene load_steps=2 format=3 uid="uid://cja617wedpwxe"]
+[gd_scene format=3 uid="uid://cja617wedpwxe"]
 
-[ext_resource type="Texture2D" uid="uid://dtwvo2ahl74oj" path="res://assets/media/icons/flag.png" id="1_4gi1k"]
+[ext_resource type="Texture2D" uid="uid://crwwyo63quxv8" path="res://assets/media/icons/star.png" id="1_4gi1k"]
 
-[node name="IconFlag" type="TextureRect"]
+[node name="IconFlag" type="TextureRect" unique_id=123830648]
 custom_minimum_size = Vector2(64, 64)
 size_flags_horizontal = 4
 size_flags_vertical = 0
