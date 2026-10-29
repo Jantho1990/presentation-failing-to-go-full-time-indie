@@ -5,7 +5,7 @@
 [ext_resource type="PackedScene" uid="uid://cwiu8nsyij4gn" path="res://data/player/player.tscn" id="3_cmu2n"]
 [ext_resource type="PackedScene" uid="uid://fia80f2s15bw" path="res://assets/models/tree_arbol/arbol_seco.blend" id="4_gk368"]
 [ext_resource type="PackedScene" uid="uid://efn840pdpyf3" path="res://assets/models/bench/bench.blend" id="5_p3rbw"]
-[ext_resource type="PackedScene" uid="uid://cgbstsitgde1s" path="res://presentations/postmortem_dgc_demo/PostmortemDGCDemo.tscn" id="7_lgk82"]
+[ext_resource type="PackedScene" uid="uid://dqw207abbtaae" path="res://presentations/failing_to_go_full_time_indie/FailingToGoFullTimeIndie.tscn" id="7_lgk82"]
 [ext_resource type="Script" uid="uid://du7cywxltdl6r" path="res://scenes/PresentationLauncher/PresentationLauncher.gd" id="7_ysmp3"]
 [ext_resource type="Script" uid="uid://hjwt42hsvhrv" path="res://scenes/MainStage/InteractionCamera.gd" id="8_crlvf"]
 

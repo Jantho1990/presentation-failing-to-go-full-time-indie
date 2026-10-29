@@ -1,4 +1,4 @@
-[gd_scene load_steps=32 format=3 uid="uid://6dby4714ib0v"]
+[gd_scene format=3 uid="uid://6dby4714ib0v"]
 
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_d407s"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_8ea1r"]
@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="9_udxkq"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_n3vlv"]
 [ext_resource type="Texture2D" uid="uid://bvbvtmqme10ck" path="res://assets/media/images/title-image.png" id="11_d407s"]
-[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/PanelEditorBlue.tres" id="12_5jo72"]
+[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_5jo72"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="13_8ea1r"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="15_krc8g"]
 [ext_resource type="Animation" uid="uid://26b1efpj5vui" path="res://assets/animations/TitleSlides.tres" id="16_2mqso"]

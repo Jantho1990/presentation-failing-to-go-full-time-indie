@@ -1,6 +1,9 @@
 [gd_scene format=3 uid="uid://dqw207abbtaae"]
 
 [ext_resource type="Script" uid="uid://cx5ff6rmig1pl" path="res://nodes/Presentation.gd" id="1_tqjp2"]
+[ext_resource type="PackedScene" uid="uid://bhrqg36apruce" path="res://presentations/failing_to_go_full_time_indie/slides/IntroToPresentation.tscn" id="2_bqimy"]
+[ext_resource type="PackedScene" uid="uid://dg52atbqvr8ax" path="res://presentations/failing_to_go_full_time_indie/slides/WhoAmI.tscn" id="2_qrr0k"]
+[ext_resource type="PackedScene" uid="uid://rd5tf4ig43jb" path="res://presentations/failing_to_go_full_time_indie/slides/TitleEstablishingTheTimeline.tscn" id="3_bqimy"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -11,3 +14,14 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tqjp2")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
+
+[node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
+layout_mode = 1
+
+[node name="WhoAmI" parent="." unique_id=546387486 instance=ExtResource("2_qrr0k")]
+visible = false
+layout_mode = 1
+
+[node name="TitleMyExperience" parent="." unique_id=879801546 instance=ExtResource("3_bqimy")]
+visible = false
+layout_mode = 1

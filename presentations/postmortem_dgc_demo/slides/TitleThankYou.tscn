@@ -11,7 +11,7 @@
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="9_uspfb"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_x0bjq"]
 [ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="11_2qpyl"]
-[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/PanelEditorBlue.tres" id="12_l2pna"]
+[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_l2pna"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="13_e7sv6"]
 [ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="14_6u4jb"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="14_ii3qe"]

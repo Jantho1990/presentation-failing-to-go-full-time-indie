@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bo86k10ti1xa8"]
+[gd_scene format=3 uid="uid://bo86k10ti1xa8"]
 
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_32v8m"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_2os14"]
@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="9_duknc"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_bkxf3"]
 [ext_resource type="PackedScene" uid="uid://cuivsw58met0m" path="res://scenes/Title3DWorldScene/Title3DWorldScene.tscn" id="11_h8swv"]
-[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/PanelEditorBlue.tres" id="12_imy6c"]
-[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="13_lgl8i"]
-[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="14_8jah2"]
+[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_imy6c"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="13_lgl8i"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="14_8jah2"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="15_ixfd4"]
 [ext_resource type="Animation" uid="uid://26b1efpj5vui" path="res://assets/animations/TitleSlides.tres" id="16_km7no"]
 

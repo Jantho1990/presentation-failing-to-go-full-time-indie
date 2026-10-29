@@ -1,0 +1,365 @@
+[gd_scene format=3 uid="uid://dg52atbqvr8ax"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_trjcd"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_q27ev"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_cn583"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_6pcai"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_p7pvr"]
+[ext_resource type="Script" uid="uid://ctoliojwclq4e" path="res://resources/SlideToZeroStep.gd" id="6_rbuqf"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="7_y1goi"]
+[ext_resource type="Script" uid="uid://yq4ysscbjf0r" path="res://resources/SlideToLocalPositionStep.gd" id="8_758ns"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="9_wwil1"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_8v4m5"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="11_5p7tr"]
+[ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="12_mw51n"]
+[ext_resource type="Texture2D" uid="uid://cm5kh8ot7ehdl" path="res://assets/media/images/Iven Smith - IMG_9331 400x600.JPG" id="13_acrat"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="14_kvrlm"]
+[ext_resource type="Texture2D" uid="uid://cofm8sak5ykmt" path="res://assets/media/icons/projectiles_icon.png" id="15_3hhgo"]
+[ext_resource type="Texture2D" uid="uid://d1jhducj0m7b4" path="res://assets/media/icons/right.png" id="16_1h26x"]
+[ext_resource type="Texture2D" uid="uid://ccfgi7halul2c" path="res://assets/media/images/loonicy_logo_white_lettering_sm.png" id="17_cl1ok"]
+[ext_resource type="Texture2D" uid="uid://brjik1rxwns63" path="res://assets/media/images/DiceGunLogo - Shadow.png" id="18_wgona"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_280l4"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_6pcai")
+
+[sub_resource type="Resource" id="Resource_arwlc"]
+script = ExtResource("5_p7pvr")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_whc7a"]
+script = ExtResource("3_cn583")
+slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_sho4t"), SubResource("Resource_arwlc")])
+
+[sub_resource type="Resource" id="Resource_gi0mb"]
+script = ExtResource("6_rbuqf")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_uly4x"]
+script = ExtResource("6_rbuqf")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_ytwgk"]
+script = ExtResource("6_rbuqf")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_0owdj"]
+script = ExtResource("8_758ns")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
+target_position = Vector2(-800, 0)
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_l2pno"]
+script = ExtResource("8_758ns")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
+target_position = Vector2(0, 1000)
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_8tfej"]
+script = ExtResource("8_758ns")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
+target_position = Vector2(800, 0)
+animation_duration = 0.2
+
+[sub_resource type="Resource" id="Resource_hhihw"]
+script = ExtResource("7_y1goi")
+slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_0owdj"), SubResource("Resource_l2pno"), SubResource("Resource_8tfej")])
+
+[sub_resource type="Resource" id="Resource_ff5r5"]
+script = ExtResource("9_wwil1")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("10_8v4m5")
+
+[sub_resource type="Resource" id="Resource_ywcmg"]
+script = ExtResource("3_cn583")
+slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_hhihw"), SubResource("Resource_ff5r5"), SubResource("Resource_1vcjn")])
+
+[node name="WhoAmI" type="Control" unique_id=546387486]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_trjcd")
+steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_whc7a"), SubResource("Resource_gi0mb"), SubResource("Resource_uly4x"), SubResource("Resource_ytwgk"), SubResource("Resource_ywcmg")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2093379169]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1073461693]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2141663795]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=487768315 instance=ExtResource("11_5p7tr")]
+layout_mode = 2
+title = "Who Am I?"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=619107628]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=334827388]
+layout_mode = 2
+theme_override_constants/separation = 128
+
+[node name="AnimationWrapper" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1993091521]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_vertical = 4
+script = ExtResource("12_mw51n")
+
+[node name="Mugshot" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=244629243]
+layout_mode = 0
+offset_left = -800.0
+offset_right = -400.0
+offset_bottom = 600.0
+
+[node name="Me" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot" unique_id=63072322]
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("13_acrat")
+stretch_mode = 5
+
+[node name="AnimationWrapper2" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1699578170]
+custom_minimum_size = Vector2(540, 700)
+layout_mode = 2
+size_flags_horizontal = 6
+script = ExtResource("12_mw51n")
+
+[node name="BioList" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2" unique_id=1214274992]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 0
+offset_top = 1000.0
+offset_right = 410.0
+offset_bottom = 1700.0
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ContentHeading" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1890423342]
+custom_minimum_size = Vector2(410, 0)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 4
+theme_type_variation = &"RichSlideContentHeading"
+bbcode_enabled = true
+text = "[b]Josh Anthony[/b]"
+fit_content = true
+
+[node name="Dev" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=995389043]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Dev" unique_id=1183119960 instance=ExtResource("14_kvrlm")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("15_3hhgo")
+
+[node name="MarginTop" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Dev" unique_id=128985645]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Dev/MarginTop" unique_id=563730001]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Game Developer
+[ul]  Programming
+  Producing
+  Designing"
+fit_content = true
+
+[node name="Family" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=551356052]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Family" unique_id=761953464 instance=ExtResource("14_kvrlm")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("15_3hhgo")
+
+[node name="MarginTop" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Family" unique_id=529817993]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Family/MarginTop" unique_id=248005169]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Live with family in the
+Twin Cities"
+fit_content = true
+
+[node name="Experience" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1583206364]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Experience" unique_id=314619463 instance=ExtResource("14_kvrlm")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("15_3hhgo")
+
+[node name="MarginTop" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Experience" unique_id=1542557181]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Experience/MarginTop" unique_id=1275804591]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Other Experiences:
+[ul]  Web Developer
+  Engineering Manager
+  Blog Author
+[/ul]"
+fit_content = true
+
+[node name="SideProjects" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1987647835]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/SideProjects" unique_id=188869191 instance=ExtResource("14_kvrlm")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("15_3hhgo")
+
+[node name="MarginTop" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/SideProjects" unique_id=1839067278]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/SideProjects/MarginTop" unique_id=519841690]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Working on Godot games
+since 2019"
+fit_content = true
+
+[node name="GodotUser" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1536740424]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/GodotUser" unique_id=348065434 instance=ExtResource("14_kvrlm")]
+texture_filter = 1
+layout_mode = 2
+texture = ExtResource("15_3hhgo")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/GodotUser" unique_id=2104052236]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/italics_font_size = 40
+bbcode_enabled = true
+text = "Using Godot since: 2019"
+fit_content = true
+
+[node name="Loonicy" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=51780599]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RightArrow" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Loonicy" unique_id=104700362]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("16_1h26x")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/Loonicy" unique_id=2134193410]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/italics_font_size = 40
+bbcode_enabled = true
+text = "Cofounder of: Loonicy Entertainment"
+fit_content = true
+
+[node name="CurrentGame" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1981113198]
+visible = false
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="RightArrow" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/CurrentGame" unique_id=2017845387]
+custom_minimum_size = Vector2(64, 64)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 4
+texture = ExtResource("16_1h26x")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList/CurrentGame" unique_id=486505680]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/normal_font_size = 32
+theme_override_font_sizes/italics_font_size = 40
+bbcode_enabled = true
+text = "Current Game: Dice Tower"
+fit_content = true
+
+[node name="AnimationWrapper3" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1003016378]
+custom_minimum_size = Vector2(359, 700)
+layout_mode = 2
+script = ExtResource("12_mw51n")
+
+[node name="LoonicyStuff" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3" unique_id=1029594522]
+layout_mode = 0
+offset_left = 800.0
+offset_right = 1159.0
+offset_bottom = 700.0
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="LoonicyLogo" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff" unique_id=1794227434]
+layout_mode = 2
+texture = ExtResource("17_cl1ok")
+stretch_mode = 3
+
+[node name="DGCLogo" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff" unique_id=1184628298]
+layout_mode = 2
+texture = ExtResource("18_wgona")
+expand_mode = 5
+stretch_mode = 4
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=598543251 instance=ExtResource("19_280l4")]
+layout_mode = 2
+size_flags_vertical = 10

@@ -19,7 +19,7 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.72
 theme_type_variation = &"FooterRichTextLabel"
 bbcode_enabled = true
-text = "[i]Postmortem: Dice Gun Commando Demo
+text = "[i]Failing To Go Full Time Indie
 Version 1.0[/i]"
 
 [node name="RightContent" type="RichTextLabel" parent="HBox" unique_id=1137088184]
@@ -29,4 +29,4 @@ size_flags_horizontal = 3
 theme_type_variation = &"FooterRichTextLabel"
 bbcode_enabled = true
 text = "[right][i]Josh Anthony, Loonicy Entertainment
-Presented for GodotCon Boston (07/22/2026)[/i][/right]"
+Presented for MDEV 26 (11/6/2026)[/i][/right]"

@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://bhrqg36apruce"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_01t5f"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_maiun"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_eo1dr"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="4_rnvyj"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="5_wmw4f"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="6_h284p"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="7_dwo7a"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="8_mjrom"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_1lx6o"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_7mvgy"]
+[ext_resource type="Texture2D" uid="uid://ctyyeepf2twyi" path="res://assets/media/images/artemis_2_splashdown-nhq202604100021.jpg" id="11_fdq1m"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="12_q0aia"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="13_182sg"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("5_wmw4f")
+
+[sub_resource type="Resource" id="Resource_a8nac"]
+script = ExtResource("6_h284p")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_86aco"]
+script = ExtResource("4_rnvyj")
+slide_steps = Array[ExtResource("2_maiun")]([SubResource("Resource_sho4t"), SubResource("Resource_a8nac")])
+animation_duration = 0.01
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_mife1"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+
+[sub_resource type="Resource" id="Resource_b3vqa"]
+script = ExtResource("3_eo1dr")
+slide_steps = Array[ExtResource("2_maiun")]([SubResource("Resource_86aco"), SubResource("Resource_mife1")])
+
+[sub_resource type="Resource" id="Resource_6kavk"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_63vt7"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_2tbgy"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_287y7"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3")])
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_yc1wc"]
+script = ExtResource("8_mjrom")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("9_1lx6o")
+
+[sub_resource type="Resource" id="Resource_cgghm"]
+script = ExtResource("3_eo1dr")
+slide_steps = Array[ExtResource("2_maiun")]([SubResource("Resource_yc1wc"), SubResource("Resource_1vcjn")])
+
+[node name="IntroToPresentation" type="Control" unique_id=702322302]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_01t5f")
+steps = Array[ExtResource("2_maiun")]([SubResource("Resource_b3vqa"), SubResource("Resource_6kavk"), SubResource("Resource_63vt7"), SubResource("Resource_2tbgy"), SubResource("Resource_287y7"), SubResource("Resource_cgghm")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1901353694]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=152552793]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1349385643]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=874462008 instance=ExtResource("10_7mvgy")]
+layout_mode = 2
+title = "Have you ever wanted to make games full-time?"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=478008598]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=311005227]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1823277628]
+layout_mode = 2
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=214725350]
+custom_minimum_size = Vector2(1040, 0)
+custom_maximum_size = Vector2(1040, -1)
+layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 3
+texture = ExtResource("11_fdq1m")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=583764477]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"V32"
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1679540614]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=424424899 instance=ExtResource("12_q0aia")]
+layout_mode = 2
+
+[node name="TopMargin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1525349983]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0/TopMargin" unique_id=1546386086]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "I got [b]laid off in 2025[/b] and decided to [i]take a shot[/i]"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1249585877]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1056279698 instance=ExtResource("12_q0aia")]
+layout_mode = 2
+
+[node name="TopMargin2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=783461887]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2" unique_id=342991047]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Developed two games from Feb. 2025 - Aug. 2026"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=339825969]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=166342096 instance=ExtResource("12_q0aia")]
+layout_mode = 2
+
+[node name="TopMargin2" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=467324555]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_type_variation = &"RichContentTopMargin"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2/TopMargin2" unique_id=24619862]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Sep. 2026 I went back to a regular job"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=163394412]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=2113021701 instance=ExtResource("12_q0aia")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=826107099]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3/MarginContainer" unique_id=128789329]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "This is a story of my journey"
+fit_content = true
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1900585123 instance=ExtResource("13_182sg")]
+layout_mode = 2
+size_flags_vertical = 8

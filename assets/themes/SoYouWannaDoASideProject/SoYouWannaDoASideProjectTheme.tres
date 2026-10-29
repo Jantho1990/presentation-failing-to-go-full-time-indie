@@ -1,20 +1,24 @@
-[gd_resource type="Theme" load_steps=23 format=3 uid="uid://chbmko3nyf2im"]
+[gd_resource type="Theme" format=3 uid="uid://chbmko3nyf2im"]
 
-[ext_resource type="StyleBox" uid="uid://bx5ulv703y1xh" path="res://assets/themes/StopWaitingForGodot/resources/AsideEditorBlue.tres" id="1_i8qjl"]
 [ext_resource type="StyleBox" uid="uid://cvrh7rayf8v21" path="res://assets/themes/SoYouWannaDoASideProject/resources/panels/AsidePanel.tres" id="1_pq26i"]
 [ext_resource type="FontFile" uid="uid://fbi0ipgd8bha" path="res://assets/fonts/REM/static/REM-Italic.ttf" id="2_0wpnx"]
-[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepBaseTypeGreen.tres" id="2_7wa6p"]
+[ext_resource type="StyleBox" uid="uid://bx5ulv703y1xh" path="res://assets/themes/StopWaitingForGodot/resources/PanelAside.tres" id="2_5godb"]
 [ext_resource type="StyleBox" uid="uid://blaoon77rhqpy" path="res://assets/themes/StopWaitingForGodot/resources/KeywordColorRed.tres" id="3_fw1wi"]
-[ext_resource type="StyleBox" uid="uid://c11s1a5xkqd2g" path="res://assets/themes/StopWaitingForGodot/resources/EditorBackgroundColor.tres" id="4_2v34b"]
-[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/PanelEditorBlue.tres" id="5_nou70"]
-[ext_resource type="FontFile" uid="uid://eb0kbwad3330" path="res://assets/fonts/Expletus_Sans/static/ExpletusSans-Bold.ttf" id="7_453wt"]
+[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepPrimary.tres" id="4_ibhda"]
+[ext_resource type="StyleBox" uid="uid://c11s1a5xkqd2g" path="res://assets/themes/StopWaitingForGodot/resources/SlideBackgroundColor.tres" id="6_ovfmq"]
+[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="7_c7hjb"]
 [ext_resource type="FontFile" uid="uid://dplw3q54uip0o" path="res://assets/fonts/REM/static/REM-Regular.ttf" id="7_vuux4"]
-[ext_resource type="FontFile" uid="uid://cwn4b1lbd10pl" path="res://assets/fonts/Expletus_Sans/static/ExpletusSans-BoldItalic.ttf" id="8_11p67"]
-[ext_resource type="FontFile" uid="uid://c1hbhvqbprxvi" path="res://assets/fonts/REM/static/REM-Bold.ttf" id="8_453wt"]
-[ext_resource type="FontFile" uid="uid://cuxyfvmlow8w6" path="res://assets/fonts/REM/static/REM-SemiBold.ttf" id="8_gjo0m"]
-[ext_resource type="FontFile" uid="uid://toegdyh38ek8" path="res://assets/fonts/REM/static/REM-BoldItalic.ttf" id="8_u3tu1"]
+[ext_resource type="FontFile" uid="uid://r80u4cabx8k6" path="res://assets/fonts/Tomorrow/Tomorrow-Bold.ttf" id="8_c2tik"]
+[ext_resource type="FontFile" uid="uid://b6spix8bgkiyj" path="res://assets/fonts/Sansation/Sansation-Bold.ttf" id="8_ibhda"]
+[ext_resource type="FontFile" uid="uid://durmmld5bo8g8" path="res://assets/fonts/Tomorrow/Tomorrow-BoldItalic.ttf" id="9_3x1gj"]
+[ext_resource type="FontFile" uid="uid://kbgphsf5h6kl" path="res://assets/fonts/Sansation/Sansation-BoldItalic.ttf" id="9_ovfmq"]
+[ext_resource type="FontFile" uid="uid://ce3jqe2djlesq" path="res://assets/fonts/Tomorrow/Tomorrow-Italic.ttf" id="10_81c8u"]
+[ext_resource type="FontFile" uid="uid://ccw2n5sosepe8" path="res://assets/fonts/Sansation/Sansation-Italic.ttf" id="10_c7hjb"]
+[ext_resource type="FontFile" uid="uid://c7h4vh5uidajv" path="res://assets/fonts/Sansation/Sansation-Regular.ttf" id="11_c2tik"]
+[ext_resource type="FontFile" uid="uid://dulsh2atyr6t1" path="res://assets/fonts/Tomorrow/Tomorrow-ExtraBold.ttf" id="12_o4a50"]
 [ext_resource type="StyleBox" uid="uid://8cceia1i2vn0" path="res://assets/themes/SoYouWannaDoASideProject/resources/table/TableCellBottomLeft.tres" id="13_hrf15"]
 [ext_resource type="StyleBox" uid="uid://cv7ltc71lc3kc" path="res://assets/themes/SoYouWannaDoASideProject/resources/table/TableCellBottomMiddle.tres" id="14_k01gw"]
+[ext_resource type="FontFile" uid="uid://dkylrx2dxcwtp" path="res://assets/fonts/Quantico/Quantico-Bold.ttf" id="15_3x1gj"]
 [ext_resource type="StyleBox" uid="uid://b1t6y5ijhwlou" path="res://assets/themes/SoYouWannaDoASideProject/resources/table/TableCellBottomRight.tres" id="15_jt6tu"]
 [ext_resource type="StyleBox" uid="uid://gqyt5he7q1kc" path="res://assets/themes/SoYouWannaDoASideProject/resources/table/TableCellMiddle.tres" id="16_ieth4"]
 [ext_resource type="StyleBox" uid="uid://dh6iiaavdj7yj" path="res://assets/themes/SoYouWannaDoASideProject/resources/table/TableCellMiddleLeft.tres" id="17_yky7c"]
@@ -29,18 +33,18 @@ default_font_size = 24
 AsidePanelContainer/base_type = &"PanelContainer"
 AsidePanelContainer/styles/panel = ExtResource("1_pq26i")
 AsidePanelEditorBlue/base_type = &"PanelContainer"
-AsidePanelEditorBlue/styles/panel = ExtResource("1_i8qjl")
+AsidePanelEditorBlue/styles/panel = ExtResource("2_5godb")
 FooterRichTextLabel/base_type = &"RichTextLabel"
 FooterRichTextLabel/font_sizes/italics_font_size = 16
-FooterRichTextLabel/fonts/italics_font = ExtResource("2_0wpnx")
+FooterRichTextLabel/fonts/italics_font = ExtResource("10_81c8u")
 HSepGreen/base_type = &"HSeparator"
 HSepGreen/constants/separation = 0
-HSepGreen/styles/separator = ExtResource("2_7wa6p")
+HSepGreen/styles/separator = ExtResource("4_ibhda")
 HSepRed/base_type = &"HSeparator"
 HSepRed/styles/separator = ExtResource("3_fw1wi")
-PanelContainer/styles/panel = ExtResource("4_2v34b")
+PanelContainer/styles/panel = ExtResource("6_ovfmq")
 PanelEditorBlue/base_type = &"PanelContainer"
-PanelEditorBlue/styles/panel = ExtResource("5_nou70")
+PanelEditorBlue/styles/panel = ExtResource("7_c7hjb")
 Rich16/base_type = &"RichTextLabel"
 Rich16/font_sizes/bold_font_size = 16
 Rich16/font_sizes/bold_italics_font_size = 16
@@ -65,15 +69,15 @@ RichContent/font_sizes/bold_italics_font_size = 32
 RichContent/font_sizes/italics_font_size = 32
 RichContent/font_sizes/mono_font_size = 32
 RichContent/font_sizes/normal_font_size = 32
-RichContent/fonts/bold_font = ExtResource("8_453wt")
-RichContent/fonts/bold_italics_font = ExtResource("8_u3tu1")
-RichContent/fonts/italics_font = ExtResource("2_0wpnx")
-RichContent/fonts/normal_font = ExtResource("7_vuux4")
+RichContent/fonts/bold_font = ExtResource("8_ibhda")
+RichContent/fonts/bold_italics_font = ExtResource("9_ovfmq")
+RichContent/fonts/italics_font = ExtResource("10_c7hjb")
+RichContent/fonts/normal_font = ExtResource("11_c2tik")
 RichContentTopMargin/base_type = &"MarginContainer"
 RichContentTopMargin/constants/margin_top = 8
 RichSlideContentHeading/base_type = &"RichTextLabel"
 RichSlideContentHeading/font_sizes/bold_font_size = 36
-RichSlideContentHeading/fonts/bold_font = ExtResource("8_gjo0m")
+RichSlideContentHeading/fonts/bold_font = ExtResource("12_o4a50")
 RichSlideTitle/base_type = &"RichTextLabel"
 RichSlideTitle/colors/font_shadow_color = Color(0.00784314, 0.00784314, 0, 1)
 RichSlideTitle/constants/shadow_offset_x = 4
@@ -81,8 +85,8 @@ RichSlideTitle/constants/shadow_offset_y = 4
 RichSlideTitle/constants/shadow_outline_size = 8
 RichSlideTitle/font_sizes/bold_font_size = 172
 RichSlideTitle/font_sizes/bold_italics_font_size = 172
-RichSlideTitle/fonts/bold_font = ExtResource("7_453wt")
-RichSlideTitle/fonts/bold_italics_font = ExtResource("8_11p67")
+RichSlideTitle/fonts/bold_font = ExtResource("8_c2tik")
+RichSlideTitle/fonts/bold_italics_font = ExtResource("9_3x1gj")
 RichTableContent/base_type = &"RichTextLabel"
 RichTableContent/font_sizes/italics_font_size = 24
 RichTableContent/font_sizes/normal_font_size = 24
@@ -91,7 +95,7 @@ RichTableContent/fonts/normal_font = ExtResource("7_vuux4")
 SlideHeaderRichTextLabel/base_type = &"RichTextLabel"
 SlideHeaderRichTextLabel/colors/default_color = Color(0.992157, 0.992157, 1, 1)
 SlideHeaderRichTextLabel/font_sizes/bold_font_size = 48
-SlideHeaderRichTextLabel/fonts/bold_font = ExtResource("8_453wt")
+SlideHeaderRichTextLabel/fonts/bold_font = ExtResource("15_3x1gj")
 TableCellBottomLeft/base_type = &"PanelContainer"
 TableCellBottomLeft/styles/panel = ExtResource("13_hrf15")
 TableCellBottomMiddle/base_type = &"PanelContainer"

@@ -1,10 +1,10 @@
-[gd_resource type="Theme" load_steps=6 format=3 uid="uid://bcf1a0cdx3w42"]
+[gd_resource type="Theme" format=3 uid="uid://bcf1a0cdx3w42"]
 
-[ext_resource type="StyleBox" uid="uid://bx5ulv703y1xh" path="res://assets/themes/StopWaitingForGodot/resources/AsideEditorBlue.tres" id="1_bjvgv"]
-[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepBaseTypeGreen.tres" id="1_f7v3s"]
+[ext_resource type="StyleBox" uid="uid://bx5ulv703y1xh" path="res://assets/themes/StopWaitingForGodot/resources/PanelAside.tres" id="1_bjvgv"]
+[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepPrimary.tres" id="1_f7v3s"]
 [ext_resource type="StyleBox" uid="uid://blaoon77rhqpy" path="res://assets/themes/StopWaitingForGodot/resources/KeywordColorRed.tres" id="2_tl071"]
-[ext_resource type="StyleBox" uid="uid://c11s1a5xkqd2g" path="res://assets/themes/StopWaitingForGodot/resources/EditorBackgroundColor.tres" id="2_wpb6d"]
-[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/PanelEditorBlue.tres" id="4_pc4i2"]
+[ext_resource type="StyleBox" uid="uid://c11s1a5xkqd2g" path="res://assets/themes/StopWaitingForGodot/resources/SlideBackgroundColor.tres" id="2_wpb6d"]
+[ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="4_pc4i2"]
 
 [resource]
 AsidePanelEditorBlue/base_type = &"PanelContainer"

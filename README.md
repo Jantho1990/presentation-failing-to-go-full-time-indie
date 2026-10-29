@@ -19,6 +19,22 @@ someday. Just not promising to make it a habit. :P
 # Credits
 
 ## Images
+Moon Spaceship Render: https://unsplash.com/photos/an-artists-rendering-of-a-satellite-in-front-of-the-moon-sWUjC79Kbp8
+Photo by Photo by <a href="https://unsplash.com/@hubblespacetelescope?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">NASA Hubble Space Telescope</a> on <a href="https://unsplash.com/photos/an-artists-rendering-of-a-satellite-in-front-of-the-moon-sWUjC79Kbp8?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a>
+
+Artemis Liftoff: https://images-assets.nasa.gov/image/NHQ202604010227/NHQ202604010227~large.jpg
+Photo by NASA: https://www.nasa.gov/image-detail/amf-nhq202604010227/
+
+Artemis Moon Flyby: https://images-assets.nasa.gov/image/art002e009567/art002e009567~large.jpg
+Photo by NASA: https://www.nasa.gov/image-detail/amf-art002e009567/
+
+Artemis Splashdown: https://www.nasa.gov/wp-content/uploads/2026/04/nhq202604100021.jpg
+Photo by NASA: https://www.nasa.gov/image-detail/artemis-ii-recovery-68/
+
+
+--- OLD (remove ones that aren't used)
+
+## Images
 Mountain: https://unsplash.com/photos/ice-capped-mountain-at-daytime-xfngap_DToE
 Photo by <a href="https://unsplash.com/@mvds?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Mads Schmidt Rasmussen</a> on <a href="https://unsplash.com/photos/ice-capped-mountain-at-daytime-xfngap_DToE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
 

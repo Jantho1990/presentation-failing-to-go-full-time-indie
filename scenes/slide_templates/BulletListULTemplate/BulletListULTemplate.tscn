@@ -1,10 +1,10 @@
-[gd_scene load_steps=10 format=3 uid="uid://7beya0t3ab3o"]
+[gd_scene format=3 uid="uid://7beya0t3ab3o"]
 
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_y1wng"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="2_en7tx"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_yrpxr"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="3_t10jh"]
-[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepBaseTypeGreen.tres" id="4_0guey"]
+[ext_resource type="StyleBox" uid="uid://cdhneblxxhen5" path="res://assets/themes/StopWaitingForGodot/resources/HSepPrimary.tres" id="4_0guey"]
 [ext_resource type="Texture2D" uid="uid://d1jhducj0m7b4" path="res://assets/media/icons/right.png" id="5_8w87y"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="6_asa87"]
 

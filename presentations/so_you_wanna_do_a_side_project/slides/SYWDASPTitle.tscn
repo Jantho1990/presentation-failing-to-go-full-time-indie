@@ -1,15 +1,15 @@
-[gd_scene load_steps=18 format=3 uid="uid://cj1hewcgrp8nj"]
+[gd_scene format=3 uid="uid://cj1hewcgrp8nj"]
 
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_bb6bq"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_a2cgg"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="3_uitoj"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="4_cxvga"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="5_hlabj"]
-[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="6_53g7k"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="6_53g7k"]
 [ext_resource type="Texture2D" uid="uid://bvbvtmqme10ck" path="res://assets/media/images/title-image.png" id="6_740wd"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="6_dhgcs"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_xpaji"]
-[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="7_7ldby"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="7_7ldby"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="8_ci1xb"]
 [ext_resource type="FontFile" uid="uid://cwn4b1lbd10pl" path="res://assets/fonts/Expletus_Sans/static/ExpletusSans-BoldItalic.ttf" id="9_dhgcs"]
 

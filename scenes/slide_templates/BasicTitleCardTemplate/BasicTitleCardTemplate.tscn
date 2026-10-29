@@ -1,11 +1,11 @@
-[gd_scene load_steps=10 format=3 uid="uid://cksisoismo7ir"]
+[gd_scene format=3 uid="uid://cksisoismo7ir"]
 
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_q4ki8"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="2_7mhdd"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_14jx6"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="3_7bmbv"]
-[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="4_abr7k"]
-[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="4_acrdn"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="4_abr7k"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="4_acrdn"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="5_onfbo"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]

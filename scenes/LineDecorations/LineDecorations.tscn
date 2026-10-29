@@ -1,8 +1,8 @@
 [gd_scene format=3 uid="uid://diak4ipf17jt0"]
 
 [ext_resource type="Script" uid="uid://bjsj7guyic25b" path="res://scenes/LineDecorations/LineDecorations.gd" id="1_dpkgp"]
-[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="1_k7rxf"]
-[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="2_dpkgp"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="1_k7rxf"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="2_dpkgp"]
 
 [sub_resource type="Animation" id="Animation_dpkgp"]
 length = 0.001

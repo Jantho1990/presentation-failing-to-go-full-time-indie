@@ -8,8 +8,8 @@
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="6_h41ka"]
 [ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="7_gqowa"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="8_o7v2a"]
-[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepKeywordColorRed.tres" id="9_2yq0d"]
-[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepCCCGray.tres" id="10_c4uhy"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="9_2yq0d"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="10_c4uhy"]
 [ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="11_gqowa"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="12_ovcjt"]
 
