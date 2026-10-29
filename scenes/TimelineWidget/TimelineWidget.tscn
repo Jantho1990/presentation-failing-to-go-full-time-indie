@@ -1,0 +1,220 @@
+[gd_scene format=3 uid="uid://dvuocd72fqsik"]
+
+[ext_resource type="FontFile" uid="uid://r80u4cabx8k6" path="res://assets/fonts/Tomorrow/Tomorrow-Bold.ttf" id="1_q4nth"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6x72"]
+bg_color = Color(0.5019608, 0.91764706, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5019608, 0.91764706, 1, 1)
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ly0ch"]
+bg_color = Color(0.5019608, 0.91764706, 1, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.5019608, 0.91764706, 1, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4nth"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lx2r"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juxnl"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[node name="TimelineWidget" type="Control" unique_id=103593109]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MainTimeline" type="Control" parent="." unique_id=253787129]
+anchors_preset = 0
+offset_left = 104.0
+offset_top = 144.0
+offset_right = 1584.0
+offset_bottom = 184.0
+
+[node name="HSeparator" type="HSeparator" parent="MainTimeline" unique_id=1656847694]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_b6x72")
+
+[node name="VSeparator" type="VSeparator" parent="MainTimeline" unique_id=136197338]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.4
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ly0ch")
+
+[node name="Label" type="Label" parent="MainTimeline/VSeparator" unique_id=1737857773]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("1_q4nth")
+text = "February
+2025"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="MainTimeline" unique_id=1582084902]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.4
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 40.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ly0ch")
+
+[node name="Label" type="Label" parent="MainTimeline/VSeparator2" unique_id=43314868]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("1_q4nth")
+text = "August
+2026"
+horizontal_alignment = 1
+
+[node name="Segment" type="Control" parent="." unique_id=968972516]
+anchors_preset = 0
+offset_left = 1048.0
+offset_top = 144.0
+offset_right = 1424.0
+offset_bottom = 184.0
+
+[node name="HSeparator" type="HSeparator" parent="Segment" unique_id=968442652]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_q4nth")
+
+[node name="VSeparator" type="VSeparator" parent="Segment" unique_id=1805792227]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_bottom = 0.4
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_5lx2r")
+
+[node name="Label" type="Label" parent="Segment/VSeparator" unique_id=941720835]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("1_q4nth")
+theme_override_font_sizes/font_size = 36
+text = "March
+2026"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="Segment" unique_id=1678689366]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_juxnl")
+
+[node name="Label" type="Label" parent="Segment/VSeparator2" unique_id=684606872]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("1_q4nth")
+theme_override_font_sizes/font_size = 36
+text = "July
+2026"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="Segment" unique_id=437511704]
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("1_q4nth")
+theme_override_font_sizes/font_size = 36
+text = "Dice Gun Commando"
+horizontal_alignment = 1

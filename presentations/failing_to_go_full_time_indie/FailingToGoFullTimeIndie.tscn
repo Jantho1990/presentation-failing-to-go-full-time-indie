@@ -4,6 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://bhrqg36apruce" path="res://presentations/failing_to_go_full_time_indie/slides/IntroToPresentation.tscn" id="2_bqimy"]
 [ext_resource type="PackedScene" uid="uid://dg52atbqvr8ax" path="res://presentations/failing_to_go_full_time_indie/slides/WhoAmI.tscn" id="2_qrr0k"]
 [ext_resource type="PackedScene" uid="uid://rd5tf4ig43jb" path="res://presentations/failing_to_go_full_time_indie/slides/TitleEstablishingTheTimeline.tscn" id="3_bqimy"]
+[ext_resource type="PackedScene" uid="uid://dqouqf4slpr34" path="res://presentations/failing_to_go_full_time_indie/slides/TestTimelineSlide.tscn" id="5_k1d6u"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -23,5 +24,9 @@ visible = false
 layout_mode = 1
 
 [node name="TitleMyExperience" parent="." unique_id=879801546 instance=ExtResource("3_bqimy")]
+visible = false
+layout_mode = 1
+
+[node name="BasicSlideTemplate" parent="." unique_id=1609868614 instance=ExtResource("5_k1d6u")]
 visible = false
 layout_mode = 1
