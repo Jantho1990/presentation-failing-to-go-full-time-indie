@@ -1,0 +1,291 @@
+[gd_scene format=3 uid="uid://dcdd1wr1prder"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_mhbc2"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_b3atg"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_3h54h"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_d3crc"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_e2yr2"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_1qtsn"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="7_5wmqd"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_vxfqx"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="9_3jkkf"]
+[ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="10_rogt0"]
+[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="11_j4v2m"]
+[ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="12_qis4t"]
+[ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="13_kwwi4"]
+[ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="14_d1667"]
+[ext_resource type="Texture2D" uid="uid://dwn8f147kbao1" path="res://assets/media/images/pizza-asset.jpg" id="15_c5coo"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="16_lbqyu"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_d3crc")
+
+[sub_resource type="Resource" id="Resource_ltgrq"]
+script = ExtResource("5_e2yr2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_e1lh8"]
+script = ExtResource("3_3h54h")
+slide_steps = Array[ExtResource("2_b3atg")]([SubResource("Resource_sho4t"), SubResource("Resource_ltgrq")])
+
+[sub_resource type="Resource" id="Resource_lpmeh"]
+script = ExtResource("6_1qtsn")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("7_5wmqd")
+
+[sub_resource type="Resource" id="Resource_h1qoh"]
+script = ExtResource("3_3h54h")
+slide_steps = Array[ExtResource("2_b3atg")]([SubResource("Resource_lpmeh"), SubResource("Resource_1vcjn")])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkvai"]
+shader = ExtResource("14_d1667")
+shader_parameter/gray_amount = 0.0
+
+[node name="LessonJustInTimeTutorialDevelopment" type="Control" unique_id=434600336]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_mhbc2")
+steps = Array[ExtResource("2_b3atg")]([SubResource("Resource_e1lh8"), SubResource("Resource_h1qoh")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=403169543]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1229255083]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1647077400]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=856785780 instance=ExtResource("8_vxfqx")]
+layout_mode = 2
+title = "Lesson 6: Just-in-time Tutorial Development"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1741053708]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=1184781901]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=546732283]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ProjectIdea" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=510392835]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea" unique_id=834631164 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea" unique_id=209912999]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Dice Tower had tutorial hell, so I vowed to not make tutorials for Dice Gun Commando"
+fit_content = true
+
+[node name="NotEnoughTime" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1485370256]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime" unique_id=1389347456 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime" unique_id=1205710233]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Started out with teaching by playing, designed game to fit"
+fit_content = true
+
+[node name="NotEnoughTime2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1202700951]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2" unique_id=123830648 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2" unique_id=254513766]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2/VBoxContainer" unique_id=940305776]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "As I got feedback, added additional features"
+fit_content = true
+
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2/VBoxContainer" unique_id=433135443]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Error Messaging for Mods[/ul]"
+fit_content = true
+
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2/VBoxContainer" unique_id=1318022307]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Quantity Stacks[/ul]"
+fit_content = true
+
+[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2/VBoxContainer" unique_id=380482871]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]End of Wave Computer[/ul]"
+fit_content = true
+
+[node name="Bullet3" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2/VBoxContainer" unique_id=1530210413]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Intuitive Controller Navigation[/ul]"
+fit_content = true
+
+[node name="Curious" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1169473022]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious" unique_id=1160581891 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious" unique_id=488327228]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "After all this, I learned what needed explicit tutorialization"
+fit_content = true
+
+[node name="Curious2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1600509808]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious2" unique_id=676133719 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious2" unique_id=1525101511]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "At this point, you either learn the game or you weren't my target audience"
+fit_content = true
+
+[node name="Curious3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=577009601]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious3" unique_id=624112790 instance=ExtResource("9_3jkkf")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious3" unique_id=770386317]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Most importantly, I didn't reiterate on the tutorial experience"
+fit_content = true
+
+[node name="ImageContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1706596185]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=515812705]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("10_rogt0")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=174702848]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("11_j4v2m")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1210544021]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("12_qis4t")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=340226756]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("13_kwwi4")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1701050438]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_xkvai")
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("15_c5coo")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1304675490 instance=ExtResource("16_lbqyu")]
+layout_mode = 2
+size_flags_vertical = 8
