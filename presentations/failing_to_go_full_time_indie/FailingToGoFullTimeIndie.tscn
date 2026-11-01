@@ -21,6 +21,7 @@
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://0303otv830lc" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooFocusedOnFinishing.tscn" id="11_547g6"]
 [ext_resource type="PackedScene" uid="uid://cyqcpbmehtdie" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2Pitching.tscn" id="11_jga75"]
+[ext_resource type="PackedScene" uid="uid://0rtme4iyqf0s" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2MoreConventions.tscn" id="12_e28t5"]
 [ext_resource type="PackedScene" uid="uid://jad8n8euopf5" path="res://presentations/failing_to_go_full_time_indie/slides/IssueFlawedAppealEvaluation.tscn" id="12_s0xly"]
 [ext_resource type="PackedScene" uid="uid://cafegeiqdhu75" path="res://presentations/failing_to_go_full_time_indie/slides/IssueChasingFunding.tscn" id="13_4l4ej"]
 [ext_resource type="PackedScene" uid="uid://7iennjfguptv" path="res://presentations/failing_to_go_full_time_indie/slides/IssueConsDontMakeYouViral.tscn" id="14_4oyh2"]
@@ -82,6 +83,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT2Pitching" parent="." unique_id=1498852661 instance=ExtResource("11_jga75")]
+layout_mode = 1
+
+[node name="TimelineDT2MoreConventions" parent="." unique_id=1392679934 instance=ExtResource("12_e28t5")]
 layout_mode = 1
 
 [node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
