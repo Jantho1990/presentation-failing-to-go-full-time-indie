@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://bnx8568e1w2aw" path="res://presentations/failing_to_go_full_time_indie/slides/LessonMoreIntentionalTargetAudience.tscn" id="26_13gyv"]
 [ext_resource type="PackedScene" uid="uid://dcdd1wr1prder" path="res://presentations/failing_to_go_full_time_indie/slides/LessonJustInTimeTutorialDevelopment.tscn" id="27_l6ojv"]
 [ext_resource type="PackedScene" uid="uid://dnho5qqssjbxe" path="res://presentations/failing_to_go_full_time_indie/slides/LessonDontCrowdLaunchWeek.tscn" id="28_tj03b"]
+[ext_resource type="PackedScene" uid="uid://cdtpbhx8c6b3s" path="res://presentations/failing_to_go_full_time_indie/slides/LessonIntentionalContracting.tscn" id="28_xf0ca"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -121,6 +122,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="LessonJustInTimeTutorialDevelopment" parent="." unique_id=757529212 instance=ExtResource("27_l6ojv")]
+layout_mode = 1
+
+[node name="LessonIntentionalContracting" parent="." unique_id=854085738 instance=ExtResource("28_xf0ca")]
 layout_mode = 1
 
 [node name="LessonDontCrowdLaunchWeek" parent="." unique_id=584666654 instance=ExtResource("28_tj03b")]
