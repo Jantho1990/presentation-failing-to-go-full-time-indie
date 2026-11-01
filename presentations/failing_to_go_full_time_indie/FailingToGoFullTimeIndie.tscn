@@ -29,6 +29,7 @@
 [ext_resource type="PackedScene" uid="uid://ig1qmq2v5m3h" path="res://presentations/failing_to_go_full_time_indie/slides/LessonFinancialStabilityIsImportant.tscn" id="25_o28ad"]
 [ext_resource type="PackedScene" uid="uid://bnx8568e1w2aw" path="res://presentations/failing_to_go_full_time_indie/slides/LessonMoreIntentionalTargetAudience.tscn" id="26_13gyv"]
 [ext_resource type="PackedScene" uid="uid://dcdd1wr1prder" path="res://presentations/failing_to_go_full_time_indie/slides/LessonJustInTimeTutorialDevelopment.tscn" id="27_l6ojv"]
+[ext_resource type="PackedScene" uid="uid://dnho5qqssjbxe" path="res://presentations/failing_to_go_full_time_indie/slides/LessonDontCrowdLaunchWeek.tscn" id="28_tj03b"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -120,6 +121,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="LessonJustInTimeTutorialDevelopment" parent="." unique_id=757529212 instance=ExtResource("27_l6ojv")]
+layout_mode = 1
+
+[node name="LessonDontCrowdLaunchWeek" parent="." unique_id=584666654 instance=ExtResource("28_tj03b")]
 layout_mode = 1
 
 [node name="TitleConclusion" parent="." unique_id=682975892 instance=ExtResource("9_xp4j2")]

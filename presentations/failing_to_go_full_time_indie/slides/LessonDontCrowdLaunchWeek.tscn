@@ -1,0 +1,173 @@
+[gd_scene format=3 uid="uid://dnho5qqssjbxe"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_0atl7"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_5h8r5"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_ryxck"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_ngon8"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_b77r0"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_cyvjm"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="7_fy1ns"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_6ti3f"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="9_535nf"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="10_42nkl"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_ngon8")
+
+[sub_resource type="Resource" id="Resource_qpkur"]
+script = ExtResource("5_b77r0")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_hx63c"]
+script = ExtResource("3_ryxck")
+slide_steps = Array[ExtResource("2_5h8r5")]([SubResource("Resource_sho4t"), SubResource("Resource_qpkur")])
+
+[sub_resource type="Resource" id="Resource_c5igg"]
+script = ExtResource("6_cyvjm")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("7_fy1ns")
+
+[sub_resource type="Resource" id="Resource_4r8tj"]
+script = ExtResource("3_ryxck")
+slide_steps = Array[ExtResource("2_5h8r5")]([SubResource("Resource_c5igg"), SubResource("Resource_1vcjn")])
+
+[node name="LessonDontCrowdLaunchWeek" type="Control" unique_id=1005773426]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0atl7")
+steps = Array[ExtResource("2_5h8r5")]([SubResource("Resource_hx63c"), SubResource("Resource_4r8tj")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1086058540]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1022645579]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=802077209]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=225052917 instance=ExtResource("8_6ti3f")]
+layout_mode = 2
+title = "Lesson: Don't Crowd Launch Week"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1322983340]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBoxContainer" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=2037735276]
+layout_mode = 2
+
+[node name="Version4" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer" unique_id=767873349]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=292317797]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0" unique_id=1950994291 instance=ExtResource("9_535nf")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0" unique_id=1916344487]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0/Margin" unique_id=1842660576]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Launch should be about promoting your game"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=1587754538]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point1" unique_id=1658627998 instance=ExtResource("9_535nf")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point1" unique_id=492234738]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point1/Margin" unique_id=1545082497]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "If you're still developing at the last minute, you can't put effort into marketing"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=1246113641]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2" unique_id=123830648 instance=ExtResource("9_535nf")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2" unique_id=1644070303]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2/Margin" unique_id=163711706]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Commit to a gold release date in advance of the launch week"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=593641543]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point3" unique_id=1093335778 instance=ExtResource("9_535nf")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point3" unique_id=525313037]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point3/Margin" unique_id=1336964562]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Comes back to make time for both development and promotion"
+fit_content = true
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=968588930 instance=ExtResource("10_42nkl")]
+layout_mode = 2
+size_flags_vertical = 8
