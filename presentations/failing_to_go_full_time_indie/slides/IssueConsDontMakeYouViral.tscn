@@ -5,8 +5,6 @@
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_yusvr"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_oi4io"]
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_2kskn"]
-[ext_resource type="Script" uid="uid://dineujlp1l13t" path="res://resources/WAYIntroStep.gd" id="6_nkagj"]
-[ext_resource type="Script" uid="uid://yts7ifi5785a" path="res://resources/WAYAdvanceStep.gd" id="7_oxhom"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="8_d6lkf"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_h6oep"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_tdujb"]
@@ -24,34 +22,15 @@ script = ExtResource("4_oi4io")
 
 [sub_resource type="Resource" id="Resource_ltgrq"]
 script = ExtResource("5_2kskn")
-targetNodes = Array[NodePath]([NodePath("")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
 
 [sub_resource type="Resource" id="Resource_e1lh8"]
 script = ExtResource("3_yusvr")
 slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_sho4t"), SubResource("Resource_ltgrq")])
 
-[sub_resource type="Resource" id="Resource_yyh3t"]
-script = ExtResource("6_nkagj")
-textBulletPath = NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea")
-imageNodePath = NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Apocalypse")
-
-[sub_resource type="Resource" id="Resource_oep1g"]
-script = ExtResource("7_oxhom")
-fadeInPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Despair")])
-fadeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Apocalypse")])
-stabilizeInPaths = Array[NodePath]([NodePath("")])
-stabilizeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea/Content")])
-
-[sub_resource type="Resource" id="Resource_xky36"]
-script = ExtResource("7_oxhom")
-fadeInPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Explore")])
-fadeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Despair")])
-stabilizeInPaths = Array[NodePath]([NodePath("")])
-stabilizeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime/Content")])
-
 [sub_resource type="Resource" id="Resource_lpmeh"]
 script = ExtResource("8_d6lkf")
-targetNodes = Array[NodePath]([NodePath(""), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("9_h6oep")
@@ -72,7 +51,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_q0kxd")
-steps = Array[ExtResource("2_t7455")]([SubResource("Resource_e1lh8"), SubResource("Resource_yyh3t"), SubResource("Resource_oep1g"), SubResource("Resource_xky36"), SubResource("Resource_h1qoh")])
+steps = Array[ExtResource("2_t7455")]([SubResource("Resource_e1lh8"), SubResource("Resource_h1qoh")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=403169543]
 layout_mode = 1
