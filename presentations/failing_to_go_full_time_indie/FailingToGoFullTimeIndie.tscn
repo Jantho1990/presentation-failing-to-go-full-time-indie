@@ -20,6 +20,7 @@
 [ext_resource type="PackedScene" uid="uid://cafegeiqdhu75" path="res://presentations/failing_to_go_full_time_indie/slides/IssueChasingFunding.tscn" id="13_4l4ej"]
 [ext_resource type="PackedScene" uid="uid://7iennjfguptv" path="res://presentations/failing_to_go_full_time_indie/slides/IssueConsDontMakeYouViral.tscn" id="14_4oyh2"]
 [ext_resource type="PackedScene" uid="uid://d22y10amc2v43" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchSpend.tscn" id="15_em84d"]
+[ext_resource type="PackedScene" uid="uid://c28vsom1bfvtg" path="res://presentations/failing_to_go_full_time_indie/slides/IssueNotConsideringMarketing.tscn" id="16_2pyv2"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -74,6 +75,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="IssueTooMuchSpend" parent="." unique_id=1177800692 instance=ExtResource("15_em84d")]
+layout_mode = 1
+
+[node name="IssueNotConsideringMarketing" parent="." unique_id=1925909922 instance=ExtResource("16_2pyv2")]
 layout_mode = 1
 
 [node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
