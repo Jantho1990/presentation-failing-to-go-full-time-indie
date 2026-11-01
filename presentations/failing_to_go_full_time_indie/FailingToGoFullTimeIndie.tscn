@@ -17,6 +17,7 @@
 [ext_resource type="PackedScene" uid="uid://c2je24uu83vck" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT1SGDQPlus2DConMoA.tscn" id="9_l1kij"]
 [ext_resource type="PackedScene" uid="uid://chxerovtcoldu" path="res://presentations/failing_to_go_full_time_indie/slides/TitleConclusion.tscn" id="9_xp4j2"]
 [ext_resource type="PackedScene" uid="uid://yhpxovphj31w" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchTutorial.tscn" id="10_4p5un"]
+[ext_resource type="PackedScene" uid="uid://b84jsui2cu2h6" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2Refactor.tscn" id="10_cs8y7"]
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://0303otv830lc" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooFocusedOnFinishing.tscn" id="11_547g6"]
 [ext_resource type="PackedScene" uid="uid://jad8n8euopf5" path="res://presentations/failing_to_go_full_time_indie/slides/IssueFlawedAppealEvaluation.tscn" id="12_s0xly"]
@@ -74,6 +75,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT1SGDQPlus2DConMoA" parent="." unique_id=1599754772 instance=ExtResource("9_l1kij")]
+layout_mode = 1
+
+[node name="TimelineDT2Refactor" parent="." unique_id=1002344523 instance=ExtResource("10_cs8y7")]
 layout_mode = 1
 
 [node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
