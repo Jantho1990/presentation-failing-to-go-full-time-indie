@@ -6,7 +6,9 @@
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="4_png6e"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="5_12yuq"]
 [ext_resource type="FontFile" uid="uid://r80u4cabx8k6" path="res://assets/fonts/Tomorrow/Tomorrow-Bold.ttf" id="6_x2s3f"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="7_43qso"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="7_s5nje"]
+[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_g1l2m"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
 script = ExtResource("3_g1l2m")
@@ -25,34 +27,34 @@ corner_radius_bottom_left = 4
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6x72"]
-bg_color = Color(0.5019608, 0.91764706, 1, 1)
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.5019608, 0.91764706, 1, 1)
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 corner_detail = 1
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43qso"]
-bg_color = Color(0.5019608, 0.91764706, 1, 1)
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.5019608, 0.91764706, 1, 1)
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1l2m"]
-bg_color = Color(0.5019608, 0.91764706, 1, 1)
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
 border_width_right = 4
 border_width_bottom = 4
-border_color = Color(0.5019608, 0.91764706, 1, 1)
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
@@ -130,6 +132,7 @@ theme_override_constants/separation = 256
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox" unique_id=893663964]
 layout_mode = 2
+theme_override_constants/separation = 8
 
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer" unique_id=651438447 instance=ExtResource("5_12yuq")]
 layout_mode = 2
@@ -146,6 +149,7 @@ anchor_right = 1.0
 grow_horizontal = 2
 
 [node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline" unique_id=2057503713]
+visible = false
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -481,6 +485,7 @@ grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_43qso")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=1737857773]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -505,6 +510,7 @@ grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_g1l2m")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=43314868]
+visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -517,12 +523,13 @@ text = "August
 2026"
 horizontal_alignment = 1
 
-[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget" unique_id=968972516]
+[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=968972516]
 layout_mode = 1
-anchor_left = 0.722
-anchor_right = 0.877
+anchor_right = 0.111
+offset_top = 2.0
+offset_bottom = 2.0
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment" unique_id=968442652]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=968442652]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
@@ -531,7 +538,7 @@ grow_horizontal = 2
 grow_vertical = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_q4nth")
 
-[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment" unique_id=1805792227]
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1805792227]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.4
@@ -542,7 +549,7 @@ offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_5lx2r")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment/VSeparator" unique_id=941720835]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=941720835]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -552,12 +559,12 @@ offset_right = 63.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_x2s3f")
-theme_override_font_sizes/font_size = 36
-text = "March
-2026"
+theme_override_font_sizes/font_size = 24
+text = "Feb
+2025"
 horizontal_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment" unique_id=1678689366]
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1678689366]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -570,7 +577,7 @@ offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_juxnl")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment/VSeparator2" unique_id=684606872]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=684606872]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -580,12 +587,12 @@ offset_right = 63.0
 grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_x2s3f")
-theme_override_font_sizes/font_size = 36
-text = "July
-2026"
+theme_override_font_sizes/font_size = 24
+text = "Apr
+2025"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/Segment" unique_id=437511704]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=437511704]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -605,6 +612,114 @@ layout_mode = 2
 size_flags_vertical = 3
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent" unique_id=1248458228]
+layout_mode = 2
+alignment = 1
+
+[node name="SideLeft" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=497006564]
+custom_minimum_size = Vector2(360, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 0.5
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ContentHeading" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=372211086]
+layout_mode = 2
+theme_type_variation = &"RichSlideContentHeading"
+bbcode_enabled = true
+text = "[b]Preparation[/b]"
+fit_content = true
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=285335690]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=123830648 instance=ExtResource("7_43qso")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=2067736737]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Finish immersive dice refactor"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=1109939981]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=71669127 instance=ExtResource("7_43qso")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=1163093265]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Refactor Careers experience"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=952878356]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=1223335229 instance=ExtResource("7_43qso")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=483448595]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Randomized tower layout"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=663737648]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=1601760466 instance=ExtResource("7_43qso")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=222269361]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Deep, dense tutorial experience"
+fit_content = true
+
+[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=57059759]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=305724259 instance=ExtResource("7_43qso")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=1107882010]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Tons of fixes and improvements"
+fit_content = true
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
+custom_maximum_size = Vector2(-1, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("8_g1l2m")
+stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("7_s5nje")]
 layout_mode = 2
