@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://c4po1tk8fslst" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatIdDoDifferently.tscn" id="7_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://dj5p2nuq3wwf6" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatILearned.tscn" id="8_0n7tt"]
 [ext_resource type="PackedScene" uid="uid://chxerovtcoldu" path="res://presentations/failing_to_go_full_time_indie/slides/TitleConclusion.tscn" id="9_xp4j2"]
+[ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -45,4 +46,7 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TitleConclusion" parent="." unique_id=682975892 instance=ExtResource("9_xp4j2")]
+layout_mode = 1
+
+[node name="TitleThankYou" parent="." unique_id=1290643666 instance=ExtResource("10_d3mqu")]
 layout_mode = 1

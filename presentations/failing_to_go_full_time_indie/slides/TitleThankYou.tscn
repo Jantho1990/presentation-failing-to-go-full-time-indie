@@ -13,7 +13,6 @@
 [ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="11_vanas"]
 [ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_kw3mk"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="13_hbvm3"]
-[ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="14_scgt5"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="15_46qk1"]
 [ext_resource type="Animation" uid="uid://26b1efpj5vui" path="res://assets/animations/TitleSlides.tres" id="16_qetri"]
 
@@ -197,8 +196,6 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichSlideTitle"
 theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
-theme_override_fonts/normal_font = ExtResource("14_scgt5")
-theme_override_fonts/bold_font = ExtResource("14_scgt5")
 theme_override_font_sizes/normal_font_size = 32
 theme_override_font_sizes/bold_font_size = 150
 bbcode_enabled = true
@@ -245,7 +242,7 @@ LinkedIn: [b]Josh Anthony[/b]
 loonicy.com
 
 [b]Presentation Repo[/b]
-https://github.com/Jantho1990/presentation-postmortem-dgc-demo[/i]
+https://github.com/Jantho1990/presentation-failing-to-go-full-time-indie[/i]
 [/right]"
 fit_content = true
 
