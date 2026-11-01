@@ -25,6 +25,7 @@
 [ext_resource type="PackedScene" uid="uid://bqn03l5oai50s" path="res://presentations/failing_to_go_full_time_indie/slides/IssueImOnlyHuman.tscn" id="18_wwira"]
 [ext_resource type="PackedScene" uid="uid://tjf543qtqdyj" path="res://presentations/failing_to_go_full_time_indie/slides/LessonKeepItSimple.tscn" id="22_6if2x"]
 [ext_resource type="PackedScene" uid="uid://fb0by1qrgb1w" path="res://presentations/failing_to_go_full_time_indie/slides/LessonAllOfItMatters.tscn" id="23_5g061"]
+[ext_resource type="PackedScene" uid="uid://degmvenuad3sh" path="res://presentations/failing_to_go_full_time_indie/slides/LessonConsiderMarketingFromStart.tscn" id="23_wr71v"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -100,6 +101,10 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="LessonKeepItSimple" parent="." unique_id=2133574200 instance=ExtResource("22_6if2x")]
+visible = false
+layout_mode = 1
+
+[node name="LessonConsiderMarketingFromStart" parent="." unique_id=396274897 instance=ExtResource("23_wr71v")]
 layout_mode = 1
 
 [node name="LessonAllOfItMatters" parent="." unique_id=1155866372 instance=ExtResource("23_5g061")]
