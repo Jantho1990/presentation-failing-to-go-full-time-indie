@@ -746,6 +746,7 @@ text = "[ul]Contributors not clear on my vision[/ul]"
 fit_content = true
 
 [node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=57059759]
+visible = false
 layout_mode = 2
 theme_override_constants/separation = 16
 
@@ -870,6 +871,15 @@ size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "[ul]Demo on April 16th[/ul]"
+fit_content = true
+
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point5/VBoxContainer" unique_id=2113134762]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Full release in July[/ul]"
 fit_content = true
 
 [node name="Point6" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=1491557873]
