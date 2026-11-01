@@ -196,7 +196,7 @@ theme_override_constants/separation = 64
 
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=1863433742 instance=ExtResource("12_7qvk5")]
 layout_mode = 2
-title = "Act 2: Execute"
+title = "Issue: Too Much Tutorial (Dice Tower)"
 
 [node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=2009136185]
 layout_mode = 2

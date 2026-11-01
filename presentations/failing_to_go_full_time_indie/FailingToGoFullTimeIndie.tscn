@@ -13,7 +13,9 @@
 [ext_resource type="PackedScene" uid="uid://bvon8a1k4ir6a" path="res://presentations/failing_to_go_full_time_indie/slides/NotADamnThing.tscn" id="8_xp4j2"]
 [ext_resource type="PackedScene" uid="uid://cy1x37e0nx3dr" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchIteration.tscn" id="9_6lafc"]
 [ext_resource type="PackedScene" uid="uid://chxerovtcoldu" path="res://presentations/failing_to_go_full_time_indie/slides/TitleConclusion.tscn" id="9_xp4j2"]
+[ext_resource type="PackedScene" uid="uid://yhpxovphj31w" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchTutorial.tscn" id="10_4p5un"]
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
+[ext_resource type="PackedScene" uid="uid://0303otv830lc" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooFocusedOnFinishing.tscn" id="11_547g6"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -50,6 +52,12 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="IssueTooMuchIteration" parent="." unique_id=1900136500 instance=ExtResource("9_6lafc")]
+layout_mode = 1
+
+[node name="IssueTooMuchTutorial" parent="." unique_id=686897252 instance=ExtResource("10_4p5un")]
+layout_mode = 1
+
+[node name="IssueTooFocusedOnFinishing" parent="." unique_id=1005773426 instance=ExtResource("11_547g6")]
 layout_mode = 1
 
 [node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
