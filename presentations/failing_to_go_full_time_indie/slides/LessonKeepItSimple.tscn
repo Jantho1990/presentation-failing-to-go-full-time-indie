@@ -1,0 +1,184 @@
+[gd_scene format=3 uid="uid://tjf543qtqdyj"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_1eqd1"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_ayb65"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_ulilh"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_s437h"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_ecu2w"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_kmila"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="7_hj43p"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_v8pvm"]
+[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="9_wjmvw"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="10_ajnu8"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="11_da4qs"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_s437h")
+
+[sub_resource type="Resource" id="Resource_mife1"]
+script = ExtResource("5_ecu2w")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+
+[sub_resource type="Resource" id="Resource_b3vqa"]
+script = ExtResource("3_ulilh")
+slide_steps = Array[ExtResource("2_ayb65")]([SubResource("Resource_sho4t"), SubResource("Resource_mife1")])
+
+[sub_resource type="Resource" id="Resource_yc1wc"]
+script = ExtResource("6_kmila")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("7_hj43p")
+
+[sub_resource type="Resource" id="Resource_cgghm"]
+script = ExtResource("3_ulilh")
+slide_steps = Array[ExtResource("2_ayb65")]([SubResource("Resource_yc1wc"), SubResource("Resource_1vcjn")])
+
+[node name="LessonKeepItSimple" type="Control" unique_id=2133574200]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1eqd1")
+steps = Array[ExtResource("2_ayb65")]([SubResource("Resource_b3vqa"), SubResource("Resource_cgghm")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=1426530480]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=261975909]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=2131461858]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=2126937754 instance=ExtResource("8_v8pvm")]
+layout_mode = 2
+title = "Lesson 1: Keep It Simple"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1598163914]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=850571323]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=225217738]
+layout_mode = 2
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1115911995]
+custom_minimum_size = Vector2(640, 0)
+layout_mode = 2
+size_flags_vertical = 3
+texture = ExtResource("9_wjmvw")
+expand_mode = 2
+stretch_mode = 5
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1265248259]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"V32"
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=518139946]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1707531016 instance=ExtResource("10_ajnu8")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1311222216]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Dice Tower took years to develop"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=851798678]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1032581916 instance=ExtResource("10_ajnu8")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=891201448]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Hard ideas inherently take longer to make"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=140125711]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=260459340 instance=ExtResource("10_ajnu8")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=1089612184]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Do I have the runway to take that long?"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1132627318]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=928550436 instance=ExtResource("10_ajnu8")]
+layout_mode = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=50875768]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3/MarginContainer" unique_id=1798197130]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Dice Gun Commando pivoted to simpler concept"
+fit_content = true
+
+[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=74912034]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1438397285 instance=ExtResource("10_ajnu8")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1803304571]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Beware the big swings"
+fit_content = true
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1260181013 instance=ExtResource("11_da4qs")]
+layout_mode = 2
+size_flags_vertical = 8

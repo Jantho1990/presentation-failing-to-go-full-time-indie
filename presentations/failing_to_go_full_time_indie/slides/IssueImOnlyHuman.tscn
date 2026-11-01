@@ -210,6 +210,27 @@ bbcode_enabled = true
 text = "\"If I give grace to others, I also need to give grace to myself\""
 fit_content = true
 
+[node name="Point6" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=241249102]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point6" unique_id=1005718955 instance=ExtResource("9_wi7ou")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point6" unique_id=127866424]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point6/Margin" unique_id=1515417640]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "TODO: Bishop not bad for a human"
+fit_content = true
+
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=968588930 instance=ExtResource("10_ve3le")]
 layout_mode = 2
 size_flags_vertical = 8
