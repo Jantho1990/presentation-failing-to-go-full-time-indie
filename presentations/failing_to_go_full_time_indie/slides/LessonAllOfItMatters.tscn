@@ -1,0 +1,442 @@
+[gd_scene format=3 uid="uid://fb0by1qrgb1w"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_b1mec"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_0olyl"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_c87qk"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_1x5sq"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="5_w0te1"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="6_bal8u"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="7_otw3n"]
+[ext_resource type="Script" uid="uid://dttfkqalo7xhk" path="res://resources/HighlightStep.gd" id="8_s8id0"]
+[ext_resource type="Script" uid="uid://e2rb8hrg2r31" path="res://resources/ClearHighlightStep.gd" id="9_ujax8"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_xlfc3"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="11_ksi6r"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_jxjpq"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="13_stmyw"]
+[ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="14_1q2bt"]
+[ext_resource type="Texture2D" uid="uid://daxaucnelvqr6" path="res://assets/media/images/Basic UI.jpg" id="15_cpsut"]
+[ext_resource type="Texture2D" uid="uid://bpfxsd3usfrn4" path="res://assets/media/images/Part 2 S1.jpg" id="16_33hwt"]
+[ext_resource type="Texture2D" uid="uid://ddv61gmkolffb" path="res://assets/media/images/Part 2 S2.jpg" id="17_khmjx"]
+[ext_resource type="Texture2D" uid="uid://dgff5hqsflgm0" path="res://assets/media/images/Part 2 S3.jpg" id="18_b1e3j"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_yr2rw"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_1x5sq")
+
+[sub_resource type="Resource" id="Resource_by1g0"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_e0ias"]
+script = ExtResource("7_otw3n")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_8a1lt"]
+script = ExtResource("5_w0te1")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_by1g0"), SubResource("Resource_e0ias")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_3o2ix"]
+script = ExtResource("3_c87qk")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_sho4t"), SubResource("Resource_8a1lt")])
+
+[sub_resource type="Resource" id="Resource_ow6pj"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_t4nnu"]
+script = ExtResource("8_s8id0")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_drb0a"]
+script = ExtResource("5_w0te1")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ow6pj"), SubResource("Resource_t4nnu")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_ynsnc"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_3a757"]
+script = ExtResource("8_s8id0")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_wf8c2"]
+script = ExtResource("9_ujax8")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_4nyxa"]
+script = ExtResource("10_xlfc3")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_0wbp2"]
+script = ExtResource("5_w0te1")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ynsnc"), SubResource("Resource_3a757"), SubResource("Resource_wf8c2"), SubResource("Resource_4nyxa")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_odlm3"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_3uvdf"]
+script = ExtResource("8_s8id0")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_as1pr"]
+script = ExtResource("9_ujax8")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_7duqq"]
+script = ExtResource("10_xlfc3")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_xqvm3"]
+script = ExtResource("5_w0te1")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_odlm3"), SubResource("Resource_3uvdf"), SubResource("Resource_as1pr"), SubResource("Resource_7duqq")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_glhkg"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_8acfr"]
+script = ExtResource("8_s8id0")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_wbe73"]
+script = ExtResource("9_ujax8")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_uxila"]
+script = ExtResource("10_xlfc3")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_glx8p"]
+script = ExtResource("5_w0te1")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_glhkg"), SubResource("Resource_8acfr"), SubResource("Resource_wbe73"), SubResource("Resource_uxila")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_yg2j3"]
+script = ExtResource("10_xlfc3")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("11_ksi6r")
+
+[sub_resource type="Resource" id="Resource_phhlc"]
+script = ExtResource("3_c87qk")
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_yg2j3"), SubResource("Resource_1vcjn")])
+
+[node name="LessonAllOfItMatters" type="Control" unique_id=686897252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_b1mec")
+steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_3o2ix"), SubResource("Resource_drb0a"), SubResource("Resource_0wbp2"), SubResource("Resource_xqvm3"), SubResource("Resource_glx8p"), SubResource("Resource_phhlc")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=333912230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1397406855]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=515161153]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=1863433742 instance=ExtResource("12_jxjpq")]
+layout_mode = 2
+title = "Lesson 2: All Of It Matters"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=2009136185]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=671964353]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox" unique_id=560710414]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0" unique_id=123830648 instance=ExtResource("13_stmyw")]
+visible = false
+texture_filter = 1
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0" unique_id=1838673095]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0/Margin" unique_id=1174115991]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichSlideContentHeading"
+bbcode_enabled = true
+text = "[b]Everything I've done informs my future choices[/b]"
+fit_content = true
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox" unique_id=700107571]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox" unique_id=732331656]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List" unique_id=2050660644]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0" unique_id=1529850916 instance=ExtResource("13_stmyw")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0" unique_id=1095281523]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0/Margin" unique_id=787722307]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Spent 3.5 years developing dice mechanics"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List" unique_id=571816709]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1" unique_id=1106207245 instance=ExtResource("13_stmyw")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1" unique_id=1546732748]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1/Margin" unique_id=1217260867]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Making dice and platformers work is hard"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List" unique_id=407024783]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2" unique_id=1335104458 instance=ExtResource("13_stmyw")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2" unique_id=1453160000]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Too much time spent on iteration"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List" unique_id=1992635305]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3" unique_id=458446576 instance=ExtResource("13_stmyw")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3" unique_id=1999937147]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Didn't have money to keep contracting weaknesses"
+fit_content = true
+
+[node name="AnimationWrapper" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox" unique_id=1885683923]
+custom_minimum_size = Vector2(628, 336)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("14_1q2bt")
+
+[node name="SidePanel0" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=351278115]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0" unique_id=1733089204]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Learned what does and doesn't work with dice mechanics in action games
+
+Helped me commit to choices early in Dice Gun Commando, and have them largely be good"
+
+[node name="SidePanel1" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=1937959797]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1" unique_id=2060320667]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Learned that platformer precision doesn't pair well with randomness
+
+Influenced next genre choice to fit dice strategy instead of fitting dice strategy to the genre"
+
+[node name="SidePanel2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=1652916181]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2" unique_id=961035900]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Learned I should prove ideas as quickly as possible
+
+Once ideas are validated, then make them well
+
+Some waste is unavoidable, the trick is minimizing it"
+
+[node name="SidePanel3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=1908003493]
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3" unique_id=335647656]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Forced me to design for what I can do myself
+
+Led to learning more about what works for art and music, and ultimately what really needs contracting"
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=973506327]
+visible = false
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control" unique_id=649298002]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.58400005
+anchor_top = 0.5
+anchor_right = 0.95900005
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Screenshot0" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=311009348]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("15_cpsut")
+expand_mode = 3
+
+[node name="Screenshot1" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=165665417]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("16_33hwt")
+expand_mode = 3
+
+[node name="Screenshot2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=212409692]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("17_khmjx")
+expand_mode = 3
+
+[node name="Screenshot3" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=1977032984]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("18_b1e3j")
+expand_mode = 3
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=717366627 instance=ExtResource("19_yr2rw")]
+layout_mode = 2
+size_flags_vertical = 8
