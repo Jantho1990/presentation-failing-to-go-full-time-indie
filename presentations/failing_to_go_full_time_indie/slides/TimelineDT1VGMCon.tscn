@@ -510,16 +510,15 @@ grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_g1l2m")
 
 [node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=43314868]
-visible = false
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -62.0
 offset_right = 63.0
-theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_colors/font_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 theme_override_fonts/font = ExtResource("6_x2s3f")
-text = "August
+text = "Aug
 2026"
 horizontal_alignment = 1
 
