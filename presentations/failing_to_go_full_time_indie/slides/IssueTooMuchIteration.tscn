@@ -203,7 +203,23 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Two iterations on music implementation"
+text = "Three iterations on music implementation"
+fit_content = true
+
+[node name="Controls" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1225562247]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Controls" unique_id=1270226458 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Controls" unique_id=676503105]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Three iterations of custom controls"
 fit_content = true
 
 [node name="ImageContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=716937752]

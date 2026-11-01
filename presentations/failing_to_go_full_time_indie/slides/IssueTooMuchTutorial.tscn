@@ -1,0 +1,422 @@
+[gd_scene format=3 uid="uid://yhpxovphj31w"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_ithr4"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_guolc"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_eyvsg"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_mt0j8"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="5_i6vts"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="6_6dnsd"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="7_cl08s"]
+[ext_resource type="Script" uid="uid://dttfkqalo7xhk" path="res://resources/HighlightStep.gd" id="8_xjmwh"]
+[ext_resource type="Script" uid="uid://e2rb8hrg2r31" path="res://resources/ClearHighlightStep.gd" id="9_656ai"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_qkp0k"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="11_6b4rt"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_7qvk5"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="13_senmt"]
+[ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="15_or80k"]
+[ext_resource type="Texture2D" uid="uid://daxaucnelvqr6" path="res://assets/media/images/Basic UI.jpg" id="16_mtbmw"]
+[ext_resource type="Texture2D" uid="uid://bpfxsd3usfrn4" path="res://assets/media/images/Part 2 S1.jpg" id="17_cfsr7"]
+[ext_resource type="Texture2D" uid="uid://ddv61gmkolffb" path="res://assets/media/images/Part 2 S2.jpg" id="18_qdaxp"]
+[ext_resource type="Texture2D" uid="uid://dgff5hqsflgm0" path="res://assets/media/images/Part 2 S3.jpg" id="19_ah6nd"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="20_bv8rc"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_mt0j8")
+
+[sub_resource type="Resource" id="Resource_by1g0"]
+script = ExtResource("6_6dnsd")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+
+[sub_resource type="Resource" id="Resource_e0ias"]
+script = ExtResource("7_cl08s")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_8a1lt"]
+script = ExtResource("5_i6vts")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_by1g0"), SubResource("Resource_e0ias")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_3o2ix"]
+script = ExtResource("3_eyvsg")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_sho4t"), SubResource("Resource_8a1lt")])
+
+[sub_resource type="Resource" id="Resource_ow6pj"]
+script = ExtResource("6_6dnsd")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_t4nnu"]
+script = ExtResource("8_xjmwh")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_drb0a"]
+script = ExtResource("5_i6vts")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ow6pj"), SubResource("Resource_t4nnu")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_ynsnc"]
+script = ExtResource("6_6dnsd")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_3a757"]
+script = ExtResource("8_xjmwh")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_wf8c2"]
+script = ExtResource("9_656ai")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_4nyxa"]
+script = ExtResource("10_qkp0k")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_0wbp2"]
+script = ExtResource("5_i6vts")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ynsnc"), SubResource("Resource_3a757"), SubResource("Resource_wf8c2"), SubResource("Resource_4nyxa")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_odlm3"]
+script = ExtResource("6_6dnsd")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_3uvdf"]
+script = ExtResource("8_xjmwh")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_as1pr"]
+script = ExtResource("9_656ai")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_7duqq"]
+script = ExtResource("10_qkp0k")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_xqvm3"]
+script = ExtResource("5_i6vts")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_odlm3"), SubResource("Resource_3uvdf"), SubResource("Resource_as1pr"), SubResource("Resource_7duqq")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_glhkg"]
+script = ExtResource("6_6dnsd")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_8acfr"]
+script = ExtResource("8_xjmwh")
+highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+
+[sub_resource type="Resource" id="Resource_wbe73"]
+script = ExtResource("9_656ai")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://e2rb8hrg2r31"
+
+[sub_resource type="Resource" id="Resource_uxila"]
+script = ExtResource("10_qkp0k")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_glx8p"]
+script = ExtResource("5_i6vts")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_glhkg"), SubResource("Resource_8acfr"), SubResource("Resource_wbe73"), SubResource("Resource_uxila")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_yg2j3"]
+script = ExtResource("10_qkp0k")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("11_6b4rt")
+
+[sub_resource type="Resource" id="Resource_phhlc"]
+script = ExtResource("3_eyvsg")
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_yg2j3"), SubResource("Resource_1vcjn")])
+
+[node name="IssueTooMuchTutorial" type="Control" unique_id=686897252]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ithr4")
+steps = Array[ExtResource("2_guolc")]([SubResource("Resource_3o2ix"), SubResource("Resource_drb0a"), SubResource("Resource_0wbp2"), SubResource("Resource_xqvm3"), SubResource("Resource_glx8p"), SubResource("Resource_phhlc")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=333912230]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1397406855]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=515161153]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=1863433742 instance=ExtResource("12_7qvk5")]
+layout_mode = 2
+title = "Act 2: Execute"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=2009136185]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=700107571]
+layout_mode = 2
+
+[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=732331656]
+custom_minimum_size = Vector2(540, 0)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+
+[node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=2050660644]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1529850916 instance=ExtResource("13_senmt")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1095281523]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0/Margin" unique_id=787722307]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Attempt 1: Natural Tutorialization"
+fit_content = true
+
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=571816709]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1106207245 instance=ExtResource("13_senmt")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1546732748]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/Margin" unique_id=1217260867]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Attempt 2: Walls of Text and Video"
+fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=407024783]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=1335104458 instance=ExtResource("13_senmt")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=1453160000]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Attempt 3: Tutorial Tower"
+fit_content = true
+
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1992635305]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=458446576 instance=ExtResource("13_senmt")]
+texture_filter = 1
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=1999937147]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Attempt 4: Inline Tutorials"
+fit_content = true
+
+[node name="AnimationWrapper" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1885683923]
+custom_minimum_size = Vector2(628, 336)
+layout_mode = 2
+size_flags_horizontal = 3
+script = ExtResource("15_or80k")
+
+[node name="SidePanel0" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=351278115]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0" unique_id=1733089204]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Issues:
+[ul]
+Concept too unique
+Players not used to dice-play
+[/ul]"
+
+[node name="SidePanel1" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=1937959797]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1" unique_id=2060320667]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Issues:
+[ul]
+Players don't read
+Way too dense
+Doesn't reinforce mechanics
+[/ul]"
+
+[node name="SidePanel2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=1652916181]
+visible = false
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2" unique_id=961035900]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Issues:
+[ul]
+Taught more naturally
+Not all players did actual run
+Too long
+[/ul]"
+
+[node name="SidePanel3" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=1908003493]
+layout_mode = 0
+offset_right = 628.0
+offset_bottom = 336.0
+size_flags_horizontal = 3
+size_flags_vertical = 0
+size_flags_stretch_ratio = 2.0
+theme_type_variation = &"AsidePanelContainer"
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3" unique_id=335647656]
+custom_minimum_size = Vector2(0, 96)
+layout_mode = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Issues:
+[ul]
+Players still don't read
+Looks ugly
+[/ul]"
+
+[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=973506327]
+layout_mode = 2
+
+[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control" unique_id=649298002]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.58400005
+anchor_top = 0.5
+anchor_right = 0.95900005
+anchor_bottom = 1.0
+grow_horizontal = 0
+grow_vertical = 2
+
+[node name="Screenshot0" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=311009348]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("16_mtbmw")
+expand_mode = 3
+
+[node name="Screenshot1" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=165665417]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("17_cfsr7")
+expand_mode = 3
+
+[node name="Screenshot2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=212409692]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("18_qdaxp")
+expand_mode = 3
+
+[node name="Screenshot3" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=1977032984]
+custom_minimum_size = Vector2(0, 256)
+layout_mode = 2
+texture = ExtResource("19_ah6nd")
+expand_mode = 3
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=717366627 instance=ExtResource("20_bv8rc")]
+layout_mode = 2
+size_flags_vertical = 8
