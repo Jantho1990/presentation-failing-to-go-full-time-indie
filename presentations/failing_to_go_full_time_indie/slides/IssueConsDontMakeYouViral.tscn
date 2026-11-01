@@ -1,0 +1,256 @@
+[gd_scene format=3 uid="uid://7iennjfguptv"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_q0kxd"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_t7455"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_yusvr"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_oi4io"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_2kskn"]
+[ext_resource type="Script" uid="uid://dineujlp1l13t" path="res://resources/WAYIntroStep.gd" id="6_nkagj"]
+[ext_resource type="Script" uid="uid://yts7ifi5785a" path="res://resources/WAYAdvanceStep.gd" id="7_oxhom"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="8_d6lkf"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_h6oep"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_tdujb"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="11_p6mxe"]
+[ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="13_j7tbq"]
+[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="14_4e70g"]
+[ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="15_yct74"]
+[ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="16_ktpu1"]
+[ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="17_chv1v"]
+[ext_resource type="Texture2D" uid="uid://dwn8f147kbao1" path="res://assets/media/images/pizza-asset.jpg" id="18_6ffpd"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_qrnlg"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_oi4io")
+
+[sub_resource type="Resource" id="Resource_ltgrq"]
+script = ExtResource("5_2kskn")
+targetNodes = Array[NodePath]([NodePath("")])
+
+[sub_resource type="Resource" id="Resource_e1lh8"]
+script = ExtResource("3_yusvr")
+slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_sho4t"), SubResource("Resource_ltgrq")])
+
+[sub_resource type="Resource" id="Resource_yyh3t"]
+script = ExtResource("6_nkagj")
+textBulletPath = NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea")
+imageNodePath = NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Apocalypse")
+
+[sub_resource type="Resource" id="Resource_oep1g"]
+script = ExtResource("7_oxhom")
+fadeInPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Despair")])
+fadeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Apocalypse")])
+stabilizeInPaths = Array[NodePath]([NodePath("")])
+stabilizeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea/Content")])
+
+[sub_resource type="Resource" id="Resource_xky36"]
+script = ExtResource("7_oxhom")
+fadeInPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Explore")])
+fadeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/Despair")])
+stabilizeInPaths = Array[NodePath]([NodePath("")])
+stabilizeOutPaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime/Content")])
+
+[sub_resource type="Resource" id="Resource_lpmeh"]
+script = ExtResource("8_d6lkf")
+targetNodes = Array[NodePath]([NodePath(""), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("9_h6oep")
+
+[sub_resource type="Resource" id="Resource_h1qoh"]
+script = ExtResource("3_yusvr")
+slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_lpmeh"), SubResource("Resource_1vcjn")])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkvai"]
+shader = ExtResource("17_chv1v")
+shader_parameter/gray_amount = 0.0
+
+[node name="IssueConsDontMakeYouViral" type="Control" unique_id=434600336]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_q0kxd")
+steps = Array[ExtResource("2_t7455")]([SubResource("Resource_e1lh8"), SubResource("Resource_yyh3t"), SubResource("Resource_oep1g"), SubResource("Resource_xky36"), SubResource("Resource_h1qoh")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=403169543]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1229255083]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=1647077400]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=856785780 instance=ExtResource("10_tdujb")]
+layout_mode = 2
+title = "Issue: Cons Don't Make You Viral (Dice Gun Commando)"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1741053708]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=1184781901]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=546732283]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="ProjectIdea" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=510392835]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea" unique_id=834631164 instance=ExtResource("11_p6mxe")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ProjectIdea" unique_id=209912999]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Thought I could get virality from showing in person"
+fit_content = true
+
+[node name="NotEnoughTime" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1485370256]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime" unique_id=1389347456 instance=ExtResource("11_p6mxe")]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime" unique_id=1205710233]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "TODO: Get number of players who \"took a card\""
+fit_content = true
+
+[node name="NotEnoughTime2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1202700951]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2" unique_id=123830648 instance=ExtResource("11_p6mxe")]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/NotEnoughTime2" unique_id=940305776]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "TODO: Get wishlists from con periods"
+fit_content = true
+
+[node name="Curious" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1169473022]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious" unique_id=1160581891 instance=ExtResource("11_p6mxe")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious" unique_id=488327228]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "TODO: Get wishlists from Next Fest"
+fit_content = true
+
+[node name="Curious2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1600509808]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious2" unique_id=676133719 instance=ExtResource("11_p6mxe")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Curious2" unique_id=1525101511]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Ignored doing the marketing steps for hitting virality"
+fit_content = true
+
+[node name="ImageContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1706596185]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=515812705]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("13_j7tbq")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=174702848]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("14_4e70g")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1210544021]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("15_yct74")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=340226756]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("16_ktpu1")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1701050438]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_xkvai")
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("18_6ffpd")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1304675490 instance=ExtResource("19_qrnlg")]
+layout_mode = 2
+size_flags_vertical = 8
