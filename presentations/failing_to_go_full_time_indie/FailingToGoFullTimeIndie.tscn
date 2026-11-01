@@ -26,6 +26,7 @@
 [ext_resource type="PackedScene" uid="uid://cafegeiqdhu75" path="res://presentations/failing_to_go_full_time_indie/slides/IssueChasingFunding.tscn" id="13_4l4ej"]
 [ext_resource type="PackedScene" uid="uid://beto4tfqho6hl" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2TheEnd.tscn" id="13_45r7a"]
 [ext_resource type="PackedScene" uid="uid://7iennjfguptv" path="res://presentations/failing_to_go_full_time_indie/slides/IssueConsDontMakeYouViral.tscn" id="14_4oyh2"]
+[ext_resource type="PackedScene" uid="uid://646mwx0c6ysu" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCTheDemo.tscn" id="14_mtstm"]
 [ext_resource type="PackedScene" uid="uid://d22y10amc2v43" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchSpend.tscn" id="15_em84d"]
 [ext_resource type="PackedScene" uid="uid://c28vsom1bfvtg" path="res://presentations/failing_to_go_full_time_indie/slides/IssueNotConsideringMarketing.tscn" id="16_2pyv2"]
 [ext_resource type="PackedScene" uid="uid://34yieqctr5au" path="res://presentations/failing_to_go_full_time_indie/slides/IssueAlwaysOnMind.tscn" id="17_wnc8m"]
@@ -90,6 +91,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT2TheEnd" parent="." unique_id=1594071683 instance=ExtResource("13_45r7a")]
+layout_mode = 1
+
+[node name="TimelineDGCTheDemo" parent="." unique_id=555063180 instance=ExtResource("14_mtstm")]
 layout_mode = 1
 
 [node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
