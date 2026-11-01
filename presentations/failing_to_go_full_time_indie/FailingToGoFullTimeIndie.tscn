@@ -32,6 +32,7 @@
 [ext_resource type="PackedScene" uid="uid://dnho5qqssjbxe" path="res://presentations/failing_to_go_full_time_indie/slides/LessonDontCrowdLaunchWeek.tscn" id="28_tj03b"]
 [ext_resource type="PackedScene" uid="uid://cdtpbhx8c6b3s" path="res://presentations/failing_to_go_full_time_indie/slides/LessonIntentionalContracting.tscn" id="28_xf0ca"]
 [ext_resource type="PackedScene" uid="uid://c4b4mwcudv012" path="res://presentations/failing_to_go_full_time_indie/slides/LessonIronTriangleFlexible.tscn" id="30_nekbb"]
+[ext_resource type="PackedScene" uid="uid://nmeydnqvlbxe" path="res://presentations/failing_to_go_full_time_indie/slides/LessonReleaseIsBestTeacher.tscn" id="31_fqkcl"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -132,6 +133,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="LessonIronTriangleFlexible" parent="." unique_id=1734410728 instance=ExtResource("30_nekbb")]
+layout_mode = 1
+
+[node name="LessonReleaseIsBestTeacher" parent="." unique_id=1487950445 instance=ExtResource("31_fqkcl")]
 layout_mode = 1
 
 [node name="TitleConclusion" parent="." unique_id=682975892 instance=ExtResource("9_xp4j2")]
