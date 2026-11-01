@@ -1,0 +1,265 @@
+[gd_scene format=3 uid="uid://cy1x37e0nx3dr"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_1jvij"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_wlf1q"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_7mite"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_s80m1"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_0ftyo"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="8_6gf6t"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_4gd4q"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_traey"]
+[ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="11_a7ctl"]
+[ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="13_ff42k"]
+[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="14_jpfwr"]
+[ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="15_vmwkb"]
+[ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="16_d1uu5"]
+[ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="17_ul761"]
+[ext_resource type="Texture2D" uid="uid://dwn8f147kbao1" path="res://assets/media/images/pizza-asset.jpg" id="18_js6ft"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_pg1r8"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_s80m1")
+
+[sub_resource type="Resource" id="Resource_ltgrq"]
+script = ExtResource("5_0ftyo")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_e1lh8"]
+script = ExtResource("3_7mite")
+slide_steps = Array[ExtResource("2_wlf1q")]([SubResource("Resource_sho4t"), SubResource("Resource_ltgrq")])
+
+[sub_resource type="Resource" id="Resource_lpmeh"]
+script = ExtResource("8_6gf6t")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("9_4gd4q")
+
+[sub_resource type="Resource" id="Resource_h1qoh"]
+script = ExtResource("3_7mite")
+slide_steps = Array[ExtResource("2_wlf1q")]([SubResource("Resource_lpmeh"), SubResource("Resource_1vcjn")])
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkvai"]
+shader = ExtResource("17_ul761")
+shader_parameter/gray_amount = 0.0
+
+[node name="IssueTooMuchIteration" type="Control" unique_id=1900136500]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_1jvij")
+steps = Array[ExtResource("2_wlf1q")]([SubResource("Resource_e1lh8"), SubResource("Resource_h1qoh")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=2036316237]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=289160518]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=880894900]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=187352994 instance=ExtResource("10_traey")]
+layout_mode = 2
+title = "Issue: Too Much Iteration (Dice Tower)"
+
+[node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=331961077]
+layout_mode = 2
+size_flags_vertical = 3
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_right = 64
+
+[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=371474767]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=650633913]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 1.4
+theme_override_constants/separation = 32
+alignment = 1
+
+[node name="RollingDice" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1567130609]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/RollingDice" unique_id=1372027296 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/RollingDice" unique_id=137296326]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Five iterations of rolling dice"
+fit_content = true
+
+[node name="TowerProgression" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=60476480]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TowerProgression" unique_id=166193292 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+expand_mode = 5
+stretch_mode = 4
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TowerProgression" unique_id=1723765056]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Three iterations of tower ascension"
+fit_content = true
+
+[node name="DiceEconomy" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1628241997]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/DiceEconomy" unique_id=123830648 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/DiceEconomy" unique_id=1837602279]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Three iterations of in-game economy"
+fit_content = true
+
+[node name="AbilityAcquistion" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1627498476]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AbilityAcquistion" unique_id=1971294080 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AbilityAcquistion" unique_id=553405228]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Two iterations of ability acquisition"
+fit_content = true
+
+[node name="MetaProgression" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1960221494]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/MetaProgression" unique_id=1402937760 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/MetaProgression" unique_id=669360126]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Two iterations of meta progression"
+fit_content = true
+
+[node name="ArtStyle" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1935643236]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ArtStyle" unique_id=355874746 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ArtStyle" unique_id=1310286929]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Two iterations on art style"
+fit_content = true
+
+[node name="MusicImplementation" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=991229488]
+layout_mode = 2
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/MusicImplementation" unique_id=1076676044 instance=ExtResource("11_a7ctl")]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/MusicImplementation" unique_id=1071002]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Two iterations on music implementation"
+fit_content = true
+
+[node name="ImageContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=716937752]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1991941891]
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("13_ff42k")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1565191943]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("14_jpfwr")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1752723037]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("15_vmwkb")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1399085238]
+modulate = Color(1, 1, 1, 0)
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("16_d1uu5")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=759502241]
+modulate = Color(1, 1, 1, 0)
+material = SubResource("ShaderMaterial_xkvai")
+custom_minimum_size = Vector2(400, 600)
+layout_mode = 2
+size_flags_horizontal = 8
+size_flags_vertical = 4
+texture = ExtResource("18_js6ft")
+expand_mode = 3
+stretch_mode = 5
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=2074686220 instance=ExtResource("19_pg1r8")]
+layout_mode = 2
+size_flags_vertical = 8

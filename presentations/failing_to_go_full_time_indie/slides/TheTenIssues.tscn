@@ -105,7 +105,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Too Much Iterating"
+text = "Too Much Iteration"
 fit_content = true
 
 [node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft" unique_id=1243525928]

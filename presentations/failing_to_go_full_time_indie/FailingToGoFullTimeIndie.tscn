@@ -11,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://dj5p2nuq3wwf6" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatILearned.tscn" id="8_0n7tt"]
 [ext_resource type="PackedScene" uid="uid://6h6jpnhay4fd" path="res://presentations/failing_to_go_full_time_indie/slides/TheTenIssues.tscn" id="8_6bkw7"]
 [ext_resource type="PackedScene" uid="uid://bvon8a1k4ir6a" path="res://presentations/failing_to_go_full_time_indie/slides/NotADamnThing.tscn" id="8_xp4j2"]
+[ext_resource type="PackedScene" uid="uid://cy1x37e0nx3dr" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchIteration.tscn" id="9_6lafc"]
 [ext_resource type="PackedScene" uid="uid://chxerovtcoldu" path="res://presentations/failing_to_go_full_time_indie/slides/TitleConclusion.tscn" id="9_xp4j2"]
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 
@@ -46,6 +47,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TheTenIssues" parent="." unique_id=654279523 instance=ExtResource("8_6bkw7")]
+layout_mode = 1
+
+[node name="IssueTooMuchIteration" parent="." unique_id=1900136500 instance=ExtResource("9_6lafc")]
 layout_mode = 1
 
 [node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
