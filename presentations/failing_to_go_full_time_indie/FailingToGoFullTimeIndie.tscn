@@ -34,6 +34,8 @@
 [ext_resource type="PackedScene" uid="uid://c4b4mwcudv012" path="res://presentations/failing_to_go_full_time_indie/slides/LessonIronTriangleFlexible.tscn" id="30_nekbb"]
 [ext_resource type="PackedScene" uid="uid://nmeydnqvlbxe" path="res://presentations/failing_to_go_full_time_indie/slides/LessonReleaseIsBestTeacher.tscn" id="31_fqkcl"]
 [ext_resource type="PackedScene" uid="uid://dho02mj1ncob1" path="res://presentations/failing_to_go_full_time_indie/slides/TheTenLessons.tscn" id="32_1uwk6"]
+[ext_resource type="PackedScene" uid="uid://d0gflkc7khta5" path="res://presentations/failing_to_go_full_time_indie/slides/WrapUp.tscn" id="34_bwgtg"]
+[ext_resource type="PackedScene" uid="uid://dobgcsljhah2l" path="res://presentations/failing_to_go_full_time_indie/slides/NotDoneYet.tscn" id="35_tyveo"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -143,6 +145,12 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TitleConclusion" parent="." unique_id=682975892 instance=ExtResource("9_xp4j2")]
+layout_mode = 1
+
+[node name="WrapUp" parent="." unique_id=888468727 instance=ExtResource("34_bwgtg")]
+layout_mode = 1
+
+[node name="NotDoneYet" parent="." unique_id=2122237107 instance=ExtResource("35_tyveo")]
 layout_mode = 1
 
 [node name="TitleThankYou" parent="." unique_id=1290643666 instance=ExtResource("10_d3mqu")]
