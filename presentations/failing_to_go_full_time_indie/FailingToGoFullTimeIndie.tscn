@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://of2hwsg271d4" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT1Minnebar.tscn" id="7_40lxk"]
 [ext_resource type="PackedScene" uid="uid://c4po1tk8fslst" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatIdDoDifferently.tscn" id="7_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://dj5p2nuq3wwf6" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatILearned.tscn" id="8_0n7tt"]
+[ext_resource type="PackedScene" uid="uid://br6xr105o6vrt" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT1TechnicalIssues.tscn" id="8_4fy4w"]
 [ext_resource type="PackedScene" uid="uid://6h6jpnhay4fd" path="res://presentations/failing_to_go_full_time_indie/slides/TheTenIssues.tscn" id="8_6bkw7"]
 [ext_resource type="PackedScene" uid="uid://bvon8a1k4ir6a" path="res://presentations/failing_to_go_full_time_indie/slides/NotADamnThing.tscn" id="8_xp4j2"]
 [ext_resource type="PackedScene" uid="uid://cy1x37e0nx3dr" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchIteration.tscn" id="9_6lafc"]
@@ -66,6 +67,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT1Minnebar" parent="." unique_id=352365043 instance=ExtResource("7_40lxk")]
+layout_mode = 1
+
+[node name="TimelineDT1TechnicalIssues" parent="." unique_id=369544861 instance=ExtResource("8_4fy4w")]
 layout_mode = 1
 
 [node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
