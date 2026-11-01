@@ -21,6 +21,8 @@
 [ext_resource type="PackedScene" uid="uid://7iennjfguptv" path="res://presentations/failing_to_go_full_time_indie/slides/IssueConsDontMakeYouViral.tscn" id="14_4oyh2"]
 [ext_resource type="PackedScene" uid="uid://d22y10amc2v43" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchSpend.tscn" id="15_em84d"]
 [ext_resource type="PackedScene" uid="uid://c28vsom1bfvtg" path="res://presentations/failing_to_go_full_time_indie/slides/IssueNotConsideringMarketing.tscn" id="16_2pyv2"]
+[ext_resource type="PackedScene" uid="uid://34yieqctr5au" path="res://presentations/failing_to_go_full_time_indie/slides/IssueAlwaysOnMind.tscn" id="17_wnc8m"]
+[ext_resource type="PackedScene" uid="uid://bqn03l5oai50s" path="res://presentations/failing_to_go_full_time_indie/slides/IssueImOnlyHuman.tscn" id="18_wwira"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -78,6 +80,12 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="IssueNotConsideringMarketing" parent="." unique_id=1925909922 instance=ExtResource("16_2pyv2")]
+layout_mode = 1
+
+[node name="IssueAlwaysOnMind" parent="." unique_id=533134843 instance=ExtResource("17_wnc8m")]
+layout_mode = 1
+
+[node name="IssueImOnlyHuman" parent="." unique_id=1637437074 instance=ExtResource("18_wwira")]
 layout_mode = 1
 
 [node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
