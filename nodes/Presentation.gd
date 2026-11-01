@@ -68,6 +68,8 @@ func previous() -> void:
 func start() -> void:
   if not get_child_count() > 0:
     await ready
+  for slideNode in _get_slides():
+    slideNode.hide()
   currentSlide = self.slides[0]
   _activate_slide(currentSlide)
   currentSlide.next()

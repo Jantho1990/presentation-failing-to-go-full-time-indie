@@ -260,8 +260,8 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Working on Godot games
-since 2019"
+text = "Working on games
+since 2018"
 fit_content = true
 
 [node name="GodotUser" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList" unique_id=1536740424]

@@ -5,6 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://dg52atbqvr8ax" path="res://presentations/failing_to_go_full_time_indie/slides/WhoAmI.tscn" id="2_qrr0k"]
 [ext_resource type="PackedScene" uid="uid://rd5tf4ig43jb" path="res://presentations/failing_to_go_full_time_indie/slides/TitleEstablishingTheTimeline.tscn" id="3_bqimy"]
 [ext_resource type="PackedScene" uid="uid://dqouqf4slpr34" path="res://presentations/failing_to_go_full_time_indie/slides/TestTimelineSlide.tscn" id="5_k1d6u"]
+[ext_resource type="PackedScene" uid="uid://3g7m8hlia4uk" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhyFullTimeFailed.tscn" id="6_lw4gl"]
+[ext_resource type="PackedScene" uid="uid://c4po1tk8fslst" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatIdDoDifferently.tscn" id="7_d3mqu"]
+[ext_resource type="PackedScene" uid="uid://dj5p2nuq3wwf6" path="res://presentations/failing_to_go_full_time_indie/slides/TitleWhatILearned.tscn" id="8_0n7tt"]
+[ext_resource type="PackedScene" uid="uid://chxerovtcoldu" path="res://presentations/failing_to_go_full_time_indie/slides/TitleConclusion.tscn" id="9_xp4j2"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -29,4 +33,16 @@ layout_mode = 1
 
 [node name="BasicSlideTemplate" parent="." unique_id=1609868614 instance=ExtResource("5_k1d6u")]
 visible = false
+layout_mode = 1
+
+[node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
+layout_mode = 1
+
+[node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
+layout_mode = 1
+
+[node name="TitleWhatILearned" parent="." unique_id=770785753 instance=ExtResource("8_0n7tt")]
+layout_mode = 1
+
+[node name="TitleConclusion" parent="." unique_id=682975892 instance=ExtResource("9_xp4j2")]
 layout_mode = 1
