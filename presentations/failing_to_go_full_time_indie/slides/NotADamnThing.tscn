@@ -1,0 +1,85 @@
+[gd_scene format=3 uid="uid://bvon8a1k4ir6a"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_3ca23"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_hp880"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_ye02l"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_gbtfi"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_2qbhj"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_xwye5"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="7_hlyr1"]
+[ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_bnohx"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="11_ffaey"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("4_gbtfi")
+
+[sub_resource type="Resource" id="Resource_awelw"]
+script = ExtResource("5_2qbhj")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_20msc"]
+script = ExtResource("3_ye02l")
+slide_steps = Array[ExtResource("2_hp880")]([SubResource("Resource_sho4t"), SubResource("Resource_awelw")])
+
+[sub_resource type="Resource" id="Resource_kf1sq"]
+script = ExtResource("6_xwye5")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("7_hlyr1")
+
+[sub_resource type="Resource" id="Resource_4e6wk"]
+script = ExtResource("3_ye02l")
+slide_steps = Array[ExtResource("2_hp880")]([SubResource("Resource_kf1sq"), SubResource("Resource_1vcjn")])
+
+[node name="NotADamnThing" type="Control" unique_id=1464294895]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_3ca23")
+steps = Array[ExtResource("2_hp880")]([SubResource("Resource_20msc"), SubResource("Resource_4e6wk")])
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=746038956]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=1876069339]
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=522054557]
+layout_mode = 2
+theme_override_constants/separation = 64
+alignment = 1
+
+[node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=21452083 instance=ExtResource("8_bnohx")]
+layout_mode = 2
+title = "What I'd Do Differently"
+
+[node name="SlideContent" type="CenterContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=895674547]
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=988722505]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichSlideTitle"
+bbcode_enabled = true
+text = "[i][b]Not a damn thing.[/b][/i]"
+fit_content = true
+autowrap_mode = 0
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1121046985 instance=ExtResource("11_ffaey")]
+layout_mode = 2
+size_flags_vertical = 8
