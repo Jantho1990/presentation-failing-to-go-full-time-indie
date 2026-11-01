@@ -16,6 +16,8 @@
 [ext_resource type="PackedScene" uid="uid://yhpxovphj31w" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchTutorial.tscn" id="10_4p5un"]
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://0303otv830lc" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooFocusedOnFinishing.tscn" id="11_547g6"]
+[ext_resource type="PackedScene" uid="uid://jad8n8euopf5" path="res://presentations/failing_to_go_full_time_indie/slides/IssueFlawedAppealEvaluation.tscn" id="12_s0xly"]
+[ext_resource type="PackedScene" uid="uid://cafegeiqdhu75" path="res://presentations/failing_to_go_full_time_indie/slides/IssueChasingFunding.tscn" id="13_4l4ej"]
 
 [node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
@@ -58,6 +60,12 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="IssueTooFocusedOnFinishing" parent="." unique_id=1005773426 instance=ExtResource("11_547g6")]
+layout_mode = 1
+
+[node name="IssueFlawedAppealEvaluation" parent="." unique_id=1979683718 instance=ExtResource("12_s0xly")]
+layout_mode = 1
+
+[node name="IssueChasingFunding" parent="." unique_id=586301189 instance=ExtResource("13_4l4ej")]
 layout_mode = 1
 
 [node name="TitleWhatIdDoDifferently" parent="." unique_id=763239810 instance=ExtResource("7_d3mqu")]
