@@ -59,7 +59,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tqjp2")
-starting_slide = NodePath("TimelineDT1SGDQPlus2DConMoA")
+starting_slide = NodePath("TimelineDT2TheEnd")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
 
 [node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
@@ -106,7 +106,7 @@ layout_mode = 1
 [node name="TimelineDT2TheEnd" parent="." unique_id=1594071683 instance=ExtResource("13_45r7a")]
 layout_mode = 1
 
-[node name="TimelineDGCIntro" parent="." unique_id=559138086 instance=ExtResource("16_0a3ew")]
+[node name="TimelineDGCIntro" parent="." unique_id=1807121466 instance=ExtResource("16_0a3ew")]
 layout_mode = 1
 
 [node name="TimelineDGCTheDemo" parent="." unique_id=555063180 instance=ExtResource("14_mtstm")]

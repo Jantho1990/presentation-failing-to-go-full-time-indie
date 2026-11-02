@@ -11,12 +11,94 @@
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="9_ljtqg"]
 [ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="10_ejaxf"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="11_ex5rn"]
+[ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="11_w2xq8"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_r20dn"]
 [ext_resource type="FontFile" uid="uid://r80u4cabx8k6" path="res://assets/fonts/Tomorrow/Tomorrow-Bold.ttf" id="13_c1k2x"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="14_00edy"]
 
-[sub_resource type="Resource" id="Resource_sho4t"]
+[sub_resource type="Resource" id="Resource_kptxx"]
 script = ExtResource("3_h72wx")
+metadata/_custom_type_script = "uid://c87bqhd78xism"
+
+[sub_resource type="Resource" id="Resource_c74vx"]
+script = ExtResource("10_ejaxf")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/BeforeLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_wcrpk"]
+script = ExtResource("10_ejaxf")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/PreLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/PreLabel")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_ty2i1"]
+script = ExtResource("5_6rebn")
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_kptxx"), SubResource("Resource_c74vx"), SubResource("Resource_wcrpk")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_ycex8"]
+script = ExtResource("6_m4lmx")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget")])
+offset_distance = Vector2(0, 542)
+axis = 1
+animation_duration = 0.4
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_mq3uc"]
+script = ExtResource("7_36b4c")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment")])
+target_anchors = Vector4(0.722, 0, 1, 0)
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://bhawgc8yopdqg"
+
+[sub_resource type="Resource" id="Resource_nyc34"]
+script = ExtResource("9_ljtqg")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/BeforeLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_53cmm"]
+script = ExtResource("8_bx64w")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/PreLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/PreLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/EndMark"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/EndMark")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_37grl"]
+script = ExtResource("5_6rebn")
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_ycex8"), SubResource("Resource_mq3uc"), SubResource("Resource_nyc34"), SubResource("Resource_53cmm")])
+animation_duration = 0.4
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_t2pty"]
+script = ExtResource("10_ejaxf")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent")])
+animation_duration = 0.0
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_k8fqn"]
+script = ExtResource("9_ljtqg")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTitle")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_52du2"]
+script = ExtResource("10_ejaxf")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_l76di"]
+script = ExtResource("5_6rebn")
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_t2pty"), SubResource("Resource_k8fqn"), SubResource("Resource_52du2")])
+animation_duration = 0.1
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_mswgo"]
+script = ExtResource("4_fkl6e")
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_ty2i1"), SubResource("Resource_37grl"), SubResource("Resource_l76di")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
 
 [sub_resource type="Resource" id="Resource_aohl3"]
 script = ExtResource("6_m4lmx")
@@ -28,10 +110,10 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
-[sub_resource type="Resource" id="Resource_gs6d1"]
+[sub_resource type="Resource" id="Resource_5mqpd"]
 script = ExtResource("7_36b4c")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment")])
-target_anchors = Vector4(0, 0, 0.111, 0)
+target_anchors = Vector4(0.722, 0, 0.778, 0)
 animation_duration = 0.4
 ease_type = 2
 trans_type = 7
@@ -53,15 +135,34 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_mswgo"]
+[sub_resource type="Resource" id="Resource_w2xq8"]
+script = ExtResource("11_w2xq8")
+animation_duration = 0.15
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_h72wx"]
+script = ExtResource("9_ljtqg")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/EndMark")])
+animation_duration = 0.2
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_exas6"]
+script = ExtResource("4_fkl6e")
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_w2xq8"), SubResource("Resource_h72wx")])
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_0ygfq"]
 script = ExtResource("5_6rebn")
-slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_aohl3"), SubResource("Resource_gs6d1"), SubResource("Resource_60cro"), SubResource("Resource_2khk1")])
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_aohl3"), SubResource("Resource_5mqpd"), SubResource("Resource_60cro"), SubResource("Resource_2khk1"), SubResource("Resource_exas6")])
 animation_duration = 0.4
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_12c8h"]
 script = ExtResource("10_ejaxf")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget")])
 animation_duration = 0.0
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
@@ -89,12 +190,13 @@ script = ExtResource("11_ex5rn")
 metadata/_custom_type_script = "uid://b2waivlvwc37x"
 
 [sub_resource type="Resource" id="Resource_eqhgs"]
+resource_name = "Animate And Out"
 script = ExtResource("4_fkl6e")
-slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_mswgo"), SubResource("Resource_2etcq"), SubResource("Resource_r8rfd"), SubResource("Resource_i2ehr")])
+slide_steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_0ygfq"), SubResource("Resource_2etcq"), SubResource("Resource_r8rfd"), SubResource("Resource_i2ehr")])
 animation_duration = 0.55
 metadata/_custom_type_script = "uid://capy37k215xbr"
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2s3f"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_nyc34"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
 border_width_left = 4
 border_width_top = 4
@@ -104,7 +206,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_b6x72"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mq3uc"]
 bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
@@ -115,7 +217,7 @@ corner_detail = 1
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_43qso"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_wcrpk"]
 bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
@@ -126,7 +228,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_g1l2m"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0ygfq"]
 bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 border_width_left = 4
 border_width_top = 4
@@ -137,7 +239,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_q4nth"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_t2pty"]
 bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 border_width_left = 4
 border_width_top = 4
@@ -148,7 +250,7 @@ corner_detail = 1
 expand_margin_left = 4.0
 expand_margin_right = 4.0
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5lx2r"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_52du2"]
 bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 border_width_left = 4
 border_width_top = 4
@@ -161,7 +263,87 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_juxnl"]
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_53cmm"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_37grl"]
+bg_color = Color(0.8, 0.8, 0.8, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_5mqpd"]
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_d0o5a"]
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_ficyd"]
+bg_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_hh4de"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_detail = 1
+expand_margin_left = 4.0
+expand_margin_right = 4.0
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_1ksu3"]
+bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+border_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+corner_radius_top_left = 4
+corner_radius_top_right = 4
+corner_radius_bottom_right = 4
+corner_radius_bottom_left = 4
+corner_detail = 1
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_fwbko"]
 bg_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 border_width_left = 4
 border_width_top = 4
@@ -182,7 +364,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_exas6")
-steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_sho4t"), SubResource("Resource_eqhgs")])
+steps = Array[ExtResource("2_w2xq8")]([SubResource("Resource_mswgo"), SubResource("Resource_eqhgs")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1474864329]
 layout_mode = 1
@@ -215,20 +397,23 @@ theme_override_constants/separation = 8
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer" unique_id=651438447 instance=ExtResource("12_r20dn")]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
-title = "Dice Tower 1: VGM Con"
+title = "Dice Gun Commando: The Demo"
 show_bottom_line = false
 
-[node name="TimelineWidget" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer" unique_id=103593109]
+[node name="TimelinesContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer" unique_id=1652563881]
+layout_mode = 2
+
+[node name="TimelineWidget" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer" unique_id=67579305]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 2
 
-[node name="MainTimeline" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget" unique_id=253787129]
+[node name="MainTimeline" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget" unique_id=1149013160]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 
-[node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline" unique_id=2057503713]
+[node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline" unique_id=185042068]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -238,13 +423,13 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="25-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1884974369]
+[node name="25-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1876705642]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-2" unique_id=2125157199]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-2" unique_id=1431577202]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -254,13 +439,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "02/25"
 horizontal_alignment = 1
 
-[node name="25-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1851541006]
+[node name="25-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=616730978]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-3" unique_id=302074509]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-3" unique_id=1823603642]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -270,13 +455,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "03/25"
 horizontal_alignment = 1
 
-[node name="25-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1647239096]
+[node name="25-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=2036572109]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-4" unique_id=626446136]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-4" unique_id=2049515000]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -286,13 +471,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "04/25"
 horizontal_alignment = 1
 
-[node name="25-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=966582538]
+[node name="25-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=396710807]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-5" unique_id=1617518329]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-5" unique_id=2142579609]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -302,13 +487,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "05/25"
 horizontal_alignment = 1
 
-[node name="25-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1422741722]
+[node name="25-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=293914101]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-6" unique_id=1024898932]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-6" unique_id=54114308]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -318,13 +503,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "06/25"
 horizontal_alignment = 1
 
-[node name="25-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1292882881]
+[node name="25-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1616422956]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-7" unique_id=1362697514]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-7" unique_id=1307022172]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -334,13 +519,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "07/25"
 horizontal_alignment = 1
 
-[node name="25-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1124809450]
+[node name="25-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=852451709]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-8" unique_id=1391064011]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-8" unique_id=1543372011]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -350,13 +535,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "08/25"
 horizontal_alignment = 1
 
-[node name="25-9" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1395870109]
+[node name="25-9" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=117184204]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-9" unique_id=413019983]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-9" unique_id=908206054]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -366,13 +551,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "09/25"
 horizontal_alignment = 1
 
-[node name="25-10" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=528411876]
+[node name="25-10" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=2132769768]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-10" unique_id=460962620]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-10" unique_id=871543987]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -382,13 +567,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "10/25"
 horizontal_alignment = 1
 
-[node name="25-11" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=950831830]
+[node name="25-11" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=807255182]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-11" unique_id=156030163]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-11" unique_id=310557479]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -398,13 +583,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "11/25"
 horizontal_alignment = 1
 
-[node name="25-12" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=454665026]
+[node name="25-12" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=551952117]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-12" unique_id=1779834542]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/25-12" unique_id=524930243]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -414,13 +599,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "12/25"
 horizontal_alignment = 1
 
-[node name="26-1" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1573813100]
+[node name="26-1" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=277327986]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-1" unique_id=592047629]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-1" unique_id=1120449094]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -430,13 +615,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "01/26"
 horizontal_alignment = 1
 
-[node name="26-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=733089578]
+[node name="26-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=974658991]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-2" unique_id=2019981009]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-2" unique_id=1551471888]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -446,13 +631,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "02/26"
 horizontal_alignment = 1
 
-[node name="26-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1441807276]
+[node name="26-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=2076396166]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-3" unique_id=203025176]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-3" unique_id=1227392271]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -462,13 +647,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "03/26"
 horizontal_alignment = 1
 
-[node name="26-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=380725141]
+[node name="26-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1343750529]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-4" unique_id=244890002]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-4" unique_id=988512405]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -478,13 +663,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "04/26"
 horizontal_alignment = 1
 
-[node name="26-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=785135337]
+[node name="26-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=182194272]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-5" unique_id=925603493]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-5" unique_id=1872953136]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -494,13 +679,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "05/26"
 horizontal_alignment = 1
 
-[node name="26-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=812050899]
+[node name="26-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1872763248]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-6" unique_id=481687783]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-6" unique_id=479399068]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -510,13 +695,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "06/26"
 horizontal_alignment = 1
 
-[node name="26-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1068099982]
+[node name="26-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1872203772]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-7" unique_id=198854432]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-7" unique_id=53055338]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -526,13 +711,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "07/26"
 horizontal_alignment = 1
 
-[node name="26-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1258476786]
+[node name="26-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides" unique_id=1195537126]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-8" unique_id=922123723]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/InvisibleGuides/26-8" unique_id=1004532479]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -542,7 +727,7 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "08/26"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline" unique_id=1656847694]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline" unique_id=540471385]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.026
@@ -553,32 +738,31 @@ offset_right = -48.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_b6x72")
+theme_override_styles/separator = SubResource("StyleBoxFlat_mq3uc")
 
-[node name="StartMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=136197338]
+[node name="StartMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=992816665]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.4
 offset_top = 2.0
 offset_bottom = 42.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_43qso")
+theme_override_styles/separator = SubResource("StyleBoxFlat_wcrpk")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=1737857773]
-visible = false
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=427782842]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -62.0
 offset_right = 63.0
-theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_colors/font_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
-text = "February
+text = "Feb
 2025"
 horizontal_alignment = 1
 
-[node name="EndMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=1582084902]
+[node name="EndMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=1786328097]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -587,9 +771,9 @@ anchor_bottom = 0.4
 offset_top = 2.0
 offset_bottom = 42.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_g1l2m")
+theme_override_styles/separator = SubResource("StyleBoxFlat_0ygfq")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=43314868]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=1713975253]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -602,22 +786,23 @@ text = "Aug
 2026"
 horizontal_alignment = 1
 
-[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=968972516]
+[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=1037677707]
 layout_mode = 1
-anchor_right = 0.111
+anchor_left = 0.722
+anchor_right = 0.778
 offset_top = 2.0
 offset_bottom = 2.0
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=968442652]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=472602106]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_q4nth")
+theme_override_styles/separator = SubResource("StyleBoxFlat_t2pty")
 
-[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1805792227]
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=358771177]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.4
@@ -626,9 +811,9 @@ offset_left = -2.0
 offset_right = 2.0
 offset_bottom = 60.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_5lx2r")
+theme_override_styles/separator = SubResource("StyleBoxFlat_52du2")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=941720835]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=67789416]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -639,11 +824,11 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
 theme_override_font_sizes/font_size = 24
-text = "Feb
-2025"
+text = "Mar
+2026"
 horizontal_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1678689366]
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=56881]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -654,9 +839,9 @@ offset_left = -2.0
 offset_right = 2.0
 offset_bottom = 60.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_juxnl")
+theme_override_styles/separator = SubResource("StyleBoxFlat_53cmm")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=684606872]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1918440934]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -668,10 +853,508 @@ theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
 theme_override_font_sizes/font_size = 24
 text = "Apr
+2026"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=240627363]
+visible = false
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 36
+text = "Dice Gun Commando"
+horizontal_alignment = 1
+
+[node name="PreTimelineWidget" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer" unique_id=73715685]
+layout_mode = 2
+offset_transform_enabled = true
+
+[node name="MainTimeline" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget" unique_id=816596309]
+layout_mode = 1
+anchors_preset = 10
+anchor_right = 1.0
+grow_horizontal = 2
+
+[node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline" unique_id=710470238]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+alignment = 1
+
+[node name="25-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2004287786]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 11
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-2" unique_id=1756996752]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "02/25"
+horizontal_alignment = 1
+
+[node name="25-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1580227377]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 11
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-3" unique_id=1202501325]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "03/25"
+horizontal_alignment = 1
+
+[node name="25-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=583368070]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-4" unique_id=799676057]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "04/25"
+horizontal_alignment = 1
+
+[node name="25-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1475045847]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-5" unique_id=456063689]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "05/25"
+horizontal_alignment = 1
+
+[node name="25-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1376313755]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-6" unique_id=1178459758]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "06/25"
+horizontal_alignment = 1
+
+[node name="25-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=368020995]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-7" unique_id=1211921097]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "07/25"
+horizontal_alignment = 1
+
+[node name="25-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2074021332]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-8" unique_id=693394800]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "08/25"
+horizontal_alignment = 1
+
+[node name="25-9" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=843185427]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-9" unique_id=630476109]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "09/25"
+horizontal_alignment = 1
+
+[node name="25-10" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=79105287]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-10" unique_id=972069631]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "10/25"
+horizontal_alignment = 1
+
+[node name="25-11" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1023063738]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-11" unique_id=765817586]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "11/25"
+horizontal_alignment = 1
+
+[node name="25-12" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1831587168]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/25-12" unique_id=1187523932]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "12/25"
+horizontal_alignment = 1
+
+[node name="26-1" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=848628859]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-1" unique_id=1874858942]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "01/26"
+horizontal_alignment = 1
+
+[node name="26-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1421051008]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-2" unique_id=227146040]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "02/26"
+horizontal_alignment = 1
+
+[node name="26-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1136150995]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-3" unique_id=1347482464]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "03/26"
+horizontal_alignment = 1
+
+[node name="26-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1779888905]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-4" unique_id=1590892010]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "04/26"
+horizontal_alignment = 1
+
+[node name="26-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2094713953]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-5" unique_id=275550873]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "05/26"
+horizontal_alignment = 1
+
+[node name="26-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1960762267]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-6" unique_id=784164216]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "06/26"
+horizontal_alignment = 1
+
+[node name="26-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2069944108]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-7" unique_id=749481568]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "07/26"
+horizontal_alignment = 1
+
+[node name="26-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides" unique_id=826204581]
+custom_minimum_size = Vector2(0, 40)
+layout_mode = 2
+size_flags_horizontal = 11
+theme_override_styles/separator = SubResource("StyleBoxFlat_37grl")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/InvisibleGuides/26-8" unique_id=1837533884]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "08/26"
+horizontal_alignment = 1
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline" unique_id=2118176982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.026
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -2.0
+offset_right = -48.0
+offset_bottom = 2.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_5mqpd")
+
+[node name="StartMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator" unique_id=1830388172]
+layout_mode = 1
+anchors_preset = -1
+anchor_bottom = 0.4
+offset_top = 2.0
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_d0o5a")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=595467472]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+theme_override_colors/font_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "Feb
 2025"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment" unique_id=437511704]
+[node name="EndMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator" unique_id=1689376950]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_right = 1.0
+anchor_bottom = 0.4
+offset_top = 2.0
+offset_bottom = 42.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_ficyd")
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=315060552]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+theme_override_colors/font_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+text = "Aug
+2026"
+horizontal_alignment = 1
+
+[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator" unique_id=108060111]
+layout_mode = 1
+anchor_left = 0.611
+anchor_right = 0.666
+offset_top = 2.0
+offset_bottom = 2.0
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1027096088]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_hh4de")
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=140203495]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 0.4
+anchor_bottom = 0.4
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_1ksu3")
+
+[node name="PreLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=1204528821]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 24
+text = "Jan
+2026"
+horizontal_alignment = 1
+
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=513910804]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 24
+text = "Mar
+2026"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=461128982]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.0
+anchor_top = 0.5
+anchor_right = 1.0
+anchor_bottom = 0.5
+offset_left = -2.0
+offset_right = 2.0
+offset_bottom = 60.0
+grow_horizontal = 2
+theme_override_styles/separator = SubResource("StyleBoxFlat_fwbko")
+
+[node name="PreLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1682558910]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 24
+text = "Feb
+2026"
+horizontal_alignment = 1
+
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1770551759]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 24
+text = "Aug
+2026"
+horizontal_alignment = 1
+
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1531050383]
 visible = false
 layout_mode = 1
 anchors_preset = -1
@@ -702,17 +1385,17 @@ fit_content = true
 autowrap_mode = 0
 horizontal_alignment = 1
 
-[node name="BigTimelineWidget" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent" unique_id=690336722]
+[node name="BigTimelineWidget" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent" unique_id=415338146]
 layout_mode = 2
 size_flags_vertical = 4
 
-[node name="MainTimeline" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget" unique_id=859264216]
+[node name="MainTimeline" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget" unique_id=1908552558]
 layout_mode = 1
 anchors_preset = 10
 anchor_right = 1.0
 grow_horizontal = 2
 
-[node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline" unique_id=898469221]
+[node name="InvisibleGuides" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline" unique_id=815391896]
 visible = false
 layout_mode = 1
 anchors_preset = 15
@@ -722,13 +1405,13 @@ grow_horizontal = 2
 grow_vertical = 2
 alignment = 1
 
-[node name="25-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1888651177]
+[node name="25-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1516174678]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-2" unique_id=56194133]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-2" unique_id=791152618]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -738,13 +1421,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "02/25"
 horizontal_alignment = 1
 
-[node name="25-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=464925082]
+[node name="25-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=347448986]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-3" unique_id=35258586]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-3" unique_id=2114074608]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -754,13 +1437,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "03/25"
 horizontal_alignment = 1
 
-[node name="25-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1567066541]
+[node name="25-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=636920253]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-4" unique_id=61817596]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-4" unique_id=121202702]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -770,13 +1453,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "04/25"
 horizontal_alignment = 1
 
-[node name="25-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=218930851]
+[node name="25-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=291376581]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-5" unique_id=1935287007]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-5" unique_id=888401970]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -786,13 +1469,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "05/25"
 horizontal_alignment = 1
 
-[node name="25-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=291997388]
+[node name="25-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=582202920]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-6" unique_id=731516540]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-6" unique_id=1420402537]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -802,13 +1485,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "06/25"
 horizontal_alignment = 1
 
-[node name="25-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1946066174]
+[node name="25-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=300563148]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-7" unique_id=236773127]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-7" unique_id=120865663]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -818,13 +1501,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "07/25"
 horizontal_alignment = 1
 
-[node name="25-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2080753808]
+[node name="25-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1498964750]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-8" unique_id=634632290]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-8" unique_id=816329978]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -834,13 +1517,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "08/25"
 horizontal_alignment = 1
 
-[node name="25-9" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1463838937]
+[node name="25-9" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1092660794]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-9" unique_id=1264828241]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-9" unique_id=746831232]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -850,13 +1533,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "09/25"
 horizontal_alignment = 1
 
-[node name="25-10" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1689269130]
+[node name="25-10" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=353107004]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-10" unique_id=1741062048]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-10" unique_id=36160785]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -866,13 +1549,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "10/25"
 horizontal_alignment = 1
 
-[node name="25-11" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=391468003]
+[node name="25-11" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=715108557]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-11" unique_id=1858840626]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-11" unique_id=1926192622]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -882,13 +1565,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "11/25"
 horizontal_alignment = 1
 
-[node name="25-12" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=148616234]
+[node name="25-12" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1675463468]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-12" unique_id=1579264548]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/25-12" unique_id=596332303]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -898,13 +1581,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "12/25"
 horizontal_alignment = 1
 
-[node name="26-1" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=818247044]
+[node name="26-1" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=308114197]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-1" unique_id=459639352]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-1" unique_id=1933403937]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -914,13 +1597,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "01/26"
 horizontal_alignment = 1
 
-[node name="26-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=216809735]
+[node name="26-2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=775734252]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-2" unique_id=840672317]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-2" unique_id=1660321783]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -930,13 +1613,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "02/26"
 horizontal_alignment = 1
 
-[node name="26-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=2138846621]
+[node name="26-3" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1048386127]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-3" unique_id=461981657]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-3" unique_id=598557329]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -946,13 +1629,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "03/26"
 horizontal_alignment = 1
 
-[node name="26-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1774070543]
+[node name="26-4" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=642113714]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-4" unique_id=2020607357]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-4" unique_id=292262830]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -962,13 +1645,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "04/26"
 horizontal_alignment = 1
 
-[node name="26-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=264157224]
+[node name="26-5" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=814740817]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-5" unique_id=299796438]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-5" unique_id=1415473530]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -978,13 +1661,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "05/26"
 horizontal_alignment = 1
 
-[node name="26-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=482167992]
+[node name="26-6" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=962019069]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-6" unique_id=571459438]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-6" unique_id=1762227571]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -994,13 +1677,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "06/26"
 horizontal_alignment = 1
 
-[node name="26-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=806792545]
+[node name="26-7" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=1229429455]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 3
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-7" unique_id=553541155]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-7" unique_id=2111810460]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -1010,13 +1693,13 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "07/26"
 horizontal_alignment = 1
 
-[node name="26-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=47224268]
+[node name="26-8" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides" unique_id=851125480]
 custom_minimum_size = Vector2(0, 40)
 layout_mode = 2
 size_flags_horizontal = 11
-theme_override_styles/separator = SubResource("StyleBoxFlat_x2s3f")
+theme_override_styles/separator = SubResource("StyleBoxFlat_nyc34")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-8" unique_id=1367131094]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/InvisibleGuides/26-8" unique_id=780695434]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -1026,7 +1709,7 @@ theme_override_fonts/font = ExtResource("13_c1k2x")
 text = "08/26"
 horizontal_alignment = 1
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline" unique_id=1787308343]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline" unique_id=1924087632]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 0.026
@@ -1037,32 +1720,32 @@ offset_right = -48.0
 offset_bottom = 2.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_b6x72")
+theme_override_styles/separator = SubResource("StyleBoxFlat_mq3uc")
 
-[node name="StartMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=243782809]
+[node name="StartMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=2020851772]
 layout_mode = 1
 anchors_preset = -1
 anchor_bottom = 0.4
 offset_top = 2.0
 offset_bottom = 42.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_43qso")
+theme_override_styles/separator = SubResource("StyleBoxFlat_wcrpk")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=1323624764]
-visible = false
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/StartMark" unique_id=1315013893]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
 anchor_bottom = 1.0
 offset_left = -62.0
 offset_right = 63.0
-theme_override_colors/font_color = Color(0.5019608, 0.91764706, 1, 1)
+theme_override_colors/font_color = Color(0.1882353, 0.9098039, 0.76862746, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
-text = "February
+text = "Feb
 2025"
 horizontal_alignment = 1
 
-[node name="EndMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=277716676]
+[node name="EndMark" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=1512787215]
+modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -1071,9 +1754,9 @@ anchor_bottom = 0.4
 offset_top = 2.0
 offset_bottom = 42.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_g1l2m")
+theme_override_styles/separator = SubResource("StyleBoxFlat_0ygfq")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=1810171530]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/EndMark" unique_id=1354863248]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -1086,22 +1769,23 @@ text = "Aug
 2026"
 horizontal_alignment = 1
 
-[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=2048299617]
+[node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator" unique_id=1580869984]
 layout_mode = 1
-anchor_right = 0.277
+anchor_left = 0.722
+anchor_right = 1.0
 offset_top = 2.0
 offset_bottom = 2.0
 
-[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1217979457]
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=640123514]
 layout_mode = 1
 anchors_preset = 15
 anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_q4nth")
+theme_override_styles/separator = SubResource("StyleBoxFlat_t2pty")
 
-[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=251302454]
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=219675520]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 0.4
@@ -1110,9 +1794,9 @@ offset_left = -2.0
 offset_right = 2.0
 offset_bottom = 60.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_5lx2r")
+theme_override_styles/separator = SubResource("StyleBoxFlat_52du2")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=979315521]
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=1805983417]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -1123,11 +1807,26 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
 theme_override_font_sizes/font_size = 24
-text = "Feb
-2025"
+text = "Mar
+2026"
 horizontal_alignment = 1
 
-[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1435596500]
+[node name="AfterLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=1950241386]
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("13_c1k2x")
+theme_override_font_sizes/font_size = 24
+text = "Mar
+2026"
+horizontal_alignment = 1
+
+[node name="VSeparator2" type="VSeparator" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=486818155]
 layout_mode = 1
 anchors_preset = -1
 anchor_left = 1.0
@@ -1138,9 +1837,9 @@ offset_left = -2.0
 offset_right = 2.0
 offset_bottom = 60.0
 grow_horizontal = 2
-theme_override_styles/separator = SubResource("StyleBoxFlat_juxnl")
+theme_override_styles/separator = SubResource("StyleBoxFlat_53cmm")
 
-[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1417508054]
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1793858640]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -1151,11 +1850,11 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
 theme_override_font_sizes/font_size = 24
-text = "Jul
-2025"
+text = "Aug
+2026"
 horizontal_alignment = 1
 
-[node name="AfterLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1904820066]
+[node name="AfterLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=74995192]
 modulate = Color(1, 1, 1, 0)
 layout_mode = 1
 anchors_preset = -1
@@ -1168,10 +1867,10 @@ theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("13_c1k2x")
 theme_override_font_sizes/font_size = 24
 text = "Apr
-2025"
+2026"
 horizontal_alignment = 1
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=1625852268]
+[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment" unique_id=222338794]
 visible = false
 layout_mode = 1
 anchors_preset = -1

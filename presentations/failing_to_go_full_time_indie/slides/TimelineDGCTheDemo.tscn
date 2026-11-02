@@ -523,7 +523,7 @@ horizontal_alignment = 1
 
 [node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=968972516]
 layout_mode = 1
-anchor_left = 0.723
+anchor_left = 0.722
 anchor_right = 0.778
 offset_top = 2.0
 offset_bottom = 2.0
