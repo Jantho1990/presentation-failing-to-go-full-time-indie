@@ -20,7 +20,7 @@ script = ExtResource("5_wmw4f")
 [sub_resource type="Resource" id="Resource_a8nac"]
 script = ExtResource("6_h284p")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1")])
 animation_duration = 0.1
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
@@ -33,6 +33,8 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 [sub_resource type="Resource" id="Resource_mife1"]
 script = ExtResource("7_dwo7a")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_b3vqa"]
 script = ExtResource("3_eo1dr")
@@ -41,26 +43,50 @@ slide_steps = Array[ExtResource("2_maiun")]([SubResource("Resource_86aco"), SubR
 [sub_resource type="Resource" id="Resource_6kavk"]
 script = ExtResource("7_dwo7a")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_63vt7"]
 script = ExtResource("7_dwo7a")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_fdq1m"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_2ea6k"]
+script = ExtResource("7_dwo7a")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1")])
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_2tbgy"]
 script = ExtResource("7_dwo7a")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_287y7"]
 script = ExtResource("7_dwo7a")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3")])
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_yc1wc"]
 script = ExtResource("8_mjrom")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("9_1lx6o")
@@ -77,7 +103,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_01t5f")
-steps = Array[ExtResource("2_maiun")]([SubResource("Resource_b3vqa"), SubResource("Resource_6kavk"), SubResource("Resource_63vt7"), SubResource("Resource_2tbgy"), SubResource("Resource_287y7"), SubResource("Resource_cgghm")])
+steps = Array[ExtResource("2_maiun")]([SubResource("Resource_b3vqa"), SubResource("Resource_6kavk"), SubResource("Resource_63vt7"), SubResource("Resource_fdq1m"), SubResource("Resource_2ea6k"), SubResource("Resource_2tbgy"), SubResource("Resource_287y7"), SubResource("Resource_cgghm")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1901353694]
 layout_mode = 1
@@ -100,7 +126,7 @@ theme_override_constants/separation = 64
 
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=874462008 instance=ExtResource("10_7mvgy")]
 layout_mode = 2
-title = "Have you ever wanted to go full-time indie?"
+title = "Have you ever wanted to go full time indie?"
 
 [node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=478008598]
 layout_mode = 2
@@ -149,7 +175,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "I got [b]laid off in 2025[/b] and decided to [i]take a shot[/i]"
+text = "I got laid off in 2025 and decided to take a shot"
 fit_content = true
 
 [node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1249585877]
@@ -164,13 +190,34 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_type_variation = &"RichContentTopMargin"
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2" unique_id=342991047]
+[node name="VBoxBullets" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2" unique_id=1681848248]
+layout_mode = 2
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets" unique_id=342991047]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "Developed two games from Feb. 2025 - Aug. 2026"
+fit_content = true
+
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets" unique_id=706365349]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Dice Tower[/ul]"
+fit_content = true
+
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets" unique_id=604829828]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Dice Gun Commando[/ul]"
 fit_content = true
 
 [node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=339825969]
@@ -191,7 +238,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Sep. 2026 I went back to a regular job"
+text = "I went back to a regular job"
 fit_content = true
 
 [node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=163394412]
@@ -212,7 +259,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "This is a story of my journey"
+text = "This is the story of my journey"
 fit_content = true
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1900585123 instance=ExtResource("13_182sg")]

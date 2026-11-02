@@ -26,6 +26,8 @@ script = ExtResource("4_6pcai")
 [sub_resource type="Resource" id="Resource_arwlc"]
 script = ExtResource("5_p7pvr")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_whc7a"]
 script = ExtResource("3_cn583")
@@ -35,34 +37,46 @@ slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_sho4t"), SubR
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_uly4x"]
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_ytwgk"]
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_0owdj"]
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
 target_position = Vector2(-800, 0)
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_l2pno"]
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
 target_position = Vector2(0, 1000)
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_8tfej"]
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
 target_position = Vector2(800, 0)
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_hhihw"]
 script = ExtResource("7_y1goi")
@@ -71,6 +85,8 @@ slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_0owdj"), SubR
 [sub_resource type="Resource" id="Resource_ff5r5"]
 script = ExtResource("9_wwil1")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("10_8v4m5")
