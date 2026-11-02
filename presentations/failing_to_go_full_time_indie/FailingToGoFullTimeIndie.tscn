@@ -30,6 +30,7 @@
 [ext_resource type="PackedScene" uid="uid://d22y10amc2v43" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchSpend.tscn" id="15_em84d"]
 [ext_resource type="PackedScene" uid="uid://c8rg0ku0nwsry" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCAttemptingHomeRun.tscn" id="15_rm33k"]
 [ext_resource type="PackedScene" uid="uid://c28vsom1bfvtg" path="res://presentations/failing_to_go_full_time_indie/slides/IssueNotConsideringMarketing.tscn" id="16_2pyv2"]
+[ext_resource type="PackedScene" uid="uid://dx20h6bhxn1b6" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCRoadToRelease.tscn" id="16_ohyin"]
 [ext_resource type="PackedScene" uid="uid://34yieqctr5au" path="res://presentations/failing_to_go_full_time_indie/slides/IssueAlwaysOnMind.tscn" id="17_wnc8m"]
 [ext_resource type="PackedScene" uid="uid://bqn03l5oai50s" path="res://presentations/failing_to_go_full_time_indie/slides/IssueImOnlyHuman.tscn" id="18_wwira"]
 [ext_resource type="PackedScene" uid="uid://tjf543qtqdyj" path="res://presentations/failing_to_go_full_time_indie/slides/LessonKeepItSimple.tscn" id="22_6if2x"]
@@ -98,6 +99,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDGCAttemptingHomeRun" parent="." unique_id=1606031491 instance=ExtResource("15_rm33k")]
+layout_mode = 1
+
+[node name="TimelineDGCRoadToRelease" parent="." unique_id=683080514 instance=ExtResource("16_ohyin")]
 layout_mode = 1
 
 [node name="TitleWhyFullTimeFailed" parent="." unique_id=1165752198 instance=ExtResource("6_lw4gl")]
