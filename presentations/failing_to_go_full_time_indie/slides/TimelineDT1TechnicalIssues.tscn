@@ -49,9 +49,18 @@ offset_distance = Vector2(0, -64)
 axis = 1
 metadata/_custom_type_script = "uid://d1ysmprsahxnr"
 
+[sub_resource type="Resource" id="Resource_7pw8w"]
+script = ExtResource("7_htiu3")
+targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer/Bullet0")])
+offset_distance = Vector2(0, -32)
+axis = 1
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://d1ysmprsahxnr"
+
 [sub_resource type="Resource" id="Resource_wyin7"]
 script = ExtResource("3_g8sen")
-slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_rsxba"), SubResource("Resource_5ya35"), SubResource("Resource_l8dap"), SubResource("Resource_rxrab"), SubResource("Resource_d0ufl")])
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_rsxba"), SubResource("Resource_5ya35"), SubResource("Resource_l8dap"), SubResource("Resource_rxrab"), SubResource("Resource_d0ufl"), SubResource("Resource_7pw8w")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_jvsp6"]
@@ -172,6 +181,26 @@ metadata/_custom_type_script = "uid://tsi26xoksyru"
 [sub_resource type="Resource" id="Resource_6x4no"]
 script = ExtResource("3_g8sen")
 slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_xw6od"), SubResource("Resource_x3ant")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_g8sen"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer/Bullet0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_shb4w"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer/Bullet0")])
+axis = 1
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_o7qk2"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_g8sen"), SubResource("Resource_shb4w")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_fkx8m"]
@@ -308,7 +337,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5htmk")
-steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_wyin7"), SubResource("Resource_7pqvm"), SubResource("Resource_qgyxl"), SubResource("Resource_dakxi"), SubResource("Resource_x1bkn"), SubResource("Resource_cjmtf"), SubResource("Resource_6x4no"), SubResource("Resource_6jekm")])
+steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_wyin7"), SubResource("Resource_7pqvm"), SubResource("Resource_qgyxl"), SubResource("Resource_dakxi"), SubResource("Resource_x1bkn"), SubResource("Resource_cjmtf"), SubResource("Resource_6x4no"), SubResource("Resource_o7qk2"), SubResource("Resource_6jekm")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1474864329]
 layout_mode = 1
