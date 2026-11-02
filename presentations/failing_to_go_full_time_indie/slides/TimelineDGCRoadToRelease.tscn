@@ -523,8 +523,8 @@ horizontal_alignment = 1
 
 [node name="Segment" type="Control" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator" unique_id=968972516]
 layout_mode = 1
-anchor_left = 0.778
-anchor_right = 0.89
+anchor_left = 0.89
+anchor_right = 0.945
 offset_top = 2.0
 offset_bottom = 2.0
 
@@ -559,7 +559,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_qj8l0")
 theme_override_font_sizes/font_size = 24
-text = "Apr
+text = "Jun
 2026"
 horizontal_alignment = 1
 
@@ -587,7 +587,7 @@ grow_horizontal = 2
 theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_qj8l0")
 theme_override_font_sizes/font_size = 24
-text = "Jun
+text = "Jul
 2026"
 horizontal_alignment = 1
 
