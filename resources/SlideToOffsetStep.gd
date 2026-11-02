@@ -61,7 +61,7 @@ func next() -> void:
     var destination_offset = _get_destination_offset(animatedNode, offset_distance)
     #print('DBG: animatedNode %s start %s destination %s' % [animatedNode.name, animatedNode.position, destination_offset])
     _slideTween.tween_property(animatedNode, "offset_transform_position", destination_offset, animation_duration).from(_old_offsets[animatedNode]).set_ease(ease_type).set_trans(trans_type)
-    _slideTween.finished.connect(func (): animatedNode.offset_transform_enabled = _old_offsets_enabled[animatedNode], CONNECT_ONE_SHOT)
+    # _slideTween.finished.connect(func (): animatedNode.offset_transform_enabled = _old_offsets_enabled[animatedNode], CONNECT_ONE_SHOT)
 
   await _slideTween.finished
   _slideTween = null

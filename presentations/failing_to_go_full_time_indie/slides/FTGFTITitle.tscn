@@ -5,7 +5,9 @@
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="3_k7r04"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="4_4l1cs"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="5_rb72u"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="6_8taey"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="6_tebpa"]
+[ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="7_62swa"]
 [ext_resource type="Texture2D" uid="uid://nfsacpru048h" path="res://assets/media/images/IntroThirdDiceTower.jpg" id="7_k4upf"]
 [ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="7_xv3w8"]
 [ext_resource type="Texture2D" uid="uid://t3rwn6poxieg" path="res://assets/media/images/IntroThirdDiceGunCommando.png" id="8_a5hct"]
@@ -22,14 +24,43 @@ script = ExtResource("3_k7r04")
 [sub_resource type="Resource" id="Resource_iuetc"]
 script = ExtResource("5_rb72u")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/TitleContainer")])
+animation_duration = 0.25
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_8taey"]
+script = ExtResource("7_62swa")
+animatedNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdDGC"), NodePath("BackgroundThirds/ThirdDT")])
+offset_distance = Vector2(0, -1280)
+axis = 1
+animation_duration = 0.3
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_62swa"]
+script = ExtResource("7_62swa")
+animatedNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdMe")])
+offset_distance = Vector2(0, 1280)
+axis = 1
+animation_duration = 0.3
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_mojkr"]
+script = ExtResource("6_8taey")
+slide_steps = Array[ExtResource("2_7fgqp")]([SubResource("Resource_8taey"), SubResource("Resource_62swa")])
+animation_duration = 0.3
+metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("6_tebpa")
 
 [sub_resource type="Resource" id="Resource_wa7o3"]
 script = ExtResource("4_4l1cs")
-slide_steps = Array[ExtResource("2_7fgqp")]([SubResource("Resource_iuetc"), SubResource("Resource_1vcjn")])
+slide_steps = Array[ExtResource("2_7fgqp")]([SubResource("Resource_iuetc"), SubResource("Resource_mojkr"), SubResource("Resource_1vcjn")])
 metadata/_custom_type_script = "uid://capy37k215xbr"
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3arb"]
