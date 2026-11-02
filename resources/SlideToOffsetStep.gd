@@ -1,4 +1,4 @@
-class_name SlideToOffestStep extends SlideStep
+class_name SlideToOffsetStep extends SlideStep
 
 
 @export var animatedNodePaths : Array[NodePath]: set = _set_animatedNodePaths
