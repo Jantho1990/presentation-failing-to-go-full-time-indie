@@ -1,0 +1,204 @@
+[gd_scene format=3 uid="uid://b6go07aae14p1"]
+
+[ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_ixver"]
+[ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_7fgqp"]
+[ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="3_k7r04"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="4_4l1cs"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="5_rb72u"]
+[ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="6_tebpa"]
+[ext_resource type="Texture2D" uid="uid://nfsacpru048h" path="res://assets/media/images/IntroThirdDiceTower.jpg" id="7_k4upf"]
+[ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="7_xv3w8"]
+[ext_resource type="Texture2D" uid="uid://t3rwn6poxieg" path="res://assets/media/images/IntroThirdDiceGunCommando.png" id="8_a5hct"]
+[ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="8_wnr2o"]
+[ext_resource type="Texture2D" uid="uid://b84qksg5tec1h" path="res://assets/media/images/IntroThirdMe.JPG" id="9_5cho7"]
+[ext_resource type="StyleBox" uid="uid://dj8jofx857n22" path="res://assets/themes/StopWaitingForGodot/resources/HSepAccent.tres" id="9_suaeq"]
+[ext_resource type="StyleBox" uid="uid://g8gt4dthr7ts" path="res://assets/themes/StopWaitingForGodot/resources/HSepSecondary.tres" id="10_v1yrq"]
+[ext_resource type="FontFile" uid="uid://cv48akgmtrvo6" path="res://assets/fonts/pixel_square/PixelSquareDGC10.ttf" id="11_g0lh6"]
+[ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="12_oydlu"]
+
+[sub_resource type="Resource" id="Resource_sho4t"]
+script = ExtResource("3_k7r04")
+
+[sub_resource type="Resource" id="Resource_iuetc"]
+script = ExtResource("5_rb72u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/TitleContainer")])
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_1vcjn"]
+script = ExtResource("6_tebpa")
+
+[sub_resource type="Resource" id="Resource_wa7o3"]
+script = ExtResource("4_4l1cs")
+slide_steps = Array[ExtResource("2_7fgqp")]([SubResource("Resource_iuetc"), SubResource("Resource_1vcjn")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b3arb"]
+
+[node name="FTGFTITitle" type="Control" unique_id=1867292032]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_ixver")
+steps = Array[ExtResource("2_7fgqp")]([SubResource("Resource_sho4t"), SubResource("Resource_wa7o3")])
+
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=510353347]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="BackgroundThirds" type="HBoxContainer" parent="." unique_id=1767076407]
+modulate = Color(1, 1, 1, 0.36078432)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ThirdDGC" type="TextureRect" parent="BackgroundThirds" unique_id=90806013]
+layout_mode = 2
+texture = ExtResource("8_a5hct")
+
+[node name="ThirdMe" type="TextureRect" parent="BackgroundThirds" unique_id=910750900]
+layout_mode = 2
+texture = ExtResource("9_5cho7")
+
+[node name="ThirdDT" type="TextureRect" parent="BackgroundThirds" unique_id=1139944918]
+layout_mode = 2
+texture = ExtResource("7_k4upf")
+
+[node name="Background" type="TextureRect" parent="." unique_id=1001554132]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("7_xv3w8")
+expand_mode = 2
+
+[node name="PanelContainer" type="PanelContainer" parent="." unique_id=649606572]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"PanelEditorBlue"
+theme_override_styles/panel = SubResource("StyleBoxEmpty_b3arb")
+
+[node name="LineDecorations" parent="PanelContainer" unique_id=485825233 instance=ExtResource("8_wnr2o")]
+visible = false
+layout_mode = 2
+
+[node name="Control" type="Control" parent="PanelContainer" unique_id=1030837381]
+visible = false
+layout_mode = 2
+size_flags_vertical = 3
+
+[node name="VSeparator" type="VSeparator" parent="PanelContainer/Control" unique_id=1124229887]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.06
+anchor_top = 0.01
+anchor_right = 0.06
+anchor_bottom = 0.99
+theme_override_styles/separator = ExtResource("9_suaeq")
+
+[node name="HSeparator" type="HSeparator" parent="PanelContainer/Control" unique_id=1400917492]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.01
+anchor_top = 0.9
+anchor_right = 0.99
+anchor_bottom = 0.9
+theme_override_styles/separator = ExtResource("10_v1yrq")
+
+[node name="TitleContainer" type="Control" parent="PanelContainer" unique_id=365768485]
+layout_mode = 2
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/TitleContainer" unique_id=643503634]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.1
+anchor_top = 0.15
+anchor_right = 0.9
+anchor_bottom = 0.83
+offset_right = 40.0
+offset_bottom = 40.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Title" type="RichTextLabel" parent="PanelContainer/TitleContainer/VBox" unique_id=1135820902]
+layout_mode = 2
+theme_type_variation = &"RichSlideTitle"
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 4
+theme_override_constants/shadow_offset_y = 4
+bbcode_enabled = true
+text = "[b]
+[right][i]Failing To Go        [/i][/right]
+[right][color=30e8c4]Full Time    [/color][/right]
+[right][color=f58596][i]Indie[/i][/color][/right]
+[/b]"
+fit_content = true
+scroll_active = false
+
+[node name="Subtitle" type="RichTextLabel" parent="PanelContainer/TitleContainer/VBox" unique_id=547156777]
+visible = false
+layout_mode = 2
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/shadow_outline_size = 1
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_fonts/normal_font = ExtResource("11_g0lh6")
+theme_override_font_sizes/normal_font_size = 80
+theme_override_font_sizes/bold_font_size = 72
+bbcode_enabled = true
+text = "[right]Dice Gun Commando Demo[/right]"
+fit_content = true
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer" unique_id=537426972]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 64
+theme_override_constants/margin_top = 32
+theme_override_constants/margin_right = 64
+theme_override_constants/margin_bottom = 32
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer" unique_id=649408932]
+layout_mode = 2
+theme_override_constants/separation = 64
+
+[node name="VBox3" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=480259809]
+layout_mode = 2
+size_flags_vertical = 6
+theme_override_constants/separation = 64
+
+[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox3" unique_id=1131901919]
+visible = false
+layout_mode = 2
+theme_override_constants/margin_left = 264
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer" unique_id=401830137]
+custom_minimum_size = Vector2(0, 235)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_override_font_sizes/bold_font_size = 172
+bbcode_enabled = true
+text = "[b]Thank you![/b]"
+
+[node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=2067559416 instance=ExtResource("12_oydlu")]
+layout_mode = 2
+size_flags_vertical = 8

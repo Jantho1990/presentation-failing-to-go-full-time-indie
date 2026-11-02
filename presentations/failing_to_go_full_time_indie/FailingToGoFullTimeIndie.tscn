@@ -2,6 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cx5ff6rmig1pl" path="res://nodes/Presentation.gd" id="1_tqjp2"]
 [ext_resource type="PackedScene" uid="uid://cqtmbv1m47p81" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT1Intro.tscn" id="2_3si5r"]
+[ext_resource type="PackedScene" uid="uid://b6go07aae14p1" path="res://presentations/failing_to_go_full_time_indie/slides/FTFTITitle.tscn" id="2_7pw8w"]
 [ext_resource type="PackedScene" uid="uid://bhrqg36apruce" path="res://presentations/failing_to_go_full_time_indie/slides/IntroToPresentation.tscn" id="2_bqimy"]
 [ext_resource type="PackedScene" uid="uid://dg52atbqvr8ax" path="res://presentations/failing_to_go_full_time_indie/slides/WhoAmI.tscn" id="2_qrr0k"]
 [ext_resource type="PackedScene" uid="uid://rd5tf4ig43jb" path="res://presentations/failing_to_go_full_time_indie/slides/TitleEstablishingTheTimeline.tscn" id="3_bqimy"]
@@ -51,7 +52,7 @@
 [ext_resource type="PackedScene" uid="uid://d0gflkc7khta5" path="res://presentations/failing_to_go_full_time_indie/slides/WrapUp.tscn" id="34_bwgtg"]
 [ext_resource type="PackedScene" uid="uid://dobgcsljhah2l" path="res://presentations/failing_to_go_full_time_indie/slides/NotDoneYet.tscn" id="35_tyveo"]
 
-[node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679 node_paths=PackedStringArray("starting_slide")]
+[node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,8 +60,10 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tqjp2")
-starting_slide = NodePath("TimelineDT2TheEnd")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
+
+[node name="FTGFTITitle" parent="." unique_id=1867292032 instance=ExtResource("2_7pw8w")]
+layout_mode = 1
 
 [node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
 layout_mode = 1
