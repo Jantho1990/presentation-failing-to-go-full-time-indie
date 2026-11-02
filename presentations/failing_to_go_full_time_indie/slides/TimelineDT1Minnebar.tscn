@@ -309,7 +309,7 @@ theme_override_constants/separation = 64
 [node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=499573943]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 256
+theme_override_constants/separation = 224
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox" unique_id=893663964]
 layout_mode = 2
@@ -852,7 +852,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=123830648 instance=ExtResource("7_vc6p7")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=2067736737]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=2111600794]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0/Margin" unique_id=2067736737]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -868,7 +873,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=71669127 instance=ExtResource("7_vc6p7")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=1163093265]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=214167132]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1/Margin" unique_id=1163093265]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -884,7 +894,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=305724259 instance=ExtResource("7_vc6p7")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=1107882010]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=835335179]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin" unique_id=1107882010]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4

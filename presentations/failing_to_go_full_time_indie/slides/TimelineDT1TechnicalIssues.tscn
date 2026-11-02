@@ -3,18 +3,222 @@
 [ext_resource type="Script" uid="uid://0v5eoi6ug6ty" path="res://nodes/PresentationSlide.gd" id="1_5htmk"]
 [ext_resource type="Script" uid="uid://seb3c43k5spx" path="res://resources/SlideStep.gd" id="2_v0p5h"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="3_7tpky"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="3_g8sen"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="4_bxj0m"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="5_0a3ky"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="5_shb4w"]
 [ext_resource type="FontFile" uid="uid://r80u4cabx8k6" path="res://assets/fonts/Tomorrow/Tomorrow-Bold.ttf" id="6_coy6i"]
+[ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="6_o7qk2"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="7_38vru"]
+[ext_resource type="Script" uid="uid://d1ysmprsahxnr" path="res://resources/SetOffsetStep.gd" id="7_htiu3"]
+[ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_ogsgj"]
 [ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_su7fs"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="9_g8sen"]
+[ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="9_sgkty"]
+[ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_j2d51"]
+[ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="11_v5ryo"]
 
-[sub_resource type="Resource" id="Resource_sho4t"]
+[sub_resource type="Resource" id="Resource_rsxba"]
 script = ExtResource("3_7tpky")
+metadata/_custom_type_script = "uid://c87bqhd78xism"
 
-[sub_resource type="Resource" id="Resource_1vcjn"]
+[sub_resource type="Resource" id="Resource_5ya35"]
+script = ExtResource("5_shb4w")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer/Bullet0")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
+[sub_resource type="Resource" id="Resource_l8dap"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/SlideHeader")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_rxrab"]
+script = ExtResource("7_htiu3")
+targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4")])
+offset_distance = Vector2(256, 0)
+axis = 0
+metadata/_custom_type_script = "uid://d1ysmprsahxnr"
+
+[sub_resource type="Resource" id="Resource_d0ufl"]
+script = ExtResource("7_htiu3")
+targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading")])
+offset_distance = Vector2(0, -64)
+axis = 1
+metadata/_custom_type_script = "uid://d1ysmprsahxnr"
+
+[sub_resource type="Resource" id="Resource_wyin7"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_rsxba"), SubResource("Resource_5ya35"), SubResource("Resource_l8dap"), SubResource("Resource_rxrab"), SubResource("Resource_d0ufl")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_jvsp6"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_6wp33"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading")])
+axis = 1
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_7pqvm"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_jvsp6"), SubResource("Resource_6wp33")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_6a1y5"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_ys6jg"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0")])
+axis = 0
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_qgyxl"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_6a1y5"), SubResource("Resource_ys6jg")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_aq4sn"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_w7qqk"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1")])
+axis = 0
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_dakxi"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_aq4sn"), SubResource("Resource_w7qqk")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_17okv"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_313bs"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2")])
+axis = 0
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_x1bkn"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_17okv"), SubResource("Resource_313bs")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_v2hqc"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_bycqj"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3")])
+axis = 0
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_cjmtf"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_v2hqc"), SubResource("Resource_bycqj")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_xw6od"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_x3ant"]
+script = ExtResource("8_ogsgj")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4")])
+axis = 0
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_6x4no"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_xw6od"), SubResource("Resource_x3ant")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_fkx8m"]
+script = ExtResource("10_j2d51")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_l34xk"]
+script = ExtResource("11_v5ryo")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment")])
+target_anchors = Vector4(0.221, inf, 0.277, inf)
+animation_duration = 0.9
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bhawgc8yopdqg"
+
+[sub_resource type="Resource" id="Resource_ss7ew"]
+script = ExtResource("6_o7qk2")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/AfterLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/AfterLabel")])
+animation_duration = 0.6
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_mbqs6"]
+script = ExtResource("10_j2d51")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/BeforeLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
+animation_duration = 0.6
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://63q6guytynws"
+
+[sub_resource type="Resource" id="Resource_bfefh"]
+script = ExtResource("3_g8sen")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_fkx8m"), SubResource("Resource_l34xk"), SubResource("Resource_ss7ew"), SubResource("Resource_mbqs6")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_qye22"]
 script = ExtResource("4_bxj0m")
+metadata/_custom_type_script = "uid://b2waivlvwc37x"
+
+[sub_resource type="Resource" id="Resource_6jekm"]
+script = ExtResource("9_sgkty")
+slide_steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_bfefh"), SubResource("Resource_qye22")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2s3f"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -104,7 +308,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_5htmk")
-steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_sho4t"), SubResource("Resource_1vcjn")])
+steps = Array[ExtResource("2_v0p5h")]([SubResource("Resource_wyin7"), SubResource("Resource_7pqvm"), SubResource("Resource_qgyxl"), SubResource("Resource_dakxi"), SubResource("Resource_x1bkn"), SubResource("Resource_cjmtf"), SubResource("Resource_6x4no"), SubResource("Resource_6jekm")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1474864329]
 layout_mode = 1
@@ -548,7 +752,7 @@ offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_5lx2r")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=941720835]
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=941720835]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -560,6 +764,22 @@ theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_coy6i")
 theme_override_font_sizes/font_size = 24
 text = "May
+2025"
+horizontal_alignment = 1
+
+[node name="AfterLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator" unique_id=764521020]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("6_coy6i")
+theme_override_font_sizes/font_size = 24
+text = "Jun
 2025"
 horizontal_alignment = 1
 
@@ -576,7 +796,7 @@ offset_bottom = 60.0
 grow_horizontal = 2
 theme_override_styles/separator = SubResource("StyleBoxFlat_juxnl")
 
-[node name="Label" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=684606872]
+[node name="BeforeLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=684606872]
 layout_mode = 1
 anchors_preset = -1
 anchor_top = 1.0
@@ -588,6 +808,22 @@ theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
 theme_override_fonts/font = ExtResource("6_coy6i")
 theme_override_font_sizes/font_size = 24
 text = "Jun
+2025"
+horizontal_alignment = 1
+
+[node name="AfterLabel" type="Label" parent="PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2" unique_id=1611888743]
+modulate = Color(1, 1, 1, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = -62.0
+offset_right = 63.0
+grow_horizontal = 2
+theme_override_colors/font_color = Color(0.9607843, 0.52156866, 0.5882353, 1)
+theme_override_fonts/font = ExtResource("6_coy6i")
+theme_override_font_sizes/font_size = 24
+text = "Jul
 2025"
 horizontal_alignment = 1
 
@@ -639,7 +875,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=123830648 instance=ExtResource("7_38vru")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=2067736737]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0" unique_id=38438357]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0/Margin" unique_id=2067736737]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -655,7 +896,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=71669127 instance=ExtResource("7_38vru")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=1163093265]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1" unique_id=1201978896]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1/Margin" unique_id=1163093265]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -664,14 +910,19 @@ bbcode_enabled = true
 text = "Godot 3.5 integration broken"
 fit_content = true
 
-[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=57059759]
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=57059759]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=305724259 instance=ExtResource("7_38vru")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=305724259 instance=ExtResource("7_38vru")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=1107882010]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=2138217221]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin" unique_id=1107882010]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -680,14 +931,19 @@ bbcode_enabled = true
 text = "Likely case for other planned integrations (like Steam plugin)"
 fit_content = true
 
-[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=952878356]
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=952878356]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=1223335229 instance=ExtResource("7_38vru")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=1223335229 instance=ExtResource("7_38vru")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2" unique_id=483448595]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=2106119323]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/Margin" unique_id=483448595]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -696,18 +952,23 @@ bbcode_enabled = true
 text = "Doing painful workarounds for Godot 3.5 limitations"
 fit_content = true
 
-[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=663737648]
+[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=663737648]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=1601760466 instance=ExtResource("7_38vru")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=1601760466 instance=ExtResource("7_38vru")]
 layout_mode = 2
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3" unique_id=1604073341]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4" unique_id=606244955]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin" unique_id=1604073341]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/VBoxContainer" unique_id=222269361]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer" unique_id=222269361]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -716,7 +977,7 @@ bbcode_enabled = true
 text = "Committed to migration to Godot 4"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/VBoxContainer" unique_id=106660630]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point4/Margin/VBoxContainer" unique_id=106660630]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
