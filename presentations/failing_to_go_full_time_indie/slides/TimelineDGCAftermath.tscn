@@ -128,7 +128,7 @@ theme_override_constants/separation = 64
 [node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=499573943]
 layout_mode = 2
 size_flags_vertical = 3
-theme_override_constants/separation = 256
+theme_override_constants/separation = 224
 
 [node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox" unique_id=893663964]
 layout_mode = 2
@@ -623,7 +623,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
 [node name="Part1" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts" unique_id=497006564]
-visible = false
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -646,7 +645,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0" unique_id=123830648 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0" unique_id=2067736737]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0" unique_id=1472305494]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/Margin" unique_id=2067736737]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -655,88 +659,23 @@ bbcode_enabled = true
 text = "I knew sales weren't enough to keep doing full-time development"
 fit_content = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0" unique_id=426441794]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/VBoxContainer" unique_id=1090923762]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "I knew sales weren't enough to keep doing full-time development"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/VBoxContainer" unique_id=1253036916]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Wishlists doubled, below 500[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/VBoxContainer" unique_id=1540315774]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]GDEX (September)[/ul]"
-fit_content = true
-
-[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/VBoxContainer" unique_id=16661638]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]MDEV (November)[/ul]"
-fit_content = true
-
-[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=1109939981]
-visible = false
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=952878356]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1" unique_id=71669127 instance=ExtResource("7_w1j4o")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1" unique_id=1223335229 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1" unique_id=310065545]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Get as much of game in 1.0 as I can"
-fit_content = true
-
-[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=952878356]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2" unique_id=1223335229 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2" unique_id=483448595]
-visible = false
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1" unique_id=77025701]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Imme"
-fit_content = true
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2" unique_id=82321867]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1/Margin" unique_id=82321867]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/VBoxContainer" unique_id=434692819]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1/Margin/VBoxContainer" unique_id=434692819]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -745,7 +684,7 @@ bbcode_enabled = true
 text = "Immediately pivot to job hunting"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/VBoxContainer" unique_id=2058263291]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1/Margin/VBoxContainer" unique_id=2058263291]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -754,7 +693,7 @@ bbcode_enabled = true
 text = "[ul]Run out of money in August[/ul]"
 fit_content = true
 
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/VBoxContainer" unique_id=1859459301]
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1/Margin/VBoxContainer" unique_id=1859459301]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -763,78 +702,23 @@ bbcode_enabled = true
 text = "[ul]Frightened, scared[/ul]"
 fit_content = true
 
-[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=57059759]
-visible = false
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=663737648]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4" unique_id=305724259 instance=ExtResource("7_w1j4o")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2" unique_id=1601760466 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4" unique_id=1905183590]
-visible = false
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2" unique_id=75954931]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Iterated on feedback"
-fit_content = true
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4" unique_id=813499745]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin" unique_id=1604073341]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4/VBoxContainer" unique_id=2136722934]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Continued development"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4/VBoxContainer" unique_id=503834851]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]More mechanics, ease of play[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point4/VBoxContainer" unique_id=43920987]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Improved easy of play[/ul]"
-fit_content = true
-
-[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=663737648]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3" unique_id=1601760466 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3" unique_id=2100745954]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Working 6 days/week on purpose"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3" unique_id=1604073341]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/VBoxContainer" unique_id=222269361]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer" unique_id=222269361]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -843,7 +727,7 @@ bbcode_enabled = true
 text = "Got an interview that week"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/VBoxContainer" unique_id=106660630]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer" unique_id=106660630]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -852,7 +736,7 @@ bbcode_enabled = true
 text = "[ul]Job offer the week after[/ul]"
 fit_content = true
 
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/VBoxContainer" unique_id=1569237027]
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer" unique_id=1569237027]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -861,38 +745,23 @@ bbcode_enabled = true
 text = "[ul]An act of God[/ul]"
 fit_content = true
 
-[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/VBoxContainer" unique_id=1346482963]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]2D Con Mall of America[/ul]"
-fit_content = true
-
-[node name="Point5" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=1165533409]
+[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=1165533409]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5" unique_id=375911965 instance=ExtResource("7_w1j4o")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3" unique_id=375911965 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5" unique_id=294155091]
-visible = false
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3" unique_id=747700499]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Working 6 days/week on purpose"
-fit_content = true
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5" unique_id=690733306]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin" unique_id=690733306]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5/VBoxContainer" unique_id=1935351653]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer" unique_id=1935351653]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -901,7 +770,7 @@ bbcode_enabled = true
 text = "Rest of August prepping for 2D Con"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5/VBoxContainer" unique_id=4667078]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer" unique_id=4667078]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -910,57 +779,8 @@ bbcode_enabled = true
 text = "[ul]Bug fixes and tutorial[/ul]"
 fit_content = true
 
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point5/VBoxContainer" unique_id=968384945]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]No time for anything but game[/ul]"
-fit_content = true
-
-[node name="Point6" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1" unique_id=1491557873]
-visible = false
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point6" unique_id=1007972404 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point6" unique_id=1311284914]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Showed at VGM Con, encouraged by feedback"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point6" unique_id=803108773]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point6/VBoxContainer" unique_id=58482099]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Steam page end of March"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point6/VBoxContainer" unique_id=1306569217]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Demo on April 16th[/ul]"
-fit_content = true
-
 [node name="Part2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts" unique_id=2009747079]
+visible = false
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -983,7 +803,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0" unique_id=928718427 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0" unique_id=428639959]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0" unique_id=1804284277]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/Margin" unique_id=428639959]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -992,88 +817,23 @@ bbcode_enabled = true
 text = "Started new job in September"
 fit_content = true
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0" unique_id=576296612]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/VBoxContainer" unique_id=2068316360]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Started new job in September"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/VBoxContainer" unique_id=1166473092]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Still developing release version[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/VBoxContainer" unique_id=565083469]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Also made a presentation[/ul]"
-fit_content = true
-
-[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/VBoxContainer" unique_id=1358244855]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]MDEV (November)[/ul]"
-fit_content = true
-
-[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=1185232760]
-visible = false
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=141833804]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1" unique_id=1104964777 instance=ExtResource("7_w1j4o")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1" unique_id=1998091267 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1" unique_id=15959995]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Get as much of game in 1.0 as I can"
-fit_content = true
-
-[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=141833804]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2" unique_id=1998091267 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2" unique_id=1201219181]
-visible = false
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1" unique_id=1514267693]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Developed a pitch deck in 3 weeks"
-fit_content = true
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2" unique_id=866965419]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin" unique_id=866965419]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/VBoxContainer" unique_id=251611419]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer" unique_id=251611419]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -1082,7 +842,7 @@ bbcode_enabled = true
 text = "Haven't released an update since"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/VBoxContainer" unique_id=177923574]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer" unique_id=177923574]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -1091,7 +851,7 @@ bbcode_enabled = true
 text = "[ul]Adjusting to doing this on the side again[/ul]"
 fit_content = true
 
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/VBoxContainer" unique_id=757409156]
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer" unique_id=757409156]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -1099,28 +859,23 @@ theme_type_variation = &"RichContent"
 bbcode_enabled = true
 fit_content = true
 
-[node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=1588034982]
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=1588034982]
 layout_mode = 2
 theme_override_constants/separation = 16
 
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4" unique_id=1743483694 instance=ExtResource("7_w1j4o")]
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2" unique_id=1743483694 instance=ExtResource("7_w1j4o")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4" unique_id=504106574]
-visible = false
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2" unique_id=242877289]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Iterated on feedback"
-fit_content = true
+theme_override_constants/margin_top = 8
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4" unique_id=414213609]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/Margin" unique_id=414213609]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4/VBoxContainer" unique_id=1310233225]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/Margin/VBoxContainer" unique_id=1310233225]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -1129,172 +884,13 @@ bbcode_enabled = true
 text = "Working on other side projects"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4/VBoxContainer" unique_id=1597826740]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/Margin/VBoxContainer" unique_id=1597826740]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "[ul]Including this presentation[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point4/VBoxContainer" unique_id=1167710733]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Improved easy of play[/ul]"
-fit_content = true
-
-[node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=1939471156]
-visible = false
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3" unique_id=252705512 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3" unique_id=1852368889]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Working 6 days/week on purpose"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3" unique_id=1121002813]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/VBoxContainer" unique_id=2051567410]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Fri: Release game, continue working"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/VBoxContainer" unique_id=900821965]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Released without achievements[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/VBoxContainer" unique_id=2010680295]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Worked until next morning[/ul]"
-fit_content = true
-
-[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/VBoxContainer" unique_id=1290579400]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]2D Con Mall of America[/ul]"
-fit_content = true
-
-[node name="Point5" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=526274669]
-visible = false
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5" unique_id=314183870 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5" unique_id=374128899]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Working 6 days/week on purpose"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5" unique_id=817251548]
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5/VBoxContainer" unique_id=1547295229]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Dealing with 40-hour work week and burnout"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5/VBoxContainer" unique_id=1196275091]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Lots of bugs[/ul]"
-fit_content = true
-
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point5/VBoxContainer" unique_id=1725947894]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Not as big a hit as hoped[/ul]"
-fit_content = true
-
-[node name="Point6" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2" unique_id=1656167744]
-visible = false
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point6" unique_id=1997581396 instance=ExtResource("7_w1j4o")]
-layout_mode = 2
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point6" unique_id=1468553264]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Showed at VGM Con, encouraged by feedback"
-fit_content = true
-
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point6" unique_id=332794225]
-visible = false
-layout_mode = 2
-size_flags_horizontal = 3
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point6/VBoxContainer" unique_id=1999594094]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Steam page end of March"
-fit_content = true
-
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point6/VBoxContainer" unique_id=559543404]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "[ul]Demo on April 16th[/ul]"
 fit_content = true
 
 [node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
