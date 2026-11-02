@@ -5,6 +5,7 @@ signal finished
 
 
 @export var close_on_finish := true
+@export var starting_slide: PresentationSlide ## If set, starts the presentation on this slide. Otherwise, starts on the first child slide.
 
 var currentSlide : PresentationSlide
 var slides: Array[PresentationSlide] : get = _get_slides
@@ -70,6 +71,6 @@ func start() -> void:
     await ready
   for slideNode in _get_slides():
     slideNode.hide()
-  currentSlide = self.slides[0]
+  currentSlide = starting_slide if starting_slide else self.slides[0]
   _activate_slide(currentSlide)
   currentSlide.next()
