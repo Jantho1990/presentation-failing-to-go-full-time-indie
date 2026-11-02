@@ -22,6 +22,7 @@
 [ext_resource type="PackedScene" uid="uid://bdt7lkgxp03gy" path="res://presentations/failing_to_go_full_time_indie/slides/TitleThankYou.tscn" id="10_d3mqu"]
 [ext_resource type="PackedScene" uid="uid://0303otv830lc" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooFocusedOnFinishing.tscn" id="11_547g6"]
 [ext_resource type="PackedScene" uid="uid://cyqcpbmehtdie" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2Pitching.tscn" id="11_jga75"]
+[ext_resource type="PackedScene" uid="uid://bv6mekfj0xh6y" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2Intro.tscn" id="11_vwetc"]
 [ext_resource type="PackedScene" uid="uid://0rtme4iyqf0s" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT2MoreConventions.tscn" id="12_e28t5"]
 [ext_resource type="PackedScene" uid="uid://jad8n8euopf5" path="res://presentations/failing_to_go_full_time_indie/slides/IssueFlawedAppealEvaluation.tscn" id="12_s0xly"]
 [ext_resource type="PackedScene" uid="uid://cafegeiqdhu75" path="res://presentations/failing_to_go_full_time_indie/slides/IssueChasingFunding.tscn" id="13_4l4ej"]
@@ -30,6 +31,7 @@
 [ext_resource type="PackedScene" uid="uid://646mwx0c6ysu" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCTheDemo.tscn" id="14_mtstm"]
 [ext_resource type="PackedScene" uid="uid://d22y10amc2v43" path="res://presentations/failing_to_go_full_time_indie/slides/IssueTooMuchSpend.tscn" id="15_em84d"]
 [ext_resource type="PackedScene" uid="uid://c8rg0ku0nwsry" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCAttemptingHomeRun.tscn" id="15_rm33k"]
+[ext_resource type="PackedScene" uid="uid://bcrsnehnh58d8" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCIntro.tscn" id="16_0a3ew"]
 [ext_resource type="PackedScene" uid="uid://c28vsom1bfvtg" path="res://presentations/failing_to_go_full_time_indie/slides/IssueNotConsideringMarketing.tscn" id="16_2pyv2"]
 [ext_resource type="PackedScene" uid="uid://dx20h6bhxn1b6" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCRoadToRelease.tscn" id="16_ohyin"]
 [ext_resource type="PackedScene" uid="uid://b5dl8i7ck0v4b" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDGCAftermath.tscn" id="17_p3odv"]
@@ -59,12 +61,6 @@ grow_vertical = 2
 script = ExtResource("1_tqjp2")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
 
-[node name="TimelineDT1Intro" parent="." unique_id=1609868614 instance=ExtResource("2_3si5r")]
-layout_mode = 1
-
-[node name="TimelineDT1VGMCon" parent="." unique_id=1700865600 instance=ExtResource("6_tyveo")]
-layout_mode = 1
-
 [node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
 layout_mode = 1
 
@@ -79,6 +75,12 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
+[node name="TimelineDT1Intro" parent="." unique_id=1609868614 instance=ExtResource("2_3si5r")]
+layout_mode = 1
+
+[node name="TimelineDT1VGMCon" parent="." unique_id=1700865600 instance=ExtResource("6_tyveo")]
+layout_mode = 1
+
 [node name="TimelineDT1Minnebar" parent="." unique_id=352365043 instance=ExtResource("7_40lxk")]
 layout_mode = 1
 
@@ -86,6 +88,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT1SGDQPlus2DConMoA" parent="." unique_id=1599754772 instance=ExtResource("9_l1kij")]
+layout_mode = 1
+
+[node name="TimelineDT2Intro" parent="." unique_id=1196996043 instance=ExtResource("11_vwetc")]
 layout_mode = 1
 
 [node name="TimelineDT2Refactor" parent="." unique_id=1002344523 instance=ExtResource("10_cs8y7")]
@@ -98,6 +103,9 @@ layout_mode = 1
 layout_mode = 1
 
 [node name="TimelineDT2TheEnd" parent="." unique_id=1594071683 instance=ExtResource("13_45r7a")]
+layout_mode = 1
+
+[node name="TimelineDGCIntro" parent="." unique_id=559138086 instance=ExtResource("16_0a3ew")]
 layout_mode = 1
 
 [node name="TimelineDGCTheDemo" parent="." unique_id=555063180 instance=ExtResource("14_mtstm")]
