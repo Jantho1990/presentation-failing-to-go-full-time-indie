@@ -21,7 +21,7 @@ func next() -> void:
   for targetNodePath in targetNodes:
     var targetNode = slide.get_node(targetNodePath)
     targetNode.modulate = FADE_IN_COLOR_BEGIN
-    _slideTween.tween_property(targetNode, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN)
+    _slideTween.tween_property(targetNode, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
 #  print('DBG: next finished %s' % [targetNodes[0].modulate])
   _slideTween = null
@@ -35,7 +35,7 @@ func previous() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for targetNodePath in targetNodes:
     var targetNode = slide.get_node(targetNodePath)
-    _slideTween.tween_property(targetNode, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END)
+    _slideTween.tween_property(targetNode, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
   _slideTween = null
   step_previous_ended.emit()  

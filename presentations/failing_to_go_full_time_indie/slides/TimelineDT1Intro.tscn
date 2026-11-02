@@ -24,6 +24,8 @@ animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VB
 offset_distance = Vector2(0, -542)
 axis = 1
 animation_duration = 0.4
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
 [sub_resource type="Resource" id="Resource_gs6d1"]
@@ -31,18 +33,24 @@ script = ExtResource("7_2khk1")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment")])
 target_anchors = Vector4(0, 0, 0.111, 0)
 animation_duration = 0.4
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bhawgc8yopdqg"
 
 [sub_resource type="Resource" id="Resource_60cro"]
 script = ExtResource("8_2khk1")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTitle"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
 animation_duration = 0.1
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_2khk1"]
 script = ExtResource("9_r8rfd")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/AfterLabel")])
 animation_duration = 0.1
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_mswgo"]

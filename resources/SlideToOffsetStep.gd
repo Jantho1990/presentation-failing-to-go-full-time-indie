@@ -60,7 +60,7 @@ func next() -> void:
     animatedNode.offset_transform_enabled = true # Must be set for this animation to work.
     var destination_offset = _get_destination_offset(animatedNode, offset_distance)
     #print('DBG: animatedNode %s start %s destination %s' % [animatedNode.name, animatedNode.position, destination_offset])
-    _slideTween.tween_property(animatedNode, "offset_transform_position", destination_offset, animation_duration).from(_old_offsets[animatedNode])
+    _slideTween.tween_property(animatedNode, "offset_transform_position", destination_offset, animation_duration).from(_old_offsets[animatedNode]).set_ease(ease_type).set_trans(trans_type)
     _slideTween.finished.connect(func (): animatedNode.offset_transform_enabled = _old_offsets_enabled[animatedNode], CONNECT_ONE_SHOT)
 
   await _slideTween.finished
@@ -78,7 +78,7 @@ func previous() -> void:
   for animatedNode in _animatedNodes:
     animatedNode.offset_transform_enabled = true # Must be set for this animation to work.
     var origin_offset = _get_destination_offset(animatedNode, offset_distance)
-    _slideTween.tween_property(animatedNode, "offset_transform_position", _old_offsets[animatedNode], animation_duration).from(origin_offset)
+    _slideTween.tween_property(animatedNode, "offset_transform_position", _old_offsets[animatedNode], animation_duration).from(origin_offset).set_ease(ease_type).set_trans(trans_type)
     _slideTween.finished.connect(func (): animatedNode.offset_transform_enabled = _old_offsets_enabled[animatedNode], CONNECT_ONE_SHOT)
   
   await _slideTween.finished

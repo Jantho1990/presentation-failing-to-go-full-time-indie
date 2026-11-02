@@ -9,6 +9,9 @@ signal step_previous_ended
 
 
 @export var animation_duration : float = 0.5
+@export_group('Animation Types')
+@export var ease_type: Tween.EaseType = Tween.EASE_IN ## The type of ease to use if slide has animation.
+@export var trans_type: Tween.TransitionType = Tween.TRANS_LINEAR ## The type of transition to use if slide has animation.
 
 var in_progress := false
 var slide : PresentationSlide : set = _set_slide

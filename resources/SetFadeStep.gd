@@ -29,11 +29,11 @@ func _set_fade(new_value: FADE) -> void:
 
 func next() -> void:
   step_next_began.emit()
-  print('DBG: _fade_color %s _prev_fade_color %s' % [_fade_color, _prev_fade_color])
+  # print('DBG: _fade_color %s _prev_fade_color %s' % [_fade_color, _prev_fade_color])
   for targetNodePath in targetNodes:
     var targetNode = slide.get_node(targetNodePath)
     targetNode.modulate = _fade_color
-    print('DBG: targetNode %s modulate %s' % [targetNode, targetNode.modulate])
+    # print('DBG: targetNode %s modulate %s' % [targetNode, targetNode.modulate])
   step_next_ended.emit()
   
   

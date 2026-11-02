@@ -61,10 +61,10 @@ func next() -> void:
   for animatedNode in _animatedNodes:
     var destination_anchors := _get_destination_anchors(animatedNode)
     #print('DBG: animatedNode %s start %s destination %s' % [animatedNode.name, animatedNode.position, destination_position])
-    _slideTween.tween_property(animatedNode, "anchor_left", destination_anchors.x, animation_duration).from(_old_anchors[animatedNode].x)
-    _slideTween.tween_property(animatedNode, "anchor_top", destination_anchors.y, animation_duration).from(_old_anchors[animatedNode].y)
-    _slideTween.tween_property(animatedNode, "anchor_right", destination_anchors.z, animation_duration).from(_old_anchors[animatedNode].z)
-    _slideTween.tween_property(animatedNode, "anchor_bottom", destination_anchors.w, animation_duration).from(_old_anchors[animatedNode].w)
+    _slideTween.tween_property(animatedNode, "anchor_left", destination_anchors.x, animation_duration).from(_old_anchors[animatedNode].x).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_top", destination_anchors.y, animation_duration).from(_old_anchors[animatedNode].y).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_right", destination_anchors.z, animation_duration).from(_old_anchors[animatedNode].z).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_bottom", destination_anchors.w, animation_duration).from(_old_anchors[animatedNode].w).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null
@@ -80,10 +80,10 @@ func previous() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNode in _animatedNodes:
     var origin_anchors := _get_destination_anchors(animatedNode)
-    _slideTween.tween_property(animatedNode, "anchor_left", _old_anchors[animatedNode].x, animation_duration).from(origin_anchors.x)
-    _slideTween.tween_property(animatedNode, "anchor_top", _old_anchors[animatedNode].y, animation_duration).from(origin_anchors.y)
-    _slideTween.tween_property(animatedNode, "anchor_right", _old_anchors[animatedNode].z, animation_duration).from(origin_anchors.z)
-    _slideTween.tween_property(animatedNode, "anchor_bottom", _old_anchors[animatedNode].w, animation_duration).from(origin_anchors.w)
+    _slideTween.tween_property(animatedNode, "anchor_left", _old_anchors[animatedNode].x, animation_duration).from(origin_anchors.x).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_top", _old_anchors[animatedNode].y, animation_duration).from(origin_anchors.y).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_right", _old_anchors[animatedNode].z, animation_duration).from(origin_anchors.z).set_ease(ease_type).set_trans(trans_type)
+    _slideTween.tween_property(animatedNode, "anchor_bottom", _old_anchors[animatedNode].w, animation_duration).from(origin_anchors.w).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null

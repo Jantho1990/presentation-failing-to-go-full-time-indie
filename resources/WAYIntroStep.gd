@@ -24,8 +24,8 @@ func next() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   var textBullet = slide.get_node(textBulletPath)
   var imageNode = slide.get_node(imageNodePath)
-  _slideTween.tween_property(textBullet, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN)
-  _slideTween.tween_property(imageNode, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN)
+  _slideTween.tween_property(textBullet, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
+  _slideTween.tween_property(imageNode, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
   _slideTween = null
   step_next_ended.emit()
@@ -38,8 +38,8 @@ func previous() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   var textBullet = slide.get_node(textBulletPath)
   var imageNode = slide.get_node(imageNodePath)
-  _slideTween.tween_property(textBullet, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END)
-  _slideTween.tween_property(imageNode, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END)
+  _slideTween.tween_property(textBullet, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
+  _slideTween.tween_property(imageNode, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
   _slideTween = null
   step_previous_ended.emit()

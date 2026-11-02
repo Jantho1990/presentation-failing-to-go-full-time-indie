@@ -55,7 +55,7 @@ func next() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNode in _animatedNodes:
     var destination_position = _get_destination_position(animatedNode)
-    _slideTween.tween_property(animatedNode, "position", destination_position, animation_duration).from(_old_positions[animatedNode])
+    _slideTween.tween_property(animatedNode, "position", destination_position, animation_duration).from(_old_positions[animatedNode]).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null
@@ -72,7 +72,7 @@ func previous() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNode in _animatedNodes:
     var origin_position = _get_destination_position(animatedNode)
-    _slideTween.tween_property(animatedNode, "position", _old_positions[animatedNode], animation_duration).from(origin_position)
+    _slideTween.tween_property(animatedNode, "position", _old_positions[animatedNode], animation_duration).from(origin_position).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null

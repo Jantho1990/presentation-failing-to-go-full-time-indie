@@ -33,14 +33,14 @@ func next() -> void:
   
   for fadeInPath in fadeInPaths:
     var fadeIn = slide.get_node(fadeInPath)
-    _slideTween.tween_property(fadeIn, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN)
+    _slideTween.tween_property(fadeIn, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
   for fadeOutPath in fadeOutPaths:
     var fadeOut = slide.get_node(fadeOutPath)
-    _slideTween.tween_property(fadeOut, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END)
+    _slideTween.tween_property(fadeOut, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
   for stabilizeInPath in stabilizeInPaths:
     var stabilizeIn = slide.get_node(stabilizeInPath)
     stabilizeIn.show()
-    _stabilizeTween.tween_property(stabilizeIn, "modulate", FADE_IN_COLOR_END, STABILIZE_TIME).from(FADE_IN_COLOR_BEGIN)
+    _stabilizeTween.tween_property(stabilizeIn, "modulate", FADE_IN_COLOR_END, STABILIZE_TIME).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
   for stabilizeOutPath in stabilizeOutPaths:
     var stabilizeOut = slide.get_node(stabilizeOutPath)
     stabilizeOut.hide()
@@ -64,13 +64,13 @@ func previous() -> void:
   
   for fadeInPath in fadeInPaths:
     var fadeIn = slide.get_node(fadeInPath)
-    _slideTween.tween_property(fadeIn, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END)
+    _slideTween.tween_property(fadeIn, "modulate", FADE_IN_COLOR_BEGIN, animation_duration).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
   for fadeOutPath in fadeOutPaths:
     var fadeOut = slide.get_node(fadeOutPath)
-    _slideTween.tween_property(fadeOut, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN)
+    _slideTween.tween_property(fadeOut, "modulate", FADE_IN_COLOR_END, animation_duration).from(FADE_IN_COLOR_BEGIN).set_ease(ease_type).set_trans(trans_type)
   for stabilizeInPath in stabilizeInPaths:
     var stabilizeIn = slide.get_node(stabilizeInPath)
-    _stabilizeTween.tween_property(stabilizeIn, "modulate", FADE_IN_COLOR_BEGIN, STABILIZE_TIME).from(FADE_IN_COLOR_END)
+    _stabilizeTween.tween_property(stabilizeIn, "modulate", FADE_IN_COLOR_BEGIN, STABILIZE_TIME).from(FADE_IN_COLOR_END).set_ease(ease_type).set_trans(trans_type)
     _stabilizeTween.chain().tween_callback(stabilizeIn.hide)
   for stabilizeOutPath in stabilizeOutPaths:
     var stabilizeOut = slide.get_node(stabilizeOutPath)

@@ -36,7 +36,7 @@ func next() -> void:
   
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNode in _animatedNodes:
-    _slideTween.tween_property(animatedNode, "modulate", highlight_color, animation_duration).from(_old_modulates[animatedNode])
+    _slideTween.tween_property(animatedNode, "modulate", highlight_color, animation_duration).from(_old_modulates[animatedNode]).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
 #  print('DBG: next finished %s' % [targetNodes[0].modulate])
   _slideTween = null
@@ -49,7 +49,7 @@ func previous() -> void:
     _kill_tween()
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNode in _animatedNodes:
-    _slideTween.tween_property(animatedNode, "modulate", _old_modulates[animatedNode], animation_duration).from(highlight_color)
+    _slideTween.tween_property(animatedNode, "modulate", _old_modulates[animatedNode], animation_duration).from(highlight_color).set_ease(ease_type).set_trans(trans_type)
   await _slideTween.finished
   _slideTween = null
   step_previous_ended.emit()  

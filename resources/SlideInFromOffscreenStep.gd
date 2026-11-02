@@ -43,7 +43,7 @@ func next() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNodePath in animatedNodePaths:
     var animatedNode = slide.get_node(animatedNodePath)
-    _slideTween.tween_property(animatedNode, "position", Vector2.ZERO, animation_duriation).from(_get_offscreen())
+    _slideTween.tween_property(animatedNode, "position", Vector2.ZERO, animation_duration).from(_get_offscreen()).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null
@@ -58,7 +58,7 @@ func previous() -> void:
   _slideTween = slide.create_tween().set_parallel(true)
   for animatedNodePath in animatedNodePaths:
     var animatedNode = slide.get_node(animatedNodePath)
-    _slideTween.tween_property(animatedNode, "position", _get_offscreen(), animation_duriation).from(Vector2.ZERO)
+    _slideTween.tween_property(animatedNode, "position", _get_offscreen(), animation_duration).from(Vector2.ZERO).set_ease(ease_type).set_trans(trans_type)
   
   await _slideTween.finished
   _slideTween = null
