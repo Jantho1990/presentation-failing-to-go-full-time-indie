@@ -2,7 +2,7 @@
 
 [ext_resource type="Script" uid="uid://cx5ff6rmig1pl" path="res://nodes/Presentation.gd" id="1_tqjp2"]
 [ext_resource type="PackedScene" uid="uid://cqtmbv1m47p81" path="res://presentations/failing_to_go_full_time_indie/slides/TimelineDT1Intro.tscn" id="2_3si5r"]
-[ext_resource type="PackedScene" uid="uid://b6go07aae14p1" path="res://presentations/failing_to_go_full_time_indie/slides/FTFTITitle.tscn" id="2_7pw8w"]
+[ext_resource type="PackedScene" uid="uid://b6go07aae14p1" path="res://presentations/failing_to_go_full_time_indie/slides/FTGFTITitle.tscn" id="2_7pw8w"]
 [ext_resource type="PackedScene" uid="uid://bhrqg36apruce" path="res://presentations/failing_to_go_full_time_indie/slides/IntroToPresentation.tscn" id="2_bqimy"]
 [ext_resource type="PackedScene" uid="uid://dg52atbqvr8ax" path="res://presentations/failing_to_go_full_time_indie/slides/WhoAmI.tscn" id="2_qrr0k"]
 [ext_resource type="PackedScene" uid="uid://rd5tf4ig43jb" path="res://presentations/failing_to_go_full_time_indie/slides/TitleEstablishingTheTimeline.tscn" id="3_bqimy"]
