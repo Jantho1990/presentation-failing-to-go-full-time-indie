@@ -23,15 +23,15 @@ func _set_animatedNodePaths(new_value: Array) -> void:
     _animatedNodes.push_back(slide.get_node(animatedNodePath))
 
 
-func _get_destination_position(targetNode: Control, target_position: Vector2) -> Vector2:
+func _get_destination_position(targetNode: Control, base_position: Vector2) -> Vector2:
   var ret := targetNode.position
   match axis:
       AXES.X:
-        ret.x = target_position.x
+        ret.x = base_position.x
       AXES.Y:
-        ret.y = target_position.y
+        ret.y = base_position.y
       AXES.BOTH:
-        ret = target_position
+        ret = base_position
   return ret
 
 
