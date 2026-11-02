@@ -8,7 +8,7 @@ func next() -> void:
   slide.hide()
   super()
   step_next_ended.emit()
-  print('DBG: hide and next done')
+  # print('DBG: hide and next done')
   
   
 # Runs when the slide moves to the previous step.

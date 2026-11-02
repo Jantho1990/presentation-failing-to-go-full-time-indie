@@ -76,27 +76,15 @@ targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBo
 animation_duration = 0.1
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
+[sub_resource type="Resource" id="Resource_i2ehr"]
+script = ExtResource("4_60cro")
+metadata/_custom_type_script = "uid://b2waivlvwc37x"
+
 [sub_resource type="Resource" id="Resource_eqhgs"]
 script = ExtResource("6_12c8h")
-slide_steps = Array[ExtResource("2_12c8h")]([SubResource("Resource_mswgo"), SubResource("Resource_2etcq"), SubResource("Resource_r8rfd")])
+slide_steps = Array[ExtResource("2_12c8h")]([SubResource("Resource_mswgo"), SubResource("Resource_2etcq"), SubResource("Resource_r8rfd"), SubResource("Resource_i2ehr")])
 animation_duration = 0.55
 metadata/_custom_type_script = "uid://capy37k215xbr"
-
-[sub_resource type="Resource" id="Resource_i5qoi"]
-script = ExtResource("4_eqhgs")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget")])
-axis = 1
-animation_duration = 0.4
-metadata/_custom_type_script = "uid://tsi26xoksyru"
-
-[sub_resource type="Resource" id="Resource_i2ehr"]
-script = ExtResource("6_12c8h")
-slide_steps = Array[ExtResource("2_12c8h")]([SubResource("Resource_i5qoi")])
-animation_duration = 0.4
-metadata/_custom_type_script = "uid://capy37k215xbr"
-
-[sub_resource type="Resource" id="Resource_1vcjn"]
-script = ExtResource("4_60cro")
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_x2s3f"]
 bg_color = Color(0.8, 0.8, 0.8, 1)
@@ -178,7 +166,7 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 corner_detail = 1
 
-[node name="TimelineDT1VGMCon" type="Control" unique_id=1609868614]
+[node name="TimelineDT1Intro" type="Control" unique_id=1609868614]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -186,7 +174,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_i5qoi")
-steps = Array[ExtResource("2_12c8h")]([SubResource("Resource_sho4t"), SubResource("Resource_eqhgs"), SubResource("Resource_i2ehr"), SubResource("Resource_1vcjn")])
+steps = Array[ExtResource("2_12c8h")]([SubResource("Resource_sho4t"), SubResource("Resource_eqhgs")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1474864329]
 layout_mode = 1

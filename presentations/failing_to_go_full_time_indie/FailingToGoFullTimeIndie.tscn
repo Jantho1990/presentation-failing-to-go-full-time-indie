@@ -59,7 +59,10 @@ grow_vertical = 2
 script = ExtResource("1_tqjp2")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
 
-[node name="TimelineDT1VGMCon2" parent="." unique_id=1609868614 instance=ExtResource("2_3si5r")]
+[node name="TimelineDT1Intro" parent="." unique_id=1609868614 instance=ExtResource("2_3si5r")]
+layout_mode = 1
+
+[node name="TimelineDT1VGMCon" parent="." unique_id=1700865600 instance=ExtResource("6_tyveo")]
 layout_mode = 1
 
 [node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
@@ -74,9 +77,6 @@ layout_mode = 1
 
 [node name="TitleMyExperience" parent="." unique_id=879801546 instance=ExtResource("3_bqimy")]
 visible = false
-layout_mode = 1
-
-[node name="TimelineDT1VGMCon" parent="." unique_id=1700865600 instance=ExtResource("6_tyveo")]
 layout_mode = 1
 
 [node name="TimelineDT1Minnebar" parent="." unique_id=352365043 instance=ExtResource("7_40lxk")]
