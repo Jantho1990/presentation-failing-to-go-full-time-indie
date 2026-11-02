@@ -51,7 +51,7 @@
 [ext_resource type="PackedScene" uid="uid://d0gflkc7khta5" path="res://presentations/failing_to_go_full_time_indie/slides/WrapUp.tscn" id="34_bwgtg"]
 [ext_resource type="PackedScene" uid="uid://dobgcsljhah2l" path="res://presentations/failing_to_go_full_time_indie/slides/NotDoneYet.tscn" id="35_tyveo"]
 
-[node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679]
+[node name="FailingToGoFullTimeIndie" type="Control" unique_id=1651450679 node_paths=PackedStringArray("starting_slide")]
 layout_mode = 3
 anchors_preset = 15
 anchor_right = 1.0
@@ -59,6 +59,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tqjp2")
+starting_slide = NodePath("TimelineDT1SGDQPlus2DConMoA")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
 
 [node name="IntroToPresentation" parent="." unique_id=1325081372 instance=ExtResource("2_bqimy")]
