@@ -215,7 +215,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson" unique_id=834631164 instance=ExtResource("11_p6mxe")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson" unique_id=209912999]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson" unique_id=938617944]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson/Margin" unique_id=209912999]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -233,7 +238,12 @@ layout_mode = 2
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TookACard" unique_id=1205710233]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TookACard" unique_id=981028285]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TookACard/Margin" unique_id=1205710233]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -251,7 +261,12 @@ layout_mode = 2
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsCon" unique_id=940305776]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsCon" unique_id=927299892]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsCon/Margin" unique_id=940305776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -267,7 +282,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest" unique_id=1160581891 instance=ExtResource("11_p6mxe")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest" unique_id=488327228]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest" unique_id=1779734856]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest/Margin" unique_id=488327228]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -283,7 +303,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps" unique_id=676133719 instance=ExtResource("11_p6mxe")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps" unique_id=1525101511]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps" unique_id=1724784025]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps/Margin" unique_id=1525101511]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
