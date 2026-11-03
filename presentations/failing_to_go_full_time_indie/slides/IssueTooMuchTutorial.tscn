@@ -50,7 +50,6 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_t4nnu"]
 script = ExtResource("8_xjmwh")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://dttfkqalo7xhk"
@@ -69,7 +68,6 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_3a757"]
 script = ExtResource("8_xjmwh")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://dttfkqalo7xhk"
@@ -100,7 +98,6 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_3uvdf"]
 script = ExtResource("8_xjmwh")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://dttfkqalo7xhk"
@@ -131,7 +128,6 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_8acfr"]
 script = ExtResource("8_xjmwh")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://dttfkqalo7xhk"
@@ -299,7 +295,6 @@ size_flags_horizontal = 3
 script = ExtResource("15_or80k")
 
 [node name="SidePanel0" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=351278115]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
@@ -319,7 +314,6 @@ Players not used to dice-play
 [/ul]"
 
 [node name="SidePanel1" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=1937959797]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
@@ -340,7 +334,6 @@ Doesn't reinforce mechanics
 [/ul]"
 
 [node name="SidePanel2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper" unique_id=1652916181]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
