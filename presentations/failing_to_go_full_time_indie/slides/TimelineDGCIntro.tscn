@@ -41,7 +41,7 @@ script = ExtResource("6_m4lmx")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget")])
 offset_distance = Vector2(0, 542)
 axis = 1
-animation_duration = 0.4
+animation_duration = 0.9
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
@@ -50,19 +50,25 @@ metadata/_custom_type_script = "uid://tsi26xoksyru"
 script = ExtResource("7_36b4c")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment")])
 target_anchors = Vector4(0.722, 0, 1, 0)
-animation_duration = 0.2
+animation_duration = 0.9
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bhawgc8yopdqg"
 
 [sub_resource type="Resource" id="Resource_nyc34"]
 script = ExtResource("9_ljtqg")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/BeforeLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
-animation_duration = 0.1
+animation_duration = 0.6
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_53cmm"]
 script = ExtResource("8_bx64w")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator/PreLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/PreLabel"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/EndMark"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelinesContainer/PreTimelineWidget/MainTimeline/HSeparator/EndMark")])
-animation_duration = 0.1
+animation_duration = 0.6
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_37grl"]
@@ -105,7 +111,7 @@ script = ExtResource("6_m4lmx")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget")])
 offset_distance = Vector2(0, -542)
 axis = 1
-animation_duration = 0.4
+animation_duration = 0.9
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
@@ -114,7 +120,7 @@ metadata/_custom_type_script = "uid://tsi26xoksyru"
 script = ExtResource("7_36b4c")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment")])
 target_anchors = Vector4(0.722, 0, 0.778, 0)
-animation_duration = 0.4
+animation_duration = 0.9
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bhawgc8yopdqg"
@@ -122,7 +128,7 @@ metadata/_custom_type_script = "uid://bhawgc8yopdqg"
 [sub_resource type="Resource" id="Resource_60cro"]
 script = ExtResource("8_bx64w")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTitle"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/BeforeLabel")])
-animation_duration = 0.1
+animation_duration = 0.6
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
@@ -130,7 +136,7 @@ metadata/_custom_type_script = "uid://63q6guytynws"
 [sub_resource type="Resource" id="Resource_2khk1"]
 script = ExtResource("9_ljtqg")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/BigTimelineWidget/MainTimeline/HSeparator/Segment/VSeparator2/AfterLabel")])
-animation_duration = 0.1
+animation_duration = 0.6
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
