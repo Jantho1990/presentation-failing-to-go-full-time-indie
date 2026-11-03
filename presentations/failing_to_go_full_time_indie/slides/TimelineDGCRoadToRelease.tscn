@@ -586,7 +586,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_4jwkh"]
 script = ExtResource("11_dp6sh")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/VBox/VBoxContainer/TimelineWidget/MainTimeline/HSeparator/EndMark/Label")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
