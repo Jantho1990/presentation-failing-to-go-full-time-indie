@@ -76,7 +76,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichSlideTitle"
 bbcode_enabled = true
-text = "[i][b]Not a damn thing.[/b][/i]"
+text = "[i][b]Nothing.[/b][/i]"
 fit_content = true
 autowrap_mode = 0
 
