@@ -1,3 +1,4 @@
+## Sets whether target nodes are transparent. They are still rendered by the engine, thus taking up space.
 class_name SetFadeStep
 extends SlideStep
 
