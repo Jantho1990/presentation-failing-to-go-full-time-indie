@@ -7,11 +7,10 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="5_i6vts"]
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="6_6dnsd"]
 [ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="7_cl08s"]
-[ext_resource type="Script" uid="uid://dttfkqalo7xhk" path="res://resources/HighlightStep.gd" id="8_xjmwh"]
-[ext_resource type="Script" uid="uid://e2rb8hrg2r31" path="res://resources/ClearHighlightStep.gd" id="9_656ai"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_qkp0k"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="11_6b4rt"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_7qvk5"]
+[ext_resource type="StyleBox" uid="uid://cwbwy3y36b43g" path="res://assets/themes/SoYouWannaDoASideProject/resources/panels/AsidePanel2.tres" id="13_2mcva"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="13_senmt"]
 [ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="15_or80k"]
 [ext_resource type="Texture2D" uid="uid://daxaucnelvqr6" path="res://assets/media/images/Basic UI.jpg" id="16_mtbmw"]
@@ -32,7 +31,7 @@ trans_type = 7
 [sub_resource type="Resource" id="Resource_e0ias"]
 script = ExtResource("7_cl08s")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_8a1lt"]
@@ -46,53 +45,29 @@ slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_sho4t"), SubR
 
 [sub_resource type="Resource" id="Resource_ow6pj"]
 script = ExtResource("6_6dnsd")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_t4nnu"]
-script = ExtResource("8_xjmwh")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
 [sub_resource type="Resource" id="Resource_drb0a"]
 script = ExtResource("5_i6vts")
-slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ow6pj"), SubResource("Resource_t4nnu")])
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ow6pj")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_ynsnc"]
 script = ExtResource("6_6dnsd")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_3a757"]
-script = ExtResource("8_xjmwh")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_wf8c2"]
-script = ExtResource("9_656ai")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
-
 [sub_resource type="Resource" id="Resource_4nyxa"]
 script = ExtResource("10_qkp0k")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -100,37 +75,21 @@ metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_0wbp2"]
 script = ExtResource("5_i6vts")
-slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ynsnc"), SubResource("Resource_3a757"), SubResource("Resource_wf8c2"), SubResource("Resource_4nyxa")])
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_ynsnc"), SubResource("Resource_4nyxa")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_odlm3"]
 script = ExtResource("6_6dnsd")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_3uvdf"]
-script = ExtResource("8_xjmwh")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_as1pr"]
-script = ExtResource("9_656ai")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
-
 [sub_resource type="Resource" id="Resource_7duqq"]
 script = ExtResource("10_qkp0k")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -138,37 +97,21 @@ metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_xqvm3"]
 script = ExtResource("5_i6vts")
-slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_odlm3"), SubResource("Resource_3uvdf"), SubResource("Resource_as1pr"), SubResource("Resource_7duqq")])
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_odlm3"), SubResource("Resource_7duqq")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_glhkg"]
 script = ExtResource("6_6dnsd")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_8acfr"]
-script = ExtResource("8_xjmwh")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_wbe73"]
-script = ExtResource("9_656ai")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
-animation_duration = 0.2
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
-
 [sub_resource type="Resource" id="Resource_uxila"]
 script = ExtResource("10_qkp0k")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -176,7 +119,7 @@ metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_glx8p"]
 script = ExtResource("5_i6vts")
-slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_glhkg"), SubResource("Resource_8acfr"), SubResource("Resource_wbe73"), SubResource("Resource_uxila")])
+slide_steps = Array[ExtResource("2_guolc")]([SubResource("Resource_glhkg"), SubResource("Resource_uxila")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
@@ -334,6 +277,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 2.0
 theme_type_variation = &"AsidePanelContainer"
+theme_override_styles/panel = ExtResource("13_2mcva")
 
 [node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel0" unique_id=1733089204]
 layout_mode = 2
@@ -353,6 +297,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 2.0
 theme_type_variation = &"AsidePanelContainer"
+theme_override_styles/panel = ExtResource("13_2mcva")
 
 [node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel1" unique_id=2060320667]
 layout_mode = 2
@@ -373,6 +318,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 2.0
 theme_type_variation = &"AsidePanelContainer"
+theme_override_styles/panel = ExtResource("13_2mcva")
 
 [node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel2" unique_id=961035900]
 layout_mode = 2
@@ -393,6 +339,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 0
 size_flags_stretch_ratio = 2.0
 theme_type_variation = &"AsidePanelContainer"
+theme_override_styles/panel = ExtResource("13_2mcva")
 
 [node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/SidePanel3" unique_id=335647656]
 custom_minimum_size = Vector2(0, 96)

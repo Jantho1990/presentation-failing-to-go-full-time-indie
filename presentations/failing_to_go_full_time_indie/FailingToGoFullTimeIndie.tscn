@@ -60,7 +60,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_tqjp2")
-starting_slide = NodePath("IssueImOnlyHuman")
+starting_slide = NodePath("LessonKeepItSimple")
 metadata/_custom_type_script = "uid://cx5ff6rmig1pl"
 
 [node name="FTGFTITitle" parent="." unique_id=1867292032 instance=ExtResource("2_7pw8w")]
@@ -174,10 +174,10 @@ layout_mode = 1
 visible = false
 layout_mode = 1
 
-[node name="LessonConsiderMarketingFromStart" parent="." unique_id=396274897 instance=ExtResource("23_wr71v")]
+[node name="LessonAllOfItMatters" parent="." unique_id=1155866372 instance=ExtResource("23_5g061")]
 layout_mode = 1
 
-[node name="LessonAllOfItMatters" parent="." unique_id=1155866372 instance=ExtResource("23_5g061")]
+[node name="LessonConsiderMarketingFromStart" parent="." unique_id=396274897 instance=ExtResource("23_wr71v")]
 layout_mode = 1
 
 [node name="LessonFinancialStabilityIsImportant" parent="." unique_id=113562776 instance=ExtResource("25_o28ad")]

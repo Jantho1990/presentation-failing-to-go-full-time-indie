@@ -7,8 +7,6 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="5_w0te1"]
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="6_bal8u"]
 [ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="7_otw3n"]
-[ext_resource type="Script" uid="uid://dttfkqalo7xhk" path="res://resources/HighlightStep.gd" id="8_s8id0"]
-[ext_resource type="Script" uid="uid://e2rb8hrg2r31" path="res://resources/ClearHighlightStep.gd" id="9_ujax8"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_xlfc3"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="11_ksi6r"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_jxjpq"]
@@ -26,11 +24,13 @@ script = ExtResource("4_1x5sq")
 [sub_resource type="Resource" id="Resource_by1g0"]
 script = ExtResource("6_bal8u")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_e0ias"]
 script = ExtResource("7_otw3n")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_8a1lt"]
@@ -42,121 +42,98 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 script = ExtResource("3_c87qk")
 slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_sho4t"), SubResource("Resource_8a1lt")])
 
-[sub_resource type="Resource" id="Resource_ow6pj"]
+[sub_resource type="Resource" id="Resource_7cgbp"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
-animation_duration = 0.2
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0")])
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
-[sub_resource type="Resource" id="Resource_t4nnu"]
-script = ExtResource("8_s8id0")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
+[sub_resource type="Resource" id="Resource_ow6pj"]
+script = ExtResource("6_bal8u")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
 animation_duration = 0.2
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_drb0a"]
 script = ExtResource("5_w0te1")
-slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ow6pj"), SubResource("Resource_t4nnu")])
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ow6pj")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_ynsnc"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_3a757"]
-script = ExtResource("8_s8id0")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_wf8c2"]
-script = ExtResource("9_ujax8")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
 
 [sub_resource type="Resource" id="Resource_4nyxa"]
 script = ExtResource("10_xlfc3")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_0wbp2"]
 script = ExtResource("5_w0te1")
-slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ynsnc"), SubResource("Resource_3a757"), SubResource("Resource_wf8c2"), SubResource("Resource_4nyxa")])
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_ynsnc"), SubResource("Resource_4nyxa")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_odlm3"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_3uvdf"]
-script = ExtResource("8_s8id0")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_as1pr"]
-script = ExtResource("9_ujax8")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
 
 [sub_resource type="Resource" id="Resource_7duqq"]
 script = ExtResource("10_xlfc3")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_xqvm3"]
 script = ExtResource("5_w0te1")
-slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_odlm3"), SubResource("Resource_3uvdf"), SubResource("Resource_as1pr"), SubResource("Resource_7duqq")])
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_odlm3"), SubResource("Resource_7duqq")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_glhkg"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_8acfr"]
-script = ExtResource("8_s8id0")
-highlight_color = Color(0.996078, 0.905882, 0.835294, 1)
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://dttfkqalo7xhk"
-
-[sub_resource type="Resource" id="Resource_wbe73"]
-script = ExtResource("9_ujax8")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
-animation_duration = 0.2
-metadata/_custom_type_script = "uid://e2rb8hrg2r31"
 
 [sub_resource type="Resource" id="Resource_uxila"]
 script = ExtResource("10_xlfc3")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
 animation_duration = 0.2
+ease_type = 2
+trans_type = 7
 metadata/_custom_type_script = "uid://63q6guytynws"
 
 [sub_resource type="Resource" id="Resource_glx8p"]
 script = ExtResource("5_w0te1")
-slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_glhkg"), SubResource("Resource_8acfr"), SubResource("Resource_wbe73"), SubResource("Resource_uxila")])
+slide_steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_glhkg"), SubResource("Resource_uxila")])
 animation_duration = 0.2
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_yg2j3"]
 script = ExtResource("10_xlfc3")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("11_ksi6r")
@@ -173,7 +150,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_b1mec")
-steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_3o2ix"), SubResource("Resource_drb0a"), SubResource("Resource_0wbp2"), SubResource("Resource_xqvm3"), SubResource("Resource_glx8p"), SubResource("Resource_phhlc")])
+steps = Array[ExtResource("2_0olyl")]([SubResource("Resource_3o2ix"), SubResource("Resource_7cgbp"), SubResource("Resource_drb0a"), SubResource("Resource_0wbp2"), SubResource("Resource_xqvm3"), SubResource("Resource_glx8p"), SubResource("Resource_phhlc")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=333912230]
 layout_mode = 1
@@ -326,7 +303,6 @@ size_flags_horizontal = 3
 script = ExtResource("14_1q2bt")
 
 [node name="SidePanel0" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=351278115]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
@@ -344,7 +320,6 @@ text = "Learned what does and doesn't work with dice mechanics in action games
 Helped me commit to choices early in Dice Gun Commando, and have them largely be good"
 
 [node name="SidePanel1" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=1937959797]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
@@ -362,7 +337,6 @@ text = "Learned that platformer precision doesn't pair well with randomness
 Influenced next genre choice to fit dice strategy instead of fitting dice strategy to the genre"
 
 [node name="SidePanel2" type="PanelContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper" unique_id=1652916181]
-visible = false
 layout_mode = 0
 offset_right = 628.0
 offset_bottom = 336.0
