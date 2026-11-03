@@ -7,12 +7,17 @@
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="5_71v1b"]
 [ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="6_in5vn"]
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="7_f2c2w"]
+[ext_resource type="Script" uid="uid://d1ysmprsahxnr" path="res://resources/SetOffsetStep.gd" id="7_rovjy"]
 [ext_resource type="Script" uid="uid://qpv26n56bah3" path="res://resources/AnimationPlayStep.gd" id="8_5mahb"]
+[ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_6ilm5"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="9_c2xbn"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_kf42y"]
 [ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="11_vanas"]
+[ext_resource type="Texture2D" uid="uid://t3rwn6poxieg" path="res://assets/media/images/IntroThirdDiceGunCommando.png" id="11_vwfon"]
+[ext_resource type="Texture2D" uid="uid://b84qksg5tec1h" path="res://assets/media/images/IntroThirdMe.JPG" id="12_hqq4b"]
 [ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_kw3mk"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="13_hbvm3"]
+[ext_resource type="Texture2D" uid="uid://nfsacpru048h" path="res://assets/media/images/IntroThirdDiceTower.jpg" id="13_rovjy"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="15_46qk1"]
 [ext_resource type="Animation" uid="uid://26b1efpj5vui" path="res://assets/animations/TitleSlides.tres" id="16_qetri"]
 
@@ -26,9 +31,38 @@ targetNodes = Array[NodePath]([NodePath("PanelContainer/LineDecorations"), NodeP
 animation_duration = 0.1
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
+[sub_resource type="Resource" id="Resource_6ilm5"]
+script = ExtResource("7_rovjy")
+targetNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdDGC"), NodePath("BackgroundThirds/ThirdDT")])
+offset_distance = Vector2(0, -1280)
+axis = 1
+metadata/_custom_type_script = "uid://d1ysmprsahxnr"
+
+[sub_resource type="Resource" id="Resource_nsrch"]
+script = ExtResource("7_rovjy")
+targetNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdMe")])
+offset_distance = Vector2(0, 1280)
+axis = 1
+metadata/_custom_type_script = "uid://d1ysmprsahxnr"
+
 [sub_resource type="Resource" id="Resource_d407s"]
 script = ExtResource("4_rwjyl")
-slide_steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_sho4t"), SubResource("Resource_6x2id")])
+slide_steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_sho4t"), SubResource("Resource_6x2id"), SubResource("Resource_6ilm5"), SubResource("Resource_nsrch")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
+[sub_resource type="Resource" id="Resource_o5ik3"]
+script = ExtResource("8_6ilm5")
+animatedNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdDGC"), NodePath("BackgroundThirds/ThirdDT"), NodePath("BackgroundThirds/ThirdMe")])
+axis = 1
+animation_duration = 0.3
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_7mq7v"]
+script = ExtResource("4_rwjyl")
+slide_steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_o5ik3")])
+animation_duration = 0.3
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_8ea1r"]
@@ -59,7 +93,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_vq00b"]
 script = ExtResource("3_w2luw")
-slide_steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_d407s"), SubResource("Resource_w6f5a"), SubResource("Resource_y4k0v"), SubResource("Resource_8nyt1")])
+slide_steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_d407s"), SubResource("Resource_7mq7v"), SubResource("Resource_w6f5a"), SubResource("Resource_y4k0v"), SubResource("Resource_8nyt1")])
 
 [sub_resource type="Resource" id="Resource_b2tck"]
 script = ExtResource("8_5mahb")
@@ -136,7 +170,39 @@ grow_vertical = 2
 script = ExtResource("1_4d851")
 steps = Array[ExtResource("2_7gvbr")]([SubResource("Resource_vq00b"), SubResource("Resource_yvaip")])
 
+[node name="BackgroundColor" type="ColorRect" parent="." unique_id=2123168330]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.13333334, 0.13333334, 0.13333334, 1)
+
+[node name="BackgroundThirds" type="HBoxContainer" parent="." unique_id=52968711]
+modulate = Color(1, 1, 1, 0.36078432)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 0
+
+[node name="ThirdDGC" type="TextureRect" parent="BackgroundThirds" unique_id=1781416371]
+layout_mode = 2
+texture = ExtResource("11_vwfon")
+
+[node name="ThirdMe" type="TextureRect" parent="BackgroundThirds" unique_id=1575368643]
+layout_mode = 2
+texture = ExtResource("12_hqq4b")
+
+[node name="ThirdDT" type="TextureRect" parent="BackgroundThirds" unique_id=2101284760]
+layout_mode = 2
+texture = ExtResource("13_rovjy")
+
 [node name="Background" type="TextureRect" parent="." unique_id=1284224567]
+visible = false
 layout_mode = 0
 anchor_right = 1.0
 anchor_bottom = 1.0
