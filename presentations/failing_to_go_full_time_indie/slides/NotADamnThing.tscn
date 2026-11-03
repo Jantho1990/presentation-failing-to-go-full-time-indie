@@ -16,6 +16,8 @@ script = ExtResource("4_gbtfi")
 [sub_resource type="Resource" id="Resource_awelw"]
 script = ExtResource("5_2qbhj")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_20msc"]
 script = ExtResource("3_ye02l")
@@ -31,6 +33,8 @@ script = ExtResource("7_hlyr1")
 [sub_resource type="Resource" id="Resource_4e6wk"]
 script = ExtResource("3_ye02l")
 slide_steps = Array[ExtResource("2_hp880")]([SubResource("Resource_kf1sq"), SubResource("Resource_1vcjn")])
+ease_type = 2
+trans_type = 7
 
 [node name="NotADamnThing" type="Control" unique_id=1464294895]
 layout_mode = 3
