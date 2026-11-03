@@ -25,7 +25,7 @@ slide_steps = Array[ExtResource("2_hp880")]([SubResource("Resource_sho4t"), SubR
 
 [sub_resource type="Resource" id="Resource_kf1sq"]
 script = ExtResource("6_xwye5")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("7_hlyr1")
