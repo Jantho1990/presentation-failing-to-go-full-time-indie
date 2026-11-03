@@ -5,8 +5,11 @@
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="3_xjvx5"]
 [ext_resource type="Script" uid="uid://c87bqhd78xism" path="res://resources/ShowAndPrevStep.gd" id="4_5kv1e"]
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="5_jrtu6"]
+[ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="5_xjvx5"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="6_a8lrc"]
+[ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="7_5kv1e"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="7_bk222"]
+[ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="7_jrtu6"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_bnl7j"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="9_oa344"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="10_jpjr0"]
@@ -14,17 +17,202 @@
 [sub_resource type="Resource" id="Resource_sho4t"]
 script = ExtResource("4_5kv1e")
 
+[sub_resource type="Resource" id="Resource_7pw8w"]
+script = ExtResource("5_xjvx5")
+fade = 1
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point4")])
+metadata/_custom_type_script = "uid://d0h3stf45a3hu"
+
 [sub_resource type="Resource" id="Resource_lvhcn"]
 script = ExtResource("5_jrtu6")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_gwk0t"]
 script = ExtResource("3_xjvx5")
-slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_sho4t"), SubResource("Resource_lvhcn")])
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_sho4t"), SubResource("Resource_7pw8w"), SubResource("Resource_lvhcn")])
+
+[sub_resource type="Resource" id="Resource_jrtu6"]
+script = ExtResource("7_5kv1e")
+animation_duration = 0.0
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_04d3y"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_5kv1e"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_jrtu6"), SubResource("Resource_04d3y")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_a8lrc"]
+script = ExtResource("7_5kv1e")
+animation_duration = 0.2
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_bnl7j"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point1")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_jpjr0"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_a8lrc"), SubResource("Resource_bnl7j")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_ygi16"]
+script = ExtResource("7_5kv1e")
+animation_duration = 0.4
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_bk222"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point2")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_qhxp3"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_ygi16"), SubResource("Resource_bk222")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_yo420"]
+script = ExtResource("7_5kv1e")
+animation_duration = 0.6
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_oa344"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point3")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_eskub"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_yo420"), SubResource("Resource_oa344")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_7qd4q"]
+script = ExtResource("7_5kv1e")
+animation_duration = 0.8
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_8j2tk"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideLeft/Point4")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_ydyc2"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_7qd4q"), SubResource("Resource_8j2tk")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_0xd3i"]
+script = ExtResource("7_5kv1e")
+animation_duration = 1.0
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_2ge2i"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_a3iia"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_0xd3i"), SubResource("Resource_2ge2i")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_rm2nn"]
+script = ExtResource("7_5kv1e")
+animation_duration = 1.2
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_6bjlb"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point1")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_p4x55"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_rm2nn"), SubResource("Resource_6bjlb")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_kt8re"]
+script = ExtResource("7_5kv1e")
+animation_duration = 1.4
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_4syk5"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point2")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_chijn"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_kt8re"), SubResource("Resource_4syk5")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_hdo8d"]
+script = ExtResource("7_5kv1e")
+animation_duration = 1.6
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_dn3d7"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point3")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_cmmc0"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_hdo8d"), SubResource("Resource_dn3d7")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_cb336"]
+script = ExtResource("7_5kv1e")
+animation_duration = 1.8
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_p4nqf"]
+script = ExtResource("5_jrtu6")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight/Point4")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_17qho"]
+script = ExtResource("3_xjvx5")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_cb336"), SubResource("Resource_p4nqf")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
+[sub_resource type="Resource" id="Resource_xjvx5"]
+script = ExtResource("7_jrtu6")
+slide_steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_5kv1e"), SubResource("Resource_jpjr0"), SubResource("Resource_qhxp3"), SubResource("Resource_eskub"), SubResource("Resource_ydyc2"), SubResource("Resource_a3iia"), SubResource("Resource_p4x55"), SubResource("Resource_chijn"), SubResource("Resource_cmmc0"), SubResource("Resource_17qho")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_nk01r"]
 script = ExtResource("6_a8lrc")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+ease_type = 2
+trans_type = 7
 
 [sub_resource type="Resource" id="Resource_1vcjn"]
 script = ExtResource("7_bk222")
@@ -41,7 +229,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_pcp4d")
-steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_gwk0t"), SubResource("Resource_ynpfl")])
+steps = Array[ExtResource("2_2lyuu")]([SubResource("Resource_gwk0t"), SubResource("Resource_xjvx5"), SubResource("Resource_ynpfl")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1239375055]
 layout_mode = 1
@@ -64,7 +252,7 @@ theme_override_constants/separation = 64
 
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=445940682 instance=ExtResource("8_bnl7j")]
 layout_mode = 2
-title = "The Ten Issues"
+title = "The Ten Lessons"
 
 [node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1724858738]
 layout_mode = 2
@@ -177,24 +365,6 @@ size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "5: More Intentional Target Audience"
-fit_content = true
-
-[node name="SideCenter" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer" unique_id=109642682]
-visible = false
-custom_minimum_size = Vector2(360, 0)
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 0
-size_flags_stretch_ratio = 0.4
-theme_override_constants/separation = 32
-alignment = 1
-
-[node name="ContentHeading" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideCenter" unique_id=1102381701]
-visible = false
-layout_mode = 2
-theme_type_variation = &"RichSlideContentHeading"
-bbcode_enabled = true
-text = "[b]Dice Gun Commando[/b]"
 fit_content = true
 
 [node name="SideRight" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer" unique_id=1731449395]
