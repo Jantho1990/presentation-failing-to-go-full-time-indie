@@ -270,7 +270,12 @@ theme_override_constants/separation = 16
 texture_filter = 1
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2" unique_id=1453160000]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2" unique_id=992505549]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2/Margin" unique_id=1453160000]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -287,7 +292,12 @@ theme_override_constants/separation = 16
 texture_filter = 1
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3" unique_id=1999937147]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3" unique_id=479217080]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3/Margin" unique_id=1999937147]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4

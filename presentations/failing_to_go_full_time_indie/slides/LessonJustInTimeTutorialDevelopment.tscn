@@ -27,7 +27,7 @@ script = ExtResource("4_d3crc")
 [sub_resource type="Resource" id="Resource_qis4t"]
 script = ExtResource("5_1qtsn")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet3")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_kwwi4"]
@@ -45,7 +45,7 @@ trans_type = 7
 
 [sub_resource type="Resource" id="Resource_nsjpp"]
 script = ExtResource("6_5wmqd")
-targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet3")])
+targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet3")])
 offset_distance = Vector2(0, -32)
 axis = 1
 metadata/_custom_type_script = "uid://d1ysmprsahxnr"
@@ -113,14 +113,14 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_e2yr2"]
 script = ExtResource("5_e2yr2")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet0")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_1qtsn"]
 script = ExtResource("9_rogt0")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet0")])
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet0")])
 axis = 1
 ease_type = 2
 trans_type = 7
@@ -133,14 +133,14 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_vxfqx"]
 script = ExtResource("5_e2yr2")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet1")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_3jkkf"]
 script = ExtResource("9_rogt0")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet1")])
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet1")])
 axis = 1
 ease_type = 2
 trans_type = 7
@@ -153,14 +153,14 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_dv8fq"]
 script = ExtResource("5_e2yr2")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet2")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_x0jtx"]
 script = ExtResource("9_rogt0")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet2")])
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet2")])
 axis = 1
 ease_type = 2
 trans_type = 7
@@ -173,14 +173,14 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_oborx"]
 script = ExtResource("5_e2yr2")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet3")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_hfy6n"]
 script = ExtResource("9_rogt0")
-animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer/Bullet3")])
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer/Bullet3")])
 axis = 1
 ease_type = 2
 trans_type = 7
@@ -321,7 +321,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0" unique_id=834631164 instance=ExtResource("9_3jkkf")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0" unique_id=209912999]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0" unique_id=1777162842]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin" unique_id=209912999]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -339,7 +344,12 @@ layout_mode = 2
 expand_mode = 5
 stretch_mode = 4
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1" unique_id=1205710233]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1" unique_id=1462536410]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1/Margin" unique_id=1205710233]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -357,11 +367,16 @@ layout_mode = 2
 expand_mode = 5
 stretch_mode = 4
 
-[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2" unique_id=254513766]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2" unique_id=260673313]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin" unique_id=254513766]
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer" unique_id=940305776]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer" unique_id=940305776]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -370,7 +385,7 @@ bbcode_enabled = true
 text = "As I got feedback, added additional features"
 fit_content = true
 
-[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer" unique_id=433135443]
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer" unique_id=433135443]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -379,7 +394,7 @@ bbcode_enabled = true
 text = "[ul]Error Messaging for Mods[/ul]"
 fit_content = true
 
-[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer" unique_id=1318022307]
+[node name="Bullet1" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer" unique_id=1318022307]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -388,7 +403,7 @@ bbcode_enabled = true
 text = "[ul]Quantity Stacks[/ul]"
 fit_content = true
 
-[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer" unique_id=380482871]
+[node name="Bullet2" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer" unique_id=380482871]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -397,7 +412,7 @@ bbcode_enabled = true
 text = "[ul]End of Wave Computer[/ul]"
 fit_content = true
 
-[node name="Bullet3" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/VBoxContainer" unique_id=1530210413]
+[node name="Bullet3" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2/Margin/VBoxContainer" unique_id=1530210413]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -413,7 +428,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3" unique_id=1160581891 instance=ExtResource("9_3jkkf")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3" unique_id=488327228]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3" unique_id=2143945339]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3/Margin" unique_id=488327228]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -429,7 +449,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4" unique_id=676133719 instance=ExtResource("9_3jkkf")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4" unique_id=1525101511]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4" unique_id=1638581341]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4/Margin" unique_id=1525101511]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -445,7 +470,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5" unique_id=624112790 instance=ExtResource("9_3jkkf")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5" unique_id=770386317]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5" unique_id=65314317]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5/Margin" unique_id=770386317]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4

@@ -215,7 +215,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1707531016 instance=ExtResource("10_ajnu8")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=1311222216]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=252523871]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0/Margin" unique_id=1311222216]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -231,7 +236,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1032581916 instance=ExtResource("10_ajnu8")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=891201448]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1060366377]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/Margin" unique_id=891201448]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -247,7 +257,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=260459340 instance=ExtResource("10_ajnu8")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=1089612184]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=280869947]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2/Margin" unique_id=1089612184]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -263,12 +278,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=928550436 instance=ExtResource("10_ajnu8")]
 layout_mode = 2
 
-[node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=50875768]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=1828507234]
 layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_top = 8
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3/MarginContainer" unique_id=1798197130]
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3/Margin" unique_id=1798197130]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
@@ -284,7 +299,12 @@ theme_override_constants/separation = 16
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1438397285 instance=ExtResource("10_ajnu8")]
 layout_mode = 2
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1803304571]
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1549662957]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4/Margin" unique_id=1803304571]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
