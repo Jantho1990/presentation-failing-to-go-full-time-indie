@@ -14,6 +14,7 @@
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="9_4urhm"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="9_s61g4"]
 [ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="10_4urhm"]
+[ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_62k3f"]
 [ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="11_r3fj2"]
 [ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="12_psbhy"]
 [ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="13_lu5f0"]
@@ -27,7 +28,7 @@ script = ExtResource("4_xqkr2")
 [sub_resource type="Resource" id="Resource_psbhy"]
 script = ExtResource("5_62k3f")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial6"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial7"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial5"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial6"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial7"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/EngineeringTriangle")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_lu5f0"]
@@ -131,10 +132,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_gs6d1"]
+script = ExtResource("10_62k3f")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_ycex8"]
+script = ExtResource("5_ygjj1")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/EngineeringTriangle")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_mswgo"]
+script = ExtResource("3_o2wq7")
+slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_gs6d1"), SubResource("Resource_ycex8")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_bfy4x"]
 resource_name = "Point0 Bullet2 SimulStep"
 script = ExtResource("8_s61g4")
-slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_2qai5"), SubResource("Resource_puk8d")])
+slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_2qai5"), SubResource("Resource_puk8d"), SubResource("Resource_mswgo")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_50ngv"]
@@ -294,6 +311,11 @@ slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_sen1l"), SubR
 shader = ExtResource("14_l05ba")
 shader_parameter/gray_amount = 0.0
 
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mswgo"]
+corner_radius_top_left = 1000
+corner_radius_top_right = 1000
+corner_detail = 1
+
 [node name="LessonIronTriangleFlexible" type="Control" unique_id=434600336]
 layout_mode = 3
 anchors_preset = 15
@@ -325,7 +347,7 @@ theme_override_constants/separation = 64
 
 [node name="SlideHeader" parent="PanelContainer/MarginContainer/VBox" unique_id=856785780 instance=ExtResource("8_luct1")]
 layout_mode = 2
-title = "Lesson 9: The Iron Triangle is Flexible"
+title = "Lesson 9: The Engineering Triangle is Flexible"
 
 [node name="SlideContent" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox" unique_id=1741053708]
 layout_mode = 2
@@ -365,7 +387,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "The Iron Triangle"
+text = "The Engineering Triangle"
 fit_content = true
 
 [node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer" unique_id=433135443]
@@ -555,6 +577,7 @@ layout_mode = 2
 size_flags_horizontal = 3
 
 [node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=515812705]
+visible = false
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
 size_flags_horizontal = 8
@@ -564,6 +587,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=174702848]
+visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -574,6 +598,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1210544021]
+visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -584,6 +609,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=340226756]
+visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -594,6 +620,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1701050438]
+visible = false
 modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_xkvai")
 custom_minimum_size = Vector2(400, 600)
@@ -603,6 +630,65 @@ size_flags_vertical = 4
 texture = ExtResource("15_xfloo")
 expand_mode = 3
 stretch_mode = 5
+
+[node name="EngineeringTriangle" type="Panel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=728939472]
+custom_minimum_size = Vector2(300, 150)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 0
+offset_transform_enabled = true
+offset_transform_position = Vector2(0, 150)
+offset_transform_scale = Vector2(1.5, 1.5)
+offset_transform_rotation = -0.7853982
+theme_override_styles/panel = SubResource("StyleBoxFlat_mswgo")
+
+[node name="Faster" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/EngineeringTriangle" unique_id=1803222951]
+custom_minimum_size = Vector2(120, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.5
+anchor_top = -0.1
+anchor_right = 0.5
+anchor_bottom = -0.1
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[b]Faster[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Better" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/EngineeringTriangle" unique_id=204605150]
+custom_minimum_size = Vector2(100, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 1.25
+anchor_top = 1.0
+anchor_right = 1.25
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[b]Better[/b]"
+fit_content = true
+horizontal_alignment = 1
+
+[node name="Cheaper" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/EngineeringTriangle" unique_id=1979125378]
+custom_minimum_size = Vector2(128, 0)
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.25
+anchor_top = 1.0
+anchor_right = -0.25
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[b]Cheaper[/b]"
+fit_content = true
+horizontal_alignment = 1
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1304675490 instance=ExtResource("16_s60pu")]
 layout_mode = 2
