@@ -36,21 +36,18 @@ slide_steps = Array[ExtResource("2_q27ev")]([SubResource("Resource_sho4t"), SubR
 [sub_resource type="Resource" id="Resource_gi0mb"]
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
 [sub_resource type="Resource" id="Resource_uly4x"]
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
 [sub_resource type="Resource" id="Resource_ytwgk"]
 script = ExtResource("6_rbuqf")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
@@ -58,7 +55,6 @@ trans_type = 7
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper/Mugshot")])
 target_position = Vector2(-800, 0)
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
@@ -66,7 +62,6 @@ trans_type = 7
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper2/BioList")])
 target_position = Vector2(0, 1000)
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
@@ -74,7 +69,6 @@ trans_type = 7
 script = ExtResource("8_758ns")
 animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff")])
 target_position = Vector2(800, 0)
-animation_duration = 0.2
 ease_type = 2
 trans_type = 7
 
