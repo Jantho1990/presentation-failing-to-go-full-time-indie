@@ -54,7 +54,6 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 script = ExtResource("8_6ilm5")
 animatedNodePaths = Array[NodePath]([NodePath("BackgroundThirds/ThirdDGC"), NodePath("BackgroundThirds/ThirdDT"), NodePath("BackgroundThirds/ThirdMe")])
 axis = 1
-animation_duration = 0.3
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
