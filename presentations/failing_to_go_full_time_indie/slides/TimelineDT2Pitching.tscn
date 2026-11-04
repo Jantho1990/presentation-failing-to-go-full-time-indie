@@ -12,12 +12,12 @@
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="7_a5caq"]
 [ext_resource type="Script" uid="uid://d1ysmprsahxnr" path="res://resources/SetOffsetStep.gd" id="7_rlfkf"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_egjmc"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_f7yxo"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="9_ulns4"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="9_ykmqa"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_47p0i"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_21e6g"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_splk4"]
+[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="17_ai6kg"]
 
 [sub_resource type="Resource" id="Resource_2c3g4"]
 script = ExtResource("3_r5vqh")
@@ -922,6 +922,7 @@ theme_override_constants/margin_right = 64
 
 [node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent" unique_id=1248458228]
 layout_mode = 2
+theme_override_constants/separation = 32
 alignment = 1
 
 [node name="SideLeft" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=497006564]
@@ -1056,11 +1057,11 @@ text = "Cut much more into my development time than planned"
 fit_content = true
 
 [node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
-custom_maximum_size = Vector2(-1, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-texture = ExtResource("8_f7yxo")
+texture = ExtResource("17_ai6kg")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("9_ulns4")]

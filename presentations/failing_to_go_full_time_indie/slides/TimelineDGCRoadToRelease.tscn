@@ -13,12 +13,12 @@
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="7_5lpax"]
 [ext_resource type="Script" uid="uid://d1ysmprsahxnr" path="res://resources/SetOffsetStep.gd" id="7_m5jdg"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_mckqx"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_qj2bd"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="9_1krxe"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="9_mnclw"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_ouvcn"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_dp6sh"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_2hopf"]
+[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="18_wmp50"]
 
 [sub_resource type="Resource" id="Resource_m5jdg"]
 script = ExtResource("3_fge4q")
@@ -1472,7 +1472,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Sat-Thu: GodotCon Boston"
+text = "Sun-Thu: GodotCon Boston"
 fit_content = true
 
 [node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/Margin/VBoxContainer" unique_id=1166473092]
@@ -1605,11 +1605,11 @@ text = "[ul]Not as big a hit as hoped[/ul]"
 fit_content = true
 
 [node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
-custom_maximum_size = Vector2(-1, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-texture = ExtResource("8_qj2bd")
+texture = ExtResource("18_wmp50")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("9_mnclw")]

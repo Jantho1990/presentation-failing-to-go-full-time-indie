@@ -13,11 +13,11 @@
 [ext_resource type="Script" uid="uid://bcqb05pw1pkii" path="res://resources/FadeInStep.gd" id="7_o4sne"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="7_s5nje"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_4jfst"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_g1l2m"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="9_o4sne"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="10_4jfst"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_thhk1"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="11_thhk1"]
+[ext_resource type="Texture2D" uid="uid://d4oymaharb3j" path="res://assets/media/images/VGMCon 2025 cropped.jpg" id="17_4jfst"]
 
 [sub_resource type="Resource" id="Resource_2etcq"]
 script = ExtResource("3_g1l2m")
@@ -996,11 +996,11 @@ text = "Tons of fixes and improvements"
 fit_content = true
 
 [node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
-custom_maximum_size = Vector2(-1, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-texture = ExtResource("8_g1l2m")
+texture = ExtResource("17_4jfst")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("7_s5nje")]

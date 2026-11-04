@@ -11,13 +11,13 @@
 [ext_resource type="Script" uid="uid://d0h3stf45a3hu" path="res://resources/SetFadeStep.gd" id="6_vc6p7"]
 [ext_resource type="Script" uid="uid://d1ysmprsahxnr" path="res://resources/SetOffsetStep.gd" id="7_n5puk"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="7_vc6p7"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="8_n5puk"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_nhlla"]
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="9_c0e85"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="9_pfnet"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_3g8ou"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_38wni"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_66m6s"]
+[ext_resource type="Texture2D" uid="uid://cgrrv2t6n2myu" path="res://assets/media/images/Minnebar 2025 cropped.jpg" id="17_c0e85"]
 
 [sub_resource type="Resource" id="Resource_5qovp"]
 script = ExtResource("3_v7se5")
@@ -842,7 +842,7 @@ alignment = 1
 layout_mode = 2
 theme_type_variation = &"RichSlideContentHeading"
 bbcode_enabled = true
-text = "[b]Preparation[/b]"
+text = "[b]How to Teach the Game[/b]"
 fit_content = true
 
 [node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft" unique_id=285335690]
@@ -909,11 +909,11 @@ text = "Continued fixes and improvements"
 fit_content = true
 
 [node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
-custom_maximum_size = Vector2(-1, 540)
+custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-texture = ExtResource("8_n5puk")
+texture = ExtResource("17_c0e85")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("9_pfnet")]
