@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="7_sbnlt"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_ap2cv"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_eyx6o"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="9_6lgky"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="10_wqd25"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="11_gxum5"]
+[ext_resource type="Texture2D" uid="uid://dqmakh3svpw6s" path="res://assets/media/images/dice games marketing numbers.png" id="12_ay5u5"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
 script = ExtResource("4_4tgq8")
@@ -21,12 +21,12 @@ script = ExtResource("4_4tgq8")
 [sub_resource type="Resource" id="Resource_r2oi8"]
 script = ExtResource("5_ay5u5")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_mife1"]
 script = ExtResource("5_mk7t8")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
 ease_type = 2
 trans_type = 7
 
@@ -76,7 +76,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_7htcy"]
 script = ExtResource("5_mk7t8")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
@@ -186,26 +186,22 @@ size_flags_vertical = 3
 theme_override_constants/margin_left = 64
 theme_override_constants/margin_right = 64
 
-[node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=1780604626]
+[node name="HBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=911145694]
 layout_mode = 2
 theme_override_constants/separation = 64
 
-[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=2112963260]
-layout_mode = 2
-
-[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=824433484]
-layout_mode = 2
-texture = ExtResource("9_6lgky")
-stretch_mode = 4
-
-[node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1940906052]
+[node name="List" type="GridContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1641496828]
 layout_mode = 2
 size_flags_horizontal = 3
-size_flags_vertical = 4
+size_flags_vertical = 10
 theme_type_variation = &"V32"
+theme_override_constants/v_separation = 32
+columns = 2
 
 [node name="Point0" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=452160761]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0" unique_id=640568981 instance=ExtResource("10_wqd25")]
@@ -225,50 +221,10 @@ bbcode_enabled = true
 text = "Playtested with gamedevs"
 fit_content = true
 
-[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=706701277]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1681034086 instance=ExtResource("10_wqd25")]
-layout_mode = 2
-
-[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=917795228]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_top = 8
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/Margin" unique_id=1231145375]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Conflated that with broad appeal"
-fit_content = true
-
-[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1676265977]
-layout_mode = 2
-theme_override_constants/separation = 16
-
-[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=952009537 instance=ExtResource("10_wqd25")]
-layout_mode = 2
-
-[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=820365390]
-layout_mode = 2
-size_flags_horizontal = 3
-theme_override_constants/margin_top = 8
-
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2/Margin" unique_id=1565647440]
-layout_mode = 2
-size_flags_horizontal = 3
-size_flags_vertical = 4
-theme_type_variation = &"RichContent"
-bbcode_enabled = true
-text = "Market research successful games"
-fit_content = true
-
 [node name="Point3" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1942426117]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3" unique_id=1906154858 instance=ExtResource("10_wqd25")]
@@ -288,8 +244,33 @@ bbcode_enabled = true
 text = "Thought demo would magically solve appeal problems"
 fit_content = true
 
+[node name="Point1" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=706701277]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=1681034086 instance=ExtResource("10_wqd25")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1" unique_id=917795228]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/Margin" unique_id=1231145375]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Conflated that with broad appeal"
+fit_content = true
+
 [node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=503050239]
 layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
 theme_override_constants/separation = 16
 
 [node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point4" unique_id=1555807659 instance=ExtResource("10_wqd25")]
@@ -308,6 +289,39 @@ theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "Thought I could appeal to all gamers with enough work"
 fit_content = true
+
+[node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List" unique_id=1676265977]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 0
+theme_override_constants/separation = 16
+
+[node name="IconFlag" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=952009537 instance=ExtResource("10_wqd25")]
+layout_mode = 2
+
+[node name="Margin" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2" unique_id=820365390]
+layout_mode = 2
+size_flags_horizontal = 3
+theme_override_constants/margin_top = 8
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2/Margin" unique_id=1565647440]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "Market research successful games"
+fit_content = true
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=2112963260]
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=824433484]
+layout_mode = 2
+texture = ExtResource("12_ay5u5")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=113152102 instance=ExtResource("11_gxum5")]
 layout_mode = 2
