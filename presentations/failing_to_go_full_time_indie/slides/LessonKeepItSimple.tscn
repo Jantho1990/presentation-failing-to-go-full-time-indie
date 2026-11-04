@@ -11,9 +11,9 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="7_w1qfs"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_ffvcw"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="8_v8pvm"]
-[ext_resource type="Texture2D" uid="uid://ulhi0bin0nml" path="res://assets/media/images/godot-download-page.png" id="9_wjmvw"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="10_ajnu8"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="11_da4qs"]
+[ext_resource type="Texture2D" uid="uid://dkbt84dctfgpp" path="res://assets/media/images/keep it simple meme.jpg" id="12_21oy6"]
 
 [sub_resource type="Resource" id="Resource_polty"]
 script = ExtResource("4_s437h")
@@ -198,7 +198,7 @@ custom_minimum_size = Vector2(640, 0)
 custom_maximum_size = Vector2(640, -1)
 layout_mode = 2
 size_flags_vertical = 3
-texture = ExtResource("9_wjmvw")
+texture = ExtResource("12_21oy6")
 expand_mode = 2
 stretch_mode = 5
 
