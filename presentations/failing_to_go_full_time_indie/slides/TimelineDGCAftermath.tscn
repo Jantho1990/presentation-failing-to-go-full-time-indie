@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://capy37k215xbr" path="res://resources/MultiStep.gd" id="10_pnoi3"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="11_xp15g"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="12_ov6m1"]
-[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="17_hc1wa"]
+[ext_resource type="Texture2D" uid="uid://bb7tjg6beytuj" path="res://assets/media/images/2DCon 2026.jpg" id="17_hc1wa"]
 
 [sub_resource type="Resource" id="Resource_qg0h8"]
 script = ExtResource("3_8uoud")
@@ -124,26 +124,10 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
-[sub_resource type="Resource" id="Resource_v2bsc"]
-script = ExtResource("11_xp15g")
-metadata/_custom_type_script = "uid://els5543ifwap"
-
-[sub_resource type="Resource" id="Resource_63s2a"]
-script = ExtResource("7_47hxv")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage")])
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_ias1l"]
-script = ExtResource("10_pnoi3")
-slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_v2bsc"), SubResource("Resource_63s2a")])
-metadata/_custom_type_script = "uid://capy37k215xbr"
-
 [sub_resource type="Resource" id="Resource_rxt55"]
 resource_name = "P1 Point0 SimulStep"
 script = ExtResource("3_pexlc")
-slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_w5xr2"), SubResource("Resource_je6d3"), SubResource("Resource_ias1l")])
+slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_w5xr2"), SubResource("Resource_je6d3")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_67vcd"]
@@ -287,10 +271,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_4pxnf"]
+script = ExtResource("11_xp15g")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_1k1qn"]
+script = ExtResource("7_47hxv")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_47hxv"]
+script = ExtResource("10_pnoi3")
+slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_4pxnf"), SubResource("Resource_1k1qn")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_mmh6h"]
 resource_name = "P1 Point3 SimulStep"
 script = ExtResource("3_pexlc")
-slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_2a3w4"), SubResource("Resource_bl6j7")])
+slide_steps = Array[ExtResource("2_1jio0")]([SubResource("Resource_2a3w4"), SubResource("Resource_bl6j7"), SubResource("Resource_47hxv")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_pdm5u"]
@@ -1096,7 +1096,6 @@ size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 
 [node name="Part1" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts" unique_id=497006564]
-visible = false
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_horizontal = 3
@@ -1254,6 +1253,7 @@ text = "[ul]Bug fixes and tutorial[/ul]"
 fit_content = true
 
 [node name="Part2" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts" unique_id=2009747079]
+visible = false
 custom_minimum_size = Vector2(360, 0)
 layout_mode = 2
 size_flags_horizontal = 3

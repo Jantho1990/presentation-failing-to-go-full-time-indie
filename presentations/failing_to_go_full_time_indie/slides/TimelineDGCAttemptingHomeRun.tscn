@@ -17,7 +17,9 @@
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_wf1yx"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_inypn"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_1b51n"]
-[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="17_0twtd"]
+[ext_resource type="Texture2D" uid="uid://dawlr1de0xuog" path="res://assets/media/images/dgc pitch deck.png" id="17_4ebfc"]
+[ext_resource type="Texture2D" uid="uid://lkj6mryq5346" path="res://assets/media/images/MWGC 2026.jpg" id="17_qnq0e"]
+[ext_resource type="Texture2D" uid="uid://c2kkvol4lh37" path="res://assets/media/images/Minnebar 2026.jpg" id="18_4ebfc"]
 
 [sub_resource type="Resource" id="Resource_0twtd"]
 script = ExtResource("3_1rhlc")
@@ -26,7 +28,7 @@ metadata/_custom_type_script = "uid://c87bqhd78xism"
 [sub_resource type="Resource" id="Resource_qnq0e"]
 script = ExtResource("5_qnq0e")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/Margin/VBoxContainer/Bullet1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point1/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideLeft/Point3/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage3")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_4ebfc"]
@@ -98,10 +100,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_jtli1"]
+script = ExtResource("10_wf1yx")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_or0su"]
+script = ExtResource("6_4ebfc")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage3")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_tmhrr"]
+script = ExtResource("9_x64ao")
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_jtli1"), SubResource("Resource_or0su")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_fnybq"]
 resource_name = "Point0 SimulStep"
 script = ExtResource("3_0twtd")
-slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_5ipwf"), SubResource("Resource_by7ah")])
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_5ipwf"), SubResource("Resource_by7ah"), SubResource("Resource_tmhrr")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_ypman"]
@@ -182,26 +200,10 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
-[sub_resource type="Resource" id="Resource_1kojo"]
-script = ExtResource("10_wf1yx")
-metadata/_custom_type_script = "uid://els5543ifwap"
-
-[sub_resource type="Resource" id="Resource_8s4o5"]
-script = ExtResource("6_4ebfc")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage")])
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_q86qh"]
-script = ExtResource("9_x64ao")
-slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_1kojo"), SubResource("Resource_8s4o5")])
-metadata/_custom_type_script = "uid://capy37k215xbr"
-
 [sub_resource type="Resource" id="Resource_8osvl"]
 resource_name = "Point2 SimulStep"
 script = ExtResource("3_0twtd")
-slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_eqk1o"), SubResource("Resource_dgxyr"), SubResource("Resource_q86qh")])
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_eqk1o"), SubResource("Resource_dgxyr")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_djopw"]
@@ -219,10 +221,22 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_1kojo"]
+script = ExtResource("6_4ebfc")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_8s4o5"]
+script = ExtResource("9_x64ao")
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_1kojo")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_penjf"]
 resource_name = "Point2 Bullet0 SimulStep"
 script = ExtResource("3_0twtd")
-slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_djopw"), SubResource("Resource_0v085")])
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_djopw"), SubResource("Resource_0v085"), SubResource("Resource_8s4o5")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_li28p"]
@@ -240,10 +254,22 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_q86qh"]
+script = ExtResource("6_4ebfc")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage2")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_qfrk5"]
+script = ExtResource("9_x64ao")
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_q86qh")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_2nyjs"]
 resource_name = "Point2 Bullet1 SimulStep"
 script = ExtResource("3_0twtd")
-slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_li28p"), SubResource("Resource_ucr28")])
+slide_steps = Array[ExtResource("2_1fh81")]([SubResource("Resource_li28p"), SubResource("Resource_ucr28"), SubResource("Resource_qfrk5")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_ue0h3"]
@@ -1157,12 +1183,31 @@ bbcode_enabled = true
 text = "[ul]Do I commit to Next Fest?[/ul]"
 fit_content = true
 
-[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
+[node name="Images" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=608772445]
+layout_mode = 2
+
+[node name="SideImage3" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=1941888277]
 custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
-texture = ExtResource("17_0twtd")
+texture = ExtResource("17_4ebfc")
+stretch_mode = 5
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=682021739]
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("17_qnq0e")
+stretch_mode = 5
+
+[node name="SideImage2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=1334559290]
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("18_4ebfc")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("9_g4si5")]

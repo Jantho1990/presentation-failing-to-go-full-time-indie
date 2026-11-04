@@ -17,7 +17,7 @@
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_ekxhn"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_iwluj"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_d4l2x"]
-[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="17_g25ya"]
+[ext_resource type="Texture2D" uid="uid://diebb58boulq6" path="res://assets/media/images/VGMCon 2026.jpg" id="17_g25ya"]
 
 [sub_resource type="Resource" id="Resource_4ejvs"]
 script = ExtResource("3_t3qem")

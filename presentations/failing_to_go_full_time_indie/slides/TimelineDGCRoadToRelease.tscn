@@ -18,7 +18,10 @@
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_ouvcn"]
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="11_dp6sh"]
 [ext_resource type="Script" uid="uid://bhawgc8yopdqg" path="res://resources/SlideToAnchorStep.gd" id="12_2hopf"]
-[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="18_wmp50"]
+[ext_resource type="Texture2D" uid="uid://dn6qre31sikme" path="res://assets/media/images/SGDQ 2026.jpg" id="18_wmp50"]
+[ext_resource type="Texture2D" uid="uid://dspbrr3obxdv3" path="res://assets/media/images/GodotCon 2026 2.jpg" id="19_m5jdg"]
+[ext_resource type="Texture2D" uid="uid://bb51p25k4d660" path="res://assets/media/images/2DCon MoA 2026.jpg" id="20_mckqx"]
+[ext_resource type="Texture2D" uid="uid://dxm4u3i05pfxc" path="res://assets/media/images/dgc release button.jpg" id="21_mckqx"]
 
 [sub_resource type="Resource" id="Resource_m5jdg"]
 script = ExtResource("3_fge4q")
@@ -43,7 +46,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 [sub_resource type="Resource" id="Resource_mckqx"]
 script = ExtResource("5_wmp50")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/Margin/VBoxContainer/Bullet1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/ContentHeading"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point2/Margin/VBoxContainer/Bullet2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part1/Point3/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point1/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Parts/Part2/Point3/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage2"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage3"), NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage4")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_1krxe"]
@@ -115,26 +118,10 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
-[sub_resource type="Resource" id="Resource_4bsnc"]
-script = ExtResource("10_ouvcn")
-metadata/_custom_type_script = "uid://els5543ifwap"
-
-[sub_resource type="Resource" id="Resource_ryk4y"]
-script = ExtResource("6_psh1s")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/SideImage")])
-ease_type = 2
-trans_type = 7
-metadata/_custom_type_script = "uid://bcqb05pw1pkii"
-
-[sub_resource type="Resource" id="Resource_2xrf4"]
-script = ExtResource("9_1krxe")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_4bsnc"), SubResource("Resource_ryk4y")])
-metadata/_custom_type_script = "uid://capy37k215xbr"
-
 [sub_resource type="Resource" id="Resource_f161j"]
 resource_name = "P1 Point0 SimulStep"
 script = ExtResource("3_xr7iy")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_jki84"), SubResource("Resource_gj6gy"), SubResource("Resource_2xrf4")])
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_jki84"), SubResource("Resource_gj6gy")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_1xd3w"]
@@ -194,10 +181,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_4bsnc"]
+script = ExtResource("10_ouvcn")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_ryk4y"]
+script = ExtResource("6_psh1s")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_2xrf4"]
+script = ExtResource("9_1krxe")
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_4bsnc"), SubResource("Resource_ryk4y")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_gyq1u"]
 resource_name = "P1 Point2 SimulStep"
 script = ExtResource("3_xr7iy")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_5ga42"), SubResource("Resource_ak08t")])
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_5ga42"), SubResource("Resource_ak08t"), SubResource("Resource_2xrf4")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_nvjg1"]
@@ -389,10 +392,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_4lgo4"]
+script = ExtResource("10_ouvcn")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_yquu1"]
+script = ExtResource("6_psh1s")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage2")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_075jc"]
+script = ExtResource("9_1krxe")
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_4lgo4"), SubResource("Resource_yquu1")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_ki6am"]
 resource_name = "P2 Point0 SimulStep"
 script = ExtResource("3_xr7iy")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_hwyyt"), SubResource("Resource_jvup3")])
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_hwyyt"), SubResource("Resource_jvup3"), SubResource("Resource_075jc")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_yfi47"]
@@ -494,10 +513,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_4agar"]
+script = ExtResource("10_ouvcn")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_nrwov"]
+script = ExtResource("6_psh1s")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage4")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_xtoyf"]
+script = ExtResource("9_1krxe")
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_4agar"), SubResource("Resource_nrwov")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_203qr"]
 resource_name = "P2 Point2 SimulStep"
 script = ExtResource("3_xr7iy")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_g7f2x"), SubResource("Resource_qf6y2")])
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_g7f2x"), SubResource("Resource_qf6y2"), SubResource("Resource_xtoyf")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_1ydxf"]
@@ -536,10 +571,26 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_0ierb"]
+script = ExtResource("10_ouvcn")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_eofot"]
+script = ExtResource("6_psh1s")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images/SideImage3")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_ws7vh"]
+script = ExtResource("9_1krxe")
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_0ierb"), SubResource("Resource_eofot")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_74yfn"]
 resource_name = "P2 Point3 SimulStep"
 script = ExtResource("3_xr7iy")
-slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_462pu"), SubResource("Resource_u05rx")])
+slide_steps = Array[ExtResource("2_oep1q")]([SubResource("Resource_462pu"), SubResource("Resource_u05rx"), SubResource("Resource_ws7vh")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_jwgaf"]
@@ -1604,12 +1655,39 @@ bbcode_enabled = true
 text = "[ul]Not as big a hit as hoped[/ul]"
 fit_content = true
 
-[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=682021739]
+[node name="Images" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox" unique_id=451437999]
+layout_mode = 2
+
+[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=682021739]
 custom_maximum_size = Vector2(960, 540)
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_stretch_ratio = 0.5
 texture = ExtResource("18_wmp50")
+stretch_mode = 5
+
+[node name="SideImage2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=1525820465]
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("19_m5jdg")
+stretch_mode = 5
+
+[node name="SideImage4" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=898664626]
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("21_mckqx")
+stretch_mode = 5
+
+[node name="SideImage3" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox/SlideContent/HBox/Images" unique_id=1630547580]
+custom_maximum_size = Vector2(960, 540)
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_stretch_ratio = 0.5
+texture = ExtResource("20_mckqx")
 stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1696159671 instance=ExtResource("9_mnclw")]
