@@ -484,7 +484,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "9: The Iron Triangle Is Flexible"
+text = "9: The Engineering Triangle Is Flexible"
 fit_content = true
 
 [node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/SideRight" unique_id=1417745469]
