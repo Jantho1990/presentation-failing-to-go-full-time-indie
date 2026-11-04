@@ -21,7 +21,7 @@ script = ExtResource("4_nhe83")
 [sub_resource type="Resource" id="Resource_u3ybm"]
 script = ExtResource("5_moa0h")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2/Margin/VBoxContainer/Bullet0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer/Bullet0")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_a3bgj"]
@@ -33,7 +33,7 @@ metadata/_custom_type_script = "uid://d1ysmprsahxnr"
 
 [sub_resource type="Resource" id="Resource_ebjek"]
 script = ExtResource("6_dxbtp")
-targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2/Margin/VBoxContainer/Bullet0")])
+targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point2/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer/Bullet0")])
 offset_distance = Vector2(0, -32)
 axis = 1
 metadata/_custom_type_script = "uid://d1ysmprsahxnr"
@@ -188,6 +188,26 @@ script = ExtResource("8_3odtc")
 slide_steps = Array[ExtResource("2_gam8x")]([SubResource("Resource_fta5x"), SubResource("Resource_jjh35")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
+[sub_resource type="Resource" id="Resource_t46db"]
+script = ExtResource("5_10e0o")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer/Bullet0")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_jxqav"]
+script = ExtResource("9_i82ms")
+animatedNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer/Bullet0")])
+axis = 1
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://tsi26xoksyru"
+
+[sub_resource type="Resource" id="Resource_74lno"]
+script = ExtResource("8_3odtc")
+slide_steps = Array[ExtResource("2_gam8x")]([SubResource("Resource_t46db"), SubResource("Resource_jxqav")])
+metadata/_custom_type_script = "uid://kdht20jhjko6"
+
 [sub_resource type="Resource" id="Resource_40hj3"]
 script = ExtResource("6_moa0h")
 targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
@@ -209,7 +229,7 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_16qmi")
-steps = Array[ExtResource("2_gam8x")]([SubResource("Resource_5qup7"), SubResource("Resource_7ufoq"), SubResource("Resource_dxbtp"), SubResource("Resource_rms7h"), SubResource("Resource_5p7nr"), SubResource("Resource_i82ms"), SubResource("Resource_w6k1j"), SubResource("Resource_40d1q"), SubResource("Resource_a47do")])
+steps = Array[ExtResource("2_gam8x")]([SubResource("Resource_5qup7"), SubResource("Resource_7ufoq"), SubResource("Resource_dxbtp"), SubResource("Resource_rms7h"), SubResource("Resource_5p7nr"), SubResource("Resource_i82ms"), SubResource("Resource_w6k1j"), SubResource("Resource_40d1q"), SubResource("Resource_74lno"), SubResource("Resource_a47do")])
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=1086058540]
 layout_mode = 1
@@ -361,7 +381,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "In the words of Aerosmith..."
+text = "Should you attempt to go full time indie?"
 fit_content = true
 
 [node name="Point4" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=1006031952]
@@ -376,13 +396,26 @@ layout_mode = 2
 size_flags_horizontal = 3
 theme_override_constants/margin_top = 8
 
-[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin" unique_id=1247640985]
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin" unique_id=721669336]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Content" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer" unique_id=1795630298]
 layout_mode = 2
 size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "\"Dream On\""
+text = "Would I do it again?"
+fit_content = true
+
+[node name="Bullet0" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4/Point4/Margin/VBoxContainer" unique_id=1061139463]
+layout_mode = 2
+size_flags_horizontal = 3
+size_flags_vertical = 4
+theme_type_variation = &"RichContent"
+bbcode_enabled = true
+text = "[ul]Yes![/ul]"
 fit_content = true
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=968588930 instance=ExtResource("10_i82ms")]
