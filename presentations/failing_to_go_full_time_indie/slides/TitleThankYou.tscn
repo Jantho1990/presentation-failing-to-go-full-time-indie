@@ -20,6 +20,7 @@
 [ext_resource type="Texture2D" uid="uid://nfsacpru048h" path="res://assets/media/images/IntroThirdDiceTower.jpg" id="13_rovjy"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="15_46qk1"]
 [ext_resource type="Animation" uid="uid://26b1efpj5vui" path="res://assets/animations/TitleSlides.tres" id="16_qetri"]
+[ext_resource type="Texture2D" uid="uid://dahn5nbayklxk" path="res://assets/media/images/joshanthonyinfo_qr_code.png" id="19_6ilm5"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
 script = ExtResource("5_71v1b")
@@ -272,11 +273,33 @@ size_flags_horizontal = 8
 size_flags_vertical = 4
 theme_override_constants/margin_left = 556
 
+[node name="VBoxContainer" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer/MarginContainer" unique_id=1722877726]
+layout_mode = 2
+
+[node name="TextureRect" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer/MarginContainer/VBoxContainer" unique_id=162054948]
+layout_mode = 2
+texture = ExtResource("19_6ilm5")
+
+[node name="RichTextLabel" type="RichTextLabel" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer/MarginContainer/VBoxContainer" unique_id=822814090]
+layout_mode = 2
+theme_type_variation = &"RichContent"
+theme_override_constants/shadow_outline_size = 4
+theme_override_constants/shadow_offset_x = 1
+theme_override_constants/shadow_offset_y = 1
+theme_override_font_sizes/bold_font_size = 48
+bbcode_enabled = true
+text = "[b]joshanthony.info[/b]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
 [node name="BackgroundScreen" type="ColorRect" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer/MarginContainer" unique_id=1786096834]
+visible = false
 layout_mode = 2
 color = Color(0, 0, 0, 0.396078)
 
 [node name="MarginContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/VBox3/MarginContainer/MarginContainer" unique_id=84614736]
+visible = false
 layout_mode = 2
 theme_override_constants/margin_left = 16
 theme_override_constants/margin_top = 16
