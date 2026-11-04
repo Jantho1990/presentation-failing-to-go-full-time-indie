@@ -40,7 +40,7 @@ metadata/_custom_type_script = "uid://d1ysmprsahxnr"
 
 [sub_resource type="Resource" id="Resource_ltgrq"]
 script = ExtResource("5_2kskn")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
 ease_type = 2
 trans_type = 7
 

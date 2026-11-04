@@ -15,7 +15,7 @@ script = ExtResource("4_gbtfi")
 
 [sub_resource type="Resource" id="Resource_awelw"]
 script = ExtResource("5_2qbhj")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
 ease_type = 2
 trans_type = 7
 

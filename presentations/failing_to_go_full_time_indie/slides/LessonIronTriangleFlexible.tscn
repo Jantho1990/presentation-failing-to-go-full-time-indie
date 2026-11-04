@@ -38,12 +38,6 @@ offset_distance = Vector2(256, 0)
 axis = 0
 metadata/_custom_type_script = "uid://d1ysmprsahxnr"
 
-[sub_resource type="Resource" id="Resource_l05ba"]
-script = ExtResource("5_ygjj1")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
-ease_type = 2
-trans_type = 7
-
 [sub_resource type="Resource" id="Resource_xfloo"]
 script = ExtResource("6_7r1wm")
 targetNodePaths = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/Tutorial0/Margin/VBoxContainer/Bullet2")])
@@ -51,9 +45,15 @@ offset_distance = Vector2(0, -32)
 axis = 1
 metadata/_custom_type_script = "uid://d1ysmprsahxnr"
 
+[sub_resource type="Resource" id="Resource_l05ba"]
+script = ExtResource("5_ygjj1")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent"), NodePath("PanelContainer/MarginContainer/VBox/SlideHeader")])
+ease_type = 2
+trans_type = 7
+
 [sub_resource type="Resource" id="Resource_s60pu"]
 script = ExtResource("3_o2wq7")
-slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_r3fj2"), SubResource("Resource_psbhy"), SubResource("Resource_lu5f0"), SubResource("Resource_l05ba"), SubResource("Resource_xfloo")])
+slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_r3fj2"), SubResource("Resource_psbhy"), SubResource("Resource_lu5f0"), SubResource("Resource_xfloo"), SubResource("Resource_l05ba")])
 
 [sub_resource type="Resource" id="Resource_y2jmg"]
 script = ExtResource("5_ygjj1")
