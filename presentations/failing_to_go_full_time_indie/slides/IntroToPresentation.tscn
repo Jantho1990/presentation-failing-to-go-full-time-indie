@@ -10,8 +10,9 @@
 [ext_resource type="Script" uid="uid://63q6guytynws" path="res://resources/FadeOutStep.gd" id="8_mjrom"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_1lx6o"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_7mvgy"]
-[ext_resource type="Texture2D" uid="uid://ctyyeepf2twyi" path="res://assets/media/images/artemis_2_splashdown-nhq202604100021.jpg" id="11_fdq1m"]
+[ext_resource type="VideoStream" uid="uid://bnoqpa6kc0diq" path="res://assets/media/videos/Dice Tower Gameplay Trailer - June 2025 (Final) 360.ogv" id="12_fdq1m"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="12_q0aia"]
+[ext_resource type="VideoStream" uid="uid://dyhm56figiwqa" path="res://assets/media/videos/DGC Release Go-Live Trailer 1 HD 60FPS 360.ogv" id="13_2ea6k"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="13_182sg"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
@@ -20,7 +21,7 @@ script = ExtResource("5_wmw4f")
 [sub_resource type="Resource" id="Resource_a8nac"]
 script = ExtResource("6_h284p")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer/DTTrailer"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer2/DGCTrailer")])
 animation_duration = 0.1
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
@@ -32,7 +33,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_mife1"]
 script = ExtResource("7_dwo7a")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox")])
 ease_type = 2
 trans_type = 7
 
@@ -56,14 +57,14 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_fdq1m"]
 script = ExtResource("7_dwo7a")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer/DTTrailer")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_2ea6k"]
 script = ExtResource("7_dwo7a")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List/Point1/TopMargin2/VBoxBullets/Bullet1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer2/DGCTrailer")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
@@ -84,7 +85,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_yc1wc"]
 script = ExtResource("8_mjrom")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/SideImage"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/List")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideHeader"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent")])
 ease_type = 2
 trans_type = 7
 
@@ -137,19 +138,6 @@ theme_override_constants/margin_right = 64
 [node name="HBox" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=311005227]
 layout_mode = 2
 theme_override_constants/separation = 64
-
-[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1823277628]
-layout_mode = 2
-
-[node name="SideImage" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=214725350]
-custom_minimum_size = Vector2(1040, 0)
-custom_maximum_size = Vector2(1040, -1)
-layout_mode = 2
-size_flags_horizontal = 0
-size_flags_vertical = 3
-texture = ExtResource("11_fdq1m")
-expand_mode = 2
-stretch_mode = 5
 
 [node name="List" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=583764477]
 layout_mode = 2
@@ -261,6 +249,35 @@ theme_type_variation = &"RichContent"
 bbcode_enabled = true
 text = "This is the story of my journey"
 fit_content = true
+
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1823277628]
+custom_minimum_size = Vector2(800, 0)
+layout_mode = 2
+alignment = 1
+
+[node name="AspectRatioContainer" type="AspectRatioContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1869627981]
+custom_maximum_size = Vector2(-1, 360)
+layout_mode = 2
+size_flags_vertical = 2
+
+[node name="DTTrailer" type="VideoStreamPlayer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer" unique_id=25317816]
+layout_mode = 2
+stream = ExtResource("12_fdq1m")
+volume_db = -80.0
+autoplay = true
+loop = true
+
+[node name="AspectRatioContainer2" type="AspectRatioContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1889115578]
+custom_maximum_size = Vector2(-1, 360)
+layout_mode = 2
+size_flags_vertical = 10
+
+[node name="DGCTrailer" type="VideoStreamPlayer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/AspectRatioContainer2" unique_id=474557958]
+layout_mode = 2
+stream = ExtResource("13_2ea6k")
+volume_db = -80.0
+autoplay = true
+loop = true
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=1900585123 instance=ExtResource("13_182sg")]
 layout_mode = 2
