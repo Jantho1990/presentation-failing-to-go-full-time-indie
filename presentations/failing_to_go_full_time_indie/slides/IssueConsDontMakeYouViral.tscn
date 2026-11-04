@@ -11,10 +11,11 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="8_rp68o"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="9_8ae3c"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="9_h6oep"]
+[ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_13mxv"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_tdujb"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="11_p6mxe"]
-[ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="13_j7tbq"]
-[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="14_4e70g"]
+[ext_resource type="Texture2D" uid="uid://dak00iukby5kw" path="res://assets/media/images/GodotCon0.jpg" id="14_m52en"]
+[ext_resource type="Texture2D" uid="uid://pnrrllll8pux" path="res://assets/media/images/wishlists from open to launch.png" id="15_13mxv"]
 [ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="15_yct74"]
 [ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="16_ktpu1"]
 [ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="17_chv1v"]
@@ -27,7 +28,7 @@ script = ExtResource("4_oi4io")
 [sub_resource type="Resource" id="Resource_7o7hb"]
 script = ExtResource("5_m52en")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TookACard"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsCon"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/ViralityInPerson"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/TookACard"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsCon"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/IgnoredSteps"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox/Apocalypse"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox/Despair")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_u8p1b"]
@@ -61,9 +62,25 @@ ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://tsi26xoksyru"
 
+[sub_resource type="Resource" id="Resource_rp68o"]
+script = ExtResource("10_13mxv")
+metadata/_custom_type_script = "uid://els5543ifwap"
+
+[sub_resource type="Resource" id="Resource_8ae3c"]
+script = ExtResource("5_2kskn")
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox/Apocalypse")])
+ease_type = 2
+trans_type = 7
+metadata/_custom_type_script = "uid://bcqb05pw1pkii"
+
+[sub_resource type="Resource" id="Resource_13mxv"]
+script = ExtResource("3_yusvr")
+slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_rp68o"), SubResource("Resource_8ae3c")])
+metadata/_custom_type_script = "uid://capy37k215xbr"
+
 [sub_resource type="Resource" id="Resource_7go75"]
 script = ExtResource("8_rp68o")
-slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_08jhb"), SubResource("Resource_m52en")])
+slide_steps = Array[ExtResource("2_t7455")]([SubResource("Resource_08jhb"), SubResource("Resource_m52en"), SubResource("Resource_13mxv")])
 metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_5bo2u"]
@@ -106,7 +123,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_gsioi"]
 script = ExtResource("5_2kskn")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox/WishlistsNextFest"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox/Despair")])
 ease_type = 2
 trans_type = 7
 metadata/_custom_type_script = "uid://bcqb05pw1pkii"
@@ -249,7 +266,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "TODO: Get number of players who \"took a card\""
+text = "During cons, 152 players \"took a card\""
 fit_content = true
 
 [node name="WishlistsCon" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1202700951]
@@ -272,7 +289,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "TODO: Get wishlists from con periods"
+text = "During same cons, gained 91 wishlists"
 fit_content = true
 
 [node name="WishlistsNextFest" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1169473022]
@@ -293,7 +310,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "TODO: Get wishlists from Next Fest"
+text = "Next Fest wishlists: 199"
 fit_content = true
 
 [node name="IgnoredSteps" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/VBox" unique_id=1600509808]
@@ -321,26 +338,43 @@ fit_content = true
 layout_mode = 2
 size_flags_horizontal = 3
 
-[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=515812705]
-custom_minimum_size = Vector2(400, 600)
+[node name="VBox" type="VBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=90927846]
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("13_j7tbq")
+theme_override_constants/separation = 64
+
+[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox" unique_id=515812705]
+custom_minimum_size = Vector2(711, 400)
+custom_maximum_size = Vector2(711, -1)
+layout_mode = 2
+size_flags_horizontal = 4
+size_flags_vertical = 6
+texture = ExtResource("14_m52en")
 expand_mode = 3
 stretch_mode = 5
 
-[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=174702848]
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
+[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox" unique_id=174702848]
+self_modulate = Color(2.2241454, 2.2241454, 2.2241454, 1)
+custom_minimum_size = Vector2(600, 300)
+custom_maximum_size = Vector2(711, 304)
 layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("14_4e70g")
-expand_mode = 3
+size_flags_vertical = 3
+texture = ExtResource("15_13mxv")
+expand_mode = 2
 stretch_mode = 5
+
+[node name="ColorRect" type="ColorRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer/VBox/Despair" unique_id=946590046]
+self_modulate = Color(2.2241454, 2.2241454, 2.2241454, 1)
+show_behind_parent = true
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.145, 0.26583332, 0.29, 1)
 
 [node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1210544021]
+visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -351,6 +385,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=340226756]
+visible = false
 modulate = Color(1, 1, 1, 0)
 custom_minimum_size = Vector2(400, 600)
 layout_mode = 2
@@ -361,6 +396,7 @@ expand_mode = 3
 stretch_mode = 5
 
 [node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1701050438]
+visible = false
 modulate = Color(1, 1, 1, 0)
 material = SubResource("ShaderMaterial_xkvai")
 custom_minimum_size = Vector2(400, 600)
