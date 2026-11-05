@@ -13,12 +13,7 @@
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="9_sn8ld"]
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="10_traey"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="11_a7ctl"]
-[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="14_jpfwr"]
 [ext_resource type="Texture2D" uid="uid://8xfs16v2xsih" path="res://assets/media/images/release this quickly cropped.jpg" id="14_t3pjy"]
-[ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="15_vmwkb"]
-[ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="16_d1uu5"]
-[ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="17_ul761"]
-[ext_resource type="Texture2D" uid="uid://dwn8f147kbao1" path="res://assets/media/images/pizza-asset.jpg" id="18_js6ft"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_pg1r8"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
@@ -234,10 +229,6 @@ script = ExtResource("9_4gd4q")
 [sub_resource type="Resource" id="Resource_h1qoh"]
 script = ExtResource("3_7mite")
 slide_steps = Array[ExtResource("2_wlf1q")]([SubResource("Resource_lpmeh"), SubResource("Resource_1vcjn")])
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkvai"]
-shader = ExtResource("17_ul761")
-shader_parameter/gray_amount = 0.0
 
 [node name="IssueTooMuchIteration" type="Control" unique_id=1900136500]
 layout_mode = 3
@@ -468,51 +459,6 @@ layout_mode = 2
 size_flags_horizontal = 8
 size_flags_vertical = 4
 texture = ExtResource("14_t3pjy")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1565191943]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("14_jpfwr")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1752723037]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("15_vmwkb")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1399085238]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("16_d1uu5")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=759502241]
-visible = false
-modulate = Color(1, 1, 1, 0)
-material = SubResource("ShaderMaterial_xkvai")
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("18_js6ft")
 expand_mode = 3
 stretch_mode = 5
 

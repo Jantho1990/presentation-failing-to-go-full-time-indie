@@ -12,10 +12,6 @@
 [ext_resource type="PackedScene" uid="uid://bt0q3yfxuiytc" path="res://scenes/SlideHeader/SlideHeader.tscn" id="12_jxjpq"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="13_stmyw"]
 [ext_resource type="Script" uid="uid://d1ilak4f38454" path="res://nodes/AnimationWrapper.gd" id="14_1q2bt"]
-[ext_resource type="Texture2D" uid="uid://daxaucnelvqr6" path="res://assets/media/images/Basic UI.jpg" id="15_cpsut"]
-[ext_resource type="Texture2D" uid="uid://bpfxsd3usfrn4" path="res://assets/media/images/Part 2 S1.jpg" id="16_33hwt"]
-[ext_resource type="Texture2D" uid="uid://ddv61gmkolffb" path="res://assets/media/images/Part 2 S2.jpg" id="17_khmjx"]
-[ext_resource type="Texture2D" uid="uid://dgff5hqsflgm0" path="res://assets/media/images/Part 2 S3.jpg" id="18_b1e3j"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_yr2rw"]
 
 [sub_resource type="Resource" id="Resource_l8fcr"]
@@ -30,7 +26,7 @@ trans_type = 7
 [sub_resource type="Resource" id="Resource_0olyl"]
 script = ExtResource("7_otw3n")
 fade = 1
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/Point0")])
 metadata/_custom_type_script = "uid://d0h3stf45a3hu"
 
 [sub_resource type="Resource" id="Resource_c87qk"]
@@ -51,7 +47,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_w0te1"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point0")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -65,7 +61,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_otw3n"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point1")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -73,7 +69,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_s8id0"]
 script = ExtResource("10_xlfc3")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot0")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel0")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -87,7 +83,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_xlfc3"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point2")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -95,7 +91,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_ksi6r"]
 script = ExtResource("10_xlfc3")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot1")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel1")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -109,7 +105,7 @@ metadata/_custom_type_script = "uid://kdht20jhjko6"
 
 [sub_resource type="Resource" id="Resource_stmyw"]
 script = ExtResource("6_bal8u")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel3"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/List/Point3")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -117,7 +113,7 @@ metadata/_custom_type_script = "uid://bcqb05pw1pkii"
 
 [sub_resource type="Resource" id="Resource_1q2bt"]
 script = ExtResource("10_xlfc3")
-targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2"), NodePath("PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer/Screenshot2")])
+targetNodes = Array[NodePath]([NodePath("PanelContainer/MarginContainer/VBox/SlideContent/VBox/HBox/AnimationWrapper/SidePanel2")])
 animation_duration = 0.2
 ease_type = 2
 trans_type = 7
@@ -382,44 +378,6 @@ bbcode_enabled = true
 text = "Forced me to design for what I can do myself
 
 Led to learning more about what works for art and music, and ultimately what really needs contracting"
-
-[node name="Control" type="Control" parent="PanelContainer/MarginContainer/VBox/SlideContent" unique_id=973506327]
-visible = false
-layout_mode = 2
-
-[node name="CenterContainer" type="CenterContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control" unique_id=649298002]
-layout_mode = 1
-anchors_preset = -1
-anchor_left = 0.58400005
-anchor_top = 0.5
-anchor_right = 0.95900005
-anchor_bottom = 1.0
-grow_horizontal = 0
-grow_vertical = 2
-
-[node name="Screenshot0" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=311009348]
-custom_minimum_size = Vector2(0, 256)
-layout_mode = 2
-texture = ExtResource("15_cpsut")
-expand_mode = 3
-
-[node name="Screenshot1" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=165665417]
-custom_minimum_size = Vector2(0, 256)
-layout_mode = 2
-texture = ExtResource("16_33hwt")
-expand_mode = 3
-
-[node name="Screenshot2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=212409692]
-custom_minimum_size = Vector2(0, 256)
-layout_mode = 2
-texture = ExtResource("17_khmjx")
-expand_mode = 3
-
-[node name="Screenshot3" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/Control/CenterContainer" unique_id=1977032984]
-custom_minimum_size = Vector2(0, 256)
-layout_mode = 2
-texture = ExtResource("18_b1e3j")
-expand_mode = 3
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=717366627 instance=ExtResource("19_yr2rw")]
 layout_mode = 2

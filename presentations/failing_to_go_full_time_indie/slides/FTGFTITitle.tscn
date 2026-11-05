@@ -9,7 +9,6 @@
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="6_tebpa"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="7_62swa"]
 [ext_resource type="Texture2D" uid="uid://nfsacpru048h" path="res://assets/media/images/IntroThirdDiceTower.jpg" id="7_k4upf"]
-[ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="7_xv3w8"]
 [ext_resource type="Texture2D" uid="uid://t3rwn6poxieg" path="res://assets/media/images/IntroThirdDiceGunCommando.png" id="8_a5hct"]
 [ext_resource type="PackedScene" uid="uid://diak4ipf17jt0" path="res://scenes/LineDecorations/LineDecorations.tscn" id="8_wnr2o"]
 [ext_resource type="Texture2D" uid="uid://b84qksg5tec1h" path="res://assets/media/images/IntroThirdMe.JPG" id="9_5cho7"]
@@ -102,17 +101,6 @@ texture = ExtResource("9_5cho7")
 [node name="ThirdDT" type="TextureRect" parent="BackgroundThirds" unique_id=1139944918]
 layout_mode = 2
 texture = ExtResource("7_k4upf")
-
-[node name="Background" type="TextureRect" parent="." unique_id=1001554132]
-visible = false
-layout_mode = 1
-anchors_preset = 15
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("7_xv3w8")
-expand_mode = 2
 
 [node name="PanelContainer" type="PanelContainer" parent="." unique_id=649606572]
 layout_mode = 1

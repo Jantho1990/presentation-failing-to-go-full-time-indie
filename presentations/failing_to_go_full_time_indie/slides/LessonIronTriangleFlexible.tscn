@@ -13,13 +13,7 @@
 [ext_resource type="Script" uid="uid://kdht20jhjko6" path="res://resources/SimulStep.gd" id="8_s61g4"]
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="9_4urhm"]
 [ext_resource type="PackedScene" uid="uid://cja617wedpwxe" path="res://scenes/IconFlag/IconFlag.tscn" id="9_s61g4"]
-[ext_resource type="Texture2D" uid="uid://dhd68fdyndif6" path="res://assets/media/images/apocalypse-asset.jpg" id="10_4urhm"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="10_62k3f"]
-[ext_resource type="Texture2D" uid="uid://dn75sj7gwr5ia" path="res://assets/media/images/despaired-asset.jpg" id="11_r3fj2"]
-[ext_resource type="Texture2D" uid="uid://dqjax7yo1tivs" path="res://assets/media/images/explore-asset.jpg" id="12_psbhy"]
-[ext_resource type="Texture2D" uid="uid://bkp06fjrhmmor" path="res://assets/media/images/developer-asset.jpg" id="13_lu5f0"]
-[ext_resource type="Shader" uid="uid://xsbjk8grxrr0" path="res://assets/shaders/GrayscaleShader.tres" id="14_l05ba"]
-[ext_resource type="Texture2D" uid="uid://dwn8f147kbao1" path="res://assets/media/images/pizza-asset.jpg" id="15_xfloo"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="16_s60pu"]
 
 [sub_resource type="Resource" id="Resource_r3fj2"]
@@ -307,10 +301,6 @@ script = ExtResource("7_7r1wm")
 script = ExtResource("3_o2wq7")
 slide_steps = Array[ExtResource("2_0ettt")]([SubResource("Resource_sen1l"), SubResource("Resource_w8e6n")])
 
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_xkvai"]
-shader = ExtResource("14_l05ba")
-shader_parameter/gray_amount = 0.0
-
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_mswgo"]
 corner_radius_top_left = 1000
 corner_radius_top_right = 1000
@@ -575,61 +565,6 @@ fit_content = true
 [node name="ImageContainer" type="MarginContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox" unique_id=1706596185]
 layout_mode = 2
 size_flags_horizontal = 3
-
-[node name="Apocalypse" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=515812705]
-visible = false
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("10_4urhm")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Despair" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=174702848]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("11_r3fj2")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Explore" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1210544021]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("12_psbhy")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Developer" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=340226756]
-visible = false
-modulate = Color(1, 1, 1, 0)
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("13_lu5f0")
-expand_mode = 3
-stretch_mode = 5
-
-[node name="Pizza" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=1701050438]
-visible = false
-modulate = Color(1, 1, 1, 0)
-material = SubResource("ShaderMaterial_xkvai")
-custom_minimum_size = Vector2(400, 600)
-layout_mode = 2
-size_flags_horizontal = 8
-size_flags_vertical = 4
-texture = ExtResource("15_xfloo")
-expand_mode = 3
-stretch_mode = 5
 
 [node name="EngineeringTriangle" type="Panel" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/ImageContainer" unique_id=728939472]
 custom_minimum_size = Vector2(300, 150)

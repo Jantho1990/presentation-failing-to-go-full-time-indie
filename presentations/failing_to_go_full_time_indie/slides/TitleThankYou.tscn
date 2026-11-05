@@ -12,7 +12,6 @@
 [ext_resource type="Script" uid="uid://tsi26xoksyru" path="res://resources/SlideToOffsetStep.gd" id="8_6ilm5"]
 [ext_resource type="Script" uid="uid://els5543ifwap" path="res://resources/WaitStep.gd" id="9_c2xbn"]
 [ext_resource type="Script" uid="uid://b2waivlvwc37x" path="res://resources/HideAndNextStep.gd" id="10_kf42y"]
-[ext_resource type="Texture2D" uid="uid://byqjcnyrm8qe3" path="res://assets/media/images/DiceGunFinal_1920x1080Darkened.png" id="11_vanas"]
 [ext_resource type="Texture2D" uid="uid://t3rwn6poxieg" path="res://assets/media/images/IntroThirdDiceGunCommando.png" id="11_vwfon"]
 [ext_resource type="Texture2D" uid="uid://b84qksg5tec1h" path="res://assets/media/images/IntroThirdMe.JPG" id="12_hqq4b"]
 [ext_resource type="StyleBox" uid="uid://hfgxwrl7l1ub" path="res://assets/themes/StopWaitingForGodot/resources/BackgroundTitle.tres" id="12_kw3mk"]
@@ -200,16 +199,6 @@ texture = ExtResource("12_hqq4b")
 [node name="ThirdDT" type="TextureRect" parent="BackgroundThirds" unique_id=2101284760]
 layout_mode = 2
 texture = ExtResource("13_rovjy")
-
-[node name="Background" type="TextureRect" parent="." unique_id=1284224567]
-visible = false
-layout_mode = 0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 2
-texture = ExtResource("11_vanas")
-expand_mode = 2
 
 [node name="Panel" type="Panel" parent="." unique_id=1025577527]
 visible = false
