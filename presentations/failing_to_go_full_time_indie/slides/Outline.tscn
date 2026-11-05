@@ -229,7 +229,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Why Full-Time Failed"
+text = "Why Full Time Failed"
 fit_content = true
 
 [node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/List" unique_id=937579809]
@@ -271,7 +271,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "Note: This Will Be Brutally Honest"
+text = "Note: This will be brutally honest"
 fit_content = true
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=361773205 instance=ExtResource("12_m1pu6")]

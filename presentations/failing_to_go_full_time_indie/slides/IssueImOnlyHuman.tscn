@@ -286,7 +286,7 @@ size_flags_horizontal = 3
 size_flags_vertical = 4
 theme_type_variation = &"RichContent"
 bbcode_enabled = true
-text = "When I'm not making progress, neither is the progress"
+text = "When I'm not making progress, neither is the game"
 fit_content = true
 
 [node name="Point2" type="HBoxContainer" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBoxContainer/Version4" unique_id=1246113641]
