@@ -277,7 +277,8 @@ theme_override_constants/shadow_offset_x = 1
 theme_override_constants/shadow_offset_y = 1
 theme_override_font_sizes/bold_font_size = 48
 bbcode_enabled = true
-text = "[b]joshanthony.info[/b]"
+text = "[b]Slides and more at
+joshanthony.info[/b]"
 fit_content = true
 horizontal_alignment = 1
 vertical_alignment = 1
