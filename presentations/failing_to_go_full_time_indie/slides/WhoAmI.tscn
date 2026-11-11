@@ -19,6 +19,7 @@
 [ext_resource type="Texture2D" uid="uid://ccfgi7halul2c" path="res://assets/media/images/loonicy_logo_white_lettering_sm.png" id="17_cl1ok"]
 [ext_resource type="Texture2D" uid="uid://brjik1rxwns63" path="res://assets/media/images/DiceGunLogo - Shadow.png" id="18_wgona"]
 [ext_resource type="PackedScene" uid="uid://dql8pta14gljo" path="res://scenes/PresentationFooter/PresentationFooter.tscn" id="19_280l4"]
+[ext_resource type="Texture2D" uid="uid://dckv7rlqdu075" path="res://assets/media/images/Logo-DiceTower-square.png" id="19_q27ev"]
 
 [sub_resource type="Resource" id="Resource_sho4t"]
 script = ExtResource("4_6pcai")
@@ -365,6 +366,13 @@ layout_mode = 2
 texture = ExtResource("18_wgona")
 expand_mode = 5
 stretch_mode = 4
+
+[node name="DGCLogo2" type="TextureRect" parent="PanelContainer/MarginContainer/VBox/SlideContent/HBox/AnimationWrapper3/LoonicyStuff" unique_id=1799009330]
+custom_maximum_size = Vector2(-1, 200)
+layout_mode = 2
+texture = ExtResource("19_q27ev")
+expand_mode = 5
+stretch_mode = 5
 
 [node name="PresentationFooter" parent="PanelContainer/MarginContainer/VBox" unique_id=598543251 instance=ExtResource("19_280l4")]
 layout_mode = 2
