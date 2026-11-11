@@ -31,13 +31,13 @@ func _input(_inputEvent: InputEvent) -> void:
     activePresentation.previous()
     _debounce()
   elif Input.is_action_just_pressed("slide_next"):
-    pass
+    push_error('slide_next not yet implemented!')
   elif Input.is_action_just_pressed("slide_prev"):
-    pass
+    push_error('slide_prev not yet implemented!')
   elif Input.is_action_just_pressed("slide_reset"):
-    pass
+    push_error('slide_reset not yet implemented!')
   elif Input.is_action_just_pressed("slide_restart"):
-    pass
+    push_error('slide_restart not yet implemented!')
 
 
 func _on_ActivePresentation_finished() -> void:
